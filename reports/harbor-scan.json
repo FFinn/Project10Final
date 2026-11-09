@@ -1,6 +1,6 @@
 {
   "application/vnd.security.vulnerability.report; version=1.1": {
-    "generated_at": "2026-11-09T10:21:51.759645919Z",
+    "generated_at": "2026-11-09T11:42:52.616168896Z",
     "scanner": {
       "name": "Trivy",
       "vendor": "Aqua Security",

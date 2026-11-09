@@ -19,6 +19,7 @@
 | Контроль системных вызовов | [falco-rules.yaml](k8s/falco-rules.yaml) |
 | Запрет небезопасных контейнеров | [kyverno-policy.yaml](k8s/kyverno-policy.yaml) |
 | Проверки HTTP-интерфейса и конфигурации узла | [zap-job.yaml](k8s/zap-job.yaml), [kube-bench-job.yaml](k8s/kube-bench-job.yaml) |
+| Настройки аудита API-сервера и проверки сертификата kubelet | [Управляющий узел](infrastructure/control-plane/README.md) |
 | Итог и результаты проверок | [RESULTS.md](RESULTS.md), [reports/](reports/) |
 
 ## Локальный запуск
@@ -36,6 +37,10 @@ curl --fail http://127.0.0.1:18081/actuator/health
 Приложение доступно на `http://127.0.0.1:18081`; внутри контейнера используется порт 8080. В `.env` можно задать другой свободный `APP_PORT`. PostgreSQL доступен только во внутренней сети Compose. Обычная остановка: `docker compose down`. Не добавляйте `-v`, если требуется сохранить данные.
 
 Контейнер приложения использует UID 10001, PostgreSQL — UID 70. Корневые файловые системы доступны только для чтения. Запись разрешена во временные тома и том данных PostgreSQL. Пароль обязателен: запуск без него завершается ошибкой.
+
+## Репозитории
+
+Основной проект и проверки безопасности: [GitLab](https://devsecops.gitlab.yandexcloud.net/s2417991/project10final). Дополнительная копия исходников и отчётов: [GitHub](https://github.com/FFinn/Project10Final). Для сборки используется Maven. В GitHub выполняются сборка и тесты; публикация в Harbor и проверки безопасности выполняются в GitLab.
 
 ## Проверки в GitLab
 
@@ -72,6 +77,7 @@ Ingress использует имя `petclinic.project10.internal`, HTTPS и с�
 ## Проверка защитных мер
 
 ```bash
+python3 scripts/verify-http-security.py http://127.0.0.1:18082
 python3 scripts/verify-network.py
 kubectl run bad-pod --image=nginx --restart=Never
 python3 scripts/verify-falco.py

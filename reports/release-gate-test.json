@@ -4,7 +4,7 @@
     "report": "reports/trivy-image.json",
     "exit_code": 0,
     "expected_exit_code": 0,
-    "output": "Проверено пакетов: 168\nHIGH/CRITICAL: 0\n",
+    "output": "Проверено пакетов: 173\nHIGH/CRITICAL: 0\n",
     "passed": true
   },
   {

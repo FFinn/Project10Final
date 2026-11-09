@@ -7,7 +7,7 @@
         "metricKey": "new_coverage",
         "comparator": "LT",
         "errorThreshold": "80",
-        "actualValue": "89.5"
+        "actualValue": "90.9"
       },
       {
         "status": "OK",

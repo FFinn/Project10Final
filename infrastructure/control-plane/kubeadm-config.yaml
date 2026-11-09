@@ -1,0 +1,56 @@
+apiServer:
+  extraArgs:
+  - name: kubelet-certificate-authority
+    value: /etc/kubernetes/pki/ca.crt
+  - name: audit-policy-file
+    value: /etc/kubernetes/audit-policy.yaml
+  - name: audit-log-path
+    value: /var/log/kubernetes/audit/audit.log
+  - name: audit-log-maxage
+    value: '30'
+  - name: audit-log-maxbackup
+    value: '10'
+  - name: audit-log-maxsize
+    value: '100'
+  - name: profiling
+    value: 'false'
+  - name: service-account-extend-token-expiration
+    value: 'false'
+  extraVolumes:
+  - hostPath: /etc/kubernetes/audit-policy.yaml
+    mountPath: /etc/kubernetes/audit-policy.yaml
+    name: audit-policy
+    pathType: File
+    readOnly: true
+  - hostPath: /var/log/kubernetes/audit
+    mountPath: /var/log/kubernetes/audit
+    name: audit-logs
+    pathType: DirectoryOrCreate
+    readOnly: false
+apiVersion: kubeadm.k8s.io/v1beta4
+caCertificateValidityPeriod: 87600h0m0s
+certificateValidityPeriod: 8760h0m0s
+certificatesDir: /etc/kubernetes/pki
+clusterName: kubernetes
+controlPlaneEndpoint: 10.91.0.20:6443
+controllerManager:
+  extraArgs:
+  - name: profiling
+    value: 'false'
+dns: {}
+encryptionAlgorithm: RSA-2048
+etcd:
+  local:
+    dataDir: /var/lib/etcd
+imageRepository: registry.k8s.io
+kind: ClusterConfiguration
+kubernetesVersion: v1.31.2
+networking:
+  dnsDomain: cluster.local
+  podSubnet: 10.200.0.0/16
+  serviceSubnet: 10.96.0.0/12
+proxy: {}
+scheduler:
+  extraArgs:
+  - name: profiling
+    value: 'false'

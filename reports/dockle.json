@@ -1,5 +1,5 @@
 {
-  "image": "harbor.project10.internal:30443/project10/petclinic:7d4d3ac71888020b277652fc257ade6d94954654",
+  "image": "harbor.project10.internal:30443/project10/petclinic:a5970ce3fd48a4a0f504ab25392e4c9cfb56aea7",
   "summary": {
     "fatal": 0,
     "warn": 0,

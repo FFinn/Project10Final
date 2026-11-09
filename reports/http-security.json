@@ -1,0 +1,51 @@
+{
+  "checked_at": "2026-11-09T11:54:09.442071+00:00",
+  "target": "http://127.0.0.1:18082",
+  "checks": [
+    {
+      "check": "form_available",
+      "status": 200,
+      "passed": true
+    },
+    {
+      "check": "x-frame-options",
+      "value": "DENY",
+      "passed": true
+    },
+    {
+      "check": "x-content-type-options",
+      "value": "nosniff",
+      "passed": true
+    },
+    {
+      "check": "session_cookie_samesite",
+      "passed": true
+    },
+    {
+      "check": "content-security-policy",
+      "value": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'",
+      "passed": true
+    },
+    {
+      "check": "missing_token_rejected",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "check": "invalid_token_rejected",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "check": "other_session_token_rejected",
+      "status": 403,
+      "passed": true
+    },
+    {
+      "check": "valid_token_reaches_form_validation",
+      "status": 200,
+      "passed": true
+    }
+  ],
+  "passed": true
+}

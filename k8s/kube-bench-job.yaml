@@ -72,6 +72,12 @@ spec:
         - mountPath: /opt/cni/bin/
           name: opt-cni-bin
           readOnly: true
+        - name: host-passwd
+          mountPath: /etc/passwd
+          readOnly: true
+        - name: host-group
+          mountPath: /etc/group
+          readOnly: true
         securityContext:
           runAsUser: 0
           privileged: true
@@ -122,6 +128,14 @@ spec:
       - hostPath:
           path: /opt/cni/bin/
         name: opt-cni-bin
+      - name: host-passwd
+        hostPath:
+          path: /etc/passwd
+          type: File
+      - name: host-group
+        hostPath:
+          path: /etc/group
+          type: File
       automountServiceAccountToken: false
   backoffLimit: 0
   activeDeadlineSeconds: 300

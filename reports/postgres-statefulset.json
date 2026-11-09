@@ -9,7 +9,7 @@
         "generation": 1,
         "name": "postgres",
         "namespace": "default",
-        "resourceVersion": "10207",
+        "resourceVersion": "39357",
         "uid": "ce3275a6-a15a-4a50-b7ad-5843366a5fc5"
     },
     "spec": {

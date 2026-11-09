@@ -5,20 +5,20 @@
         "annotations": {
             "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"batch/v1\",\"kind\":\"Job\",\"metadata\":{\"annotations\":{},\"name\":\"zap-baseline\",\"namespace\":\"default\"},\"spec\":{\"activeDeadlineSeconds\":900,\"backoffLimit\":0,\"template\":{\"metadata\":{\"labels\":{\"app\":\"zap\",\"security-scan\":\"true\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"args\":[\"zap-baseline.py -t http://petclinic:8080 -m 1 -J zap.json -r zap.html -z \\\"-dir /tmp/zap -silent\\\" \\u003e /zap/wrk/run.log 2\\u003e\\u00261\\nresult=$?\\necho \\\"ZAP_RESULT_BEGIN\\\"\\ncat /zap/wrk/zap.json\\necho \\\"ZAP_RESULT_END\\\"\\ncat /zap/wrk/run.log\\ntest \\\"$result\\\" -le 2\\n\"],\"command\":[\"/bin/sh\",\"-c\"],\"env\":[{\"name\":\"HOME\",\"value\":\"/tmp\"},{\"name\":\"JAVA_OPTS\",\"value\":\"-Xmx512m\"}],\"image\":\"ghcr.io/zaproxy/zaproxy:stable\",\"name\":\"zap\",\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"1Gi\"},\"requests\":{\"cpu\":\"200m\",\"memory\":\"512Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true},\"volumeMounts\":[{\"mountPath\":\"/tmp\",\"name\":\"tmp\"},{\"mountPath\":\"/zap/wrk\",\"name\":\"work\"}]}],\"restartPolicy\":\"Never\",\"securityContext\":{\"fsGroup\":1000,\"runAsGroup\":1000,\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"volumes\":[{\"emptyDir\":{\"sizeLimit\":\"512Mi\"},\"name\":\"tmp\"},{\"emptyDir\":{\"sizeLimit\":\"128Mi\"},\"name\":\"work\"}]}}}}\n"
         },
-        "creationTimestamp": "2026-11-09T10:23:14Z",
+        "creationTimestamp": "2026-11-09T11:53:44Z",
         "generation": 1,
         "labels": {
             "app": "zap",
-            "batch.kubernetes.io/controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f",
+            "batch.kubernetes.io/controller-uid": "56beaa9a-97ae-4db1-9f40-50e3c480477a",
             "batch.kubernetes.io/job-name": "zap-baseline",
-            "controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f",
+            "controller-uid": "56beaa9a-97ae-4db1-9f40-50e3c480477a",
             "job-name": "zap-baseline",
             "security-scan": "true"
         },
         "name": "zap-baseline",
         "namespace": "default",
-        "resourceVersion": "25367",
-        "uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f"
+        "resourceVersion": "47932",
+        "uid": "56beaa9a-97ae-4db1-9f40-50e3c480477a"
     },
     "spec": {
         "activeDeadlineSeconds": 900,
@@ -30,7 +30,7 @@
         "podReplacementPolicy": "TerminatingOrFailed",
         "selector": {
             "matchLabels": {
-                "batch.kubernetes.io/controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f"
+                "batch.kubernetes.io/controller-uid": "56beaa9a-97ae-4db1-9f40-50e3c480477a"
             }
         },
         "suspend": false,
@@ -39,9 +39,9 @@
                 "creationTimestamp": null,
                 "labels": {
                     "app": "zap",
-                    "batch.kubernetes.io/controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f",
+                    "batch.kubernetes.io/controller-uid": "56beaa9a-97ae-4db1-9f40-50e3c480477a",
                     "batch.kubernetes.io/job-name": "zap-baseline",
-                    "controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f",
+                    "controller-uid": "56beaa9a-97ae-4db1-9f40-50e3c480477a",
                     "job-name": "zap-baseline",
                     "security-scan": "true"
                 }
@@ -135,19 +135,19 @@
         }
     },
     "status": {
-        "completionTime": "2026-11-09T10:24:03Z",
+        "completionTime": "2026-11-09T11:54:27Z",
         "conditions": [
             {
-                "lastProbeTime": "2026-11-09T10:24:03Z",
-                "lastTransitionTime": "2026-11-09T10:24:03Z",
+                "lastProbeTime": "2026-11-09T11:54:27Z",
+                "lastTransitionTime": "2026-11-09T11:54:27Z",
                 "message": "Reached expected number of succeeded pods",
                 "reason": "CompletionsReached",
                 "status": "True",
                 "type": "SuccessCriteriaMet"
             },
             {
-                "lastProbeTime": "2026-11-09T10:24:04Z",
-                "lastTransitionTime": "2026-11-09T10:24:04Z",
+                "lastProbeTime": "2026-11-09T11:54:27Z",
+                "lastTransitionTime": "2026-11-09T11:54:27Z",
                 "message": "Reached expected number of succeeded pods",
                 "reason": "CompletionsReached",
                 "status": "True",
@@ -155,7 +155,7 @@
             }
         ],
         "ready": 0,
-        "startTime": "2026-11-09T10:23:14Z",
+        "startTime": "2026-11-09T11:53:44Z",
         "succeeded": 1,
         "terminating": 0,
         "uncountedTerminatedPods": {}

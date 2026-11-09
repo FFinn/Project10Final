@@ -1,5 +1,5 @@
 The push refers to repository [harbor.project10.internal:30443/project10/petclinic]
-b646485edd6a: Preparing
+530a003fabaf: Preparing
 9700a9813914: Preparing
 8486b11a27bd: Preparing
 219987be0891: Preparing
@@ -10,12 +10,12 @@ f5e61faefc0d: Preparing
 4ef03777e368: Waiting
 84acb449159b: Waiting
 75f1d9657d88: Waiting
-8486b11a27bd: Layer already exists
-f5e61faefc0d: Layer already exists
 219987be0891: Layer already exists
+f5e61faefc0d: Layer already exists
+8486b11a27bd: Layer already exists
 9700a9813914: Layer already exists
 4ef03777e368: Layer already exists
 84acb449159b: Layer already exists
 75f1d9657d88: Layer already exists
-b646485edd6a: Pushed
-7d4d3ac71888020b277652fc257ade6d94954654: digest: sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538 size: 1995
+530a003fabaf: Pushed
+a5970ce3fd48a4a0f504ab25392e4c9cfb56aea7: digest: sha256:ee5a2a4cbe36142deb5ba139d0b99d80c01333fcec00651746174de1e95940f5 size: 1995

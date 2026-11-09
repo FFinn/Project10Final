@@ -1,0 +1,12 @@
+{
+  "checked_at": "2026-11-09T11:44:53.534055+00:00",
+  "target": "https://petclinic.project10.internal/owners/new",
+  "exit_code": 0,
+  "headers": {
+    "x-content-type-options": "nosniff",
+    "x-frame-options": "DENY",
+    "content-security-policy": "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'"
+  },
+  "tls_verification": true,
+  "passed": true
+}

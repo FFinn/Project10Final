@@ -3,8 +3,8 @@
   "Trivy": {
     "Version": "0.76.2"
   },
-  "ReportID": "01a1bfcf-c344-7620-b618-7e96f4f9f124",
-  "CreatedAt": "2026-11-09T10:17:06.628406584Z",
+  "ReportID": "01a1c016-787f-70b0-aab4-ac2d82b66b5f",
+  "CreatedAt": "2026-11-09T11:34:20.543049342Z",
   "ArtifactName": "/work/target",
   "ArtifactType": "filesystem",
   "Results": [
@@ -1939,6 +1939,39 @@
           "AnalyzedBy": "sbom"
         },
         {
+          "Name": "org.springframework.boot:spring-boot-security",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-security@4.1.2",
+            "UID": "db0e7957553fc994"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-security-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-security:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-security",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-security@4.1.2?type=jar",
+            "UID": "f9d107ba11e47d63",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-security@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework.security:spring-security-config:7.1.2",
+            "org.springframework.security:spring-security-web:7.1.2"
+          ],
+          "Digest": "md5:11cc581c60b51ae4215b6dca98b44074",
+          "AnalyzedBy": "sbom"
+        },
+        {
           "Name": "org.springframework.boot:spring-boot-servlet",
           "Identifier": {
             "PURL": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
@@ -2161,6 +2194,26 @@
             "org.springframework.boot:spring-boot-micrometer-metrics:4.1.2"
           ],
           "Digest": "md5:1f0797c8e4f4542e37537741a1934209",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-security:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-security",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-security@4.1.2?type=jar",
+            "UID": "18b6da14f5ecc117",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-security@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-security:4.1.2",
+            "org.springframework:spring-aop:7.0.10"
+          ],
+          "Digest": "md5:3494c7414c9676478a5e68f35831777d",
           "AnalyzedBy": "sbom"
         },
         {
@@ -2555,7 +2608,7 @@
           "Name": "org.springframework.samples:spring-petclinic",
           "Identifier": {
             "PURL": "pkg:maven/org.springframework.samples/spring-petclinic@4.0.0-SNAPSHOT?type=jar",
-            "UID": "ca5e34d341cf675d",
+            "UID": "f689ab03b972543c",
             "BOMRef": "pkg:maven/org.springframework.samples/spring-petclinic@4.0.0-SNAPSHOT?type=jar"
           },
           "Version": "4.0.0-SNAPSHOT",
@@ -2563,6 +2616,7 @@
             "Apache-2.0"
           ],
           "DependsOn": [
+            "org.springframework.boot:spring-boot-starter-security:4.1.2",
             "org.springframework.boot:spring-boot-starter-actuator:4.1.2",
             "org.springframework.boot:spring-boot-starter-cache:4.1.2",
             "org.springframework.boot:spring-boot-starter-data-jpa:4.1.2",
@@ -2580,6 +2634,143 @@
             "org.webjars.npm:font-awesome:4.7.0",
             "org.springframework.boot:spring-boot-devtools:4.1.2"
           ],
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-config",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-config@7.1.2",
+            "UID": "35646341d1eef6a2"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-security-config-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.security:spring-security-config:7.1.2",
+          "Name": "org.springframework.security:spring-security-config",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-config@7.1.2?type=jar",
+            "UID": "e4844583d3530cbb",
+            "BOMRef": "pkg:maven/org.springframework.security/spring-security-config@7.1.2?type=jar"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.security:spring-security-core:7.1.2",
+            "org.springframework:spring-aop:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-context:7.0.10",
+            "org.springframework:spring-core:7.0.10"
+          ],
+          "Digest": "md5:8840402fed20a1a9f3852f3ad17b496d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-core@7.1.2",
+            "UID": "802dd7200d9d8e69"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-security-core-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.security:spring-security-core:7.1.2",
+          "Name": "org.springframework.security:spring-security-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-core@7.1.2?type=jar",
+            "UID": "670c622264a903a1",
+            "BOMRef": "pkg:maven/org.springframework.security/spring-security-core@7.1.2?type=jar"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.security:spring-security-crypto:7.1.2",
+            "org.springframework:spring-aop:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-context:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-expression:7.0.10",
+            "io.micrometer:micrometer-observation:1.17.2"
+          ],
+          "Digest": "md5:be8c7708d1771ff982279b90e537feaf",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-crypto",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-crypto@7.1.2",
+            "UID": "bc93cd9ed45bb50d"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-security-crypto-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.security:spring-security-crypto:7.1.2",
+          "Name": "org.springframework.security:spring-security-crypto",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-crypto@7.1.2?type=jar",
+            "UID": "de36d4c40bcc540e",
+            "BOMRef": "pkg:maven/org.springframework.security/spring-security-crypto@7.1.2?type=jar"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:1e8d1e2c82d4cf4833f4b73fd442a8c6",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-web@7.1.2",
+            "UID": "45c5f73681997d44"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-security-web-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.security:spring-security-web:7.1.2",
+          "Name": "org.springframework.security:spring-security-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-web@7.1.2?type=jar",
+            "UID": "c63a2cef0d8c2b86",
+            "BOMRef": "pkg:maven/org.springframework.security/spring-security-web@7.1.2?type=jar"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.security:spring-security-core:7.1.2",
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-aop:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-context:7.0.10",
+            "org.springframework:spring-expression:7.0.10",
+            "org.springframework:spring-web:7.0.10"
+          ],
+          "Digest": "md5:04bf5ceee4d4c36e5c25f381177ec3f3",
           "AnalyzedBy": "sbom"
         },
         {

@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-09T10:28:35.225525+00:00",
+  "checked_at": "2026-11-09T11:55:18.765226+00:00",
   "checks": [
     {
       "check": "required_files",
@@ -62,6 +62,14 @@
       "passed": true
     },
     {
+      "check": "http-security",
+      "passed": true
+    },
+    {
+      "check": "control-plane-verification",
+      "passed": true
+    },
+    {
       "check": "network_tests",
       "passed": true
     },
@@ -79,6 +87,14 @@
     },
     {
       "check": "harbor_scan",
+      "passed": true
+    },
+    {
+      "check": "kube_bench_no_fail",
+      "passed": true
+    },
+    {
+      "check": "zap_no_medium_high",
       "passed": true
     },
     {

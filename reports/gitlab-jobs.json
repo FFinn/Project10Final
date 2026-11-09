@@ -1,37 +1,37 @@
 [
   {
-    "id": 66777,
+    "id": 66803,
     "name": "build_publish",
     "status": "success",
-    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66777",
-    "duration": 166.254114
+    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66803",
+    "duration": 44.254679
   },
   {
-    "id": 66776,
+    "id": 66801,
     "name": "sonarqube",
     "status": "success",
-    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66776",
-    "duration": 148.33553
+    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66801",
+    "duration": 145.245037
   },
   {
-    "id": 66775,
+    "id": 66800,
     "name": "dependencies",
     "status": "success",
-    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66775",
-    "duration": 56.882208
+    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66800",
+    "duration": 55.939542
   },
   {
-    "id": 66774,
+    "id": 66799,
     "name": "hadolint",
     "status": "success",
-    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66774",
-    "duration": 5.754312
+    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66799",
+    "duration": 3.709551
   },
   {
-    "id": 66773,
+    "id": 66798,
     "name": "secrets",
     "status": "success",
-    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66773",
-    "duration": 26.921563
+    "web_url": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/jobs/66798",
+    "duration": 30.596223
   }
 ]

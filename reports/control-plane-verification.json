@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-11-09T11:28:47.224789+00:00",
+  "api_ready": {
+    "exit_code": 0,
+    "stdout": "ok",
+    "stderr": ""
+  },
+  "kubelet_tls": {
+    "exit_code": 0,
+    "verified": true
+  },
+  "pod_logs": {
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "pod_exec": {
+    "exit_code": 0,
+    "stdout": "10001",
+    "stderr": ""
+  },
+  "audit_events": [
+    {
+      "auditID": "2e4c8cbe-9419-46de-8c4d-e2b508c2b67a",
+      "level": "Metadata",
+      "stage": "ResponseComplete",
+      "verb": "get",
+      "requestURI": "/readyz?review=project10-audit",
+      "responseStatus": {
+        "metadata": {},
+        "code": 200
+      },
+      "requestReceivedTimestamp": "2026-11-09T11:28:46.878976Z",
+      "stageTimestamp": "2026-11-09T11:28:46.879495Z"
+    }
+  ],
+  "file_permissions": {
+    "/var/lib/etcd": "700 etcd:etcd",
+    "/var/lib/kubelet/config.yaml": "600 root:root",
+    "/lib/systemd/system/kubelet.service": "600 root:root",
+    "/var/log/kubernetes/audit/audit.log": "600 root:root"
+  },
+  "passed": true
+}

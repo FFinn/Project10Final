@@ -7,7 +7,7 @@
     "measures": [
       {
         "metric": "coverage",
-        "value": "91.6",
+        "value": "91.7",
         "bestValue": false
       },
       {
@@ -37,13 +37,13 @@
       },
       {
         "metric": "tests",
-        "value": "80"
+        "value": "85"
       },
       {
         "metric": "new_coverage",
         "period": {
           "index": 1,
-          "value": "89.5",
+          "value": "90.9",
           "bestValue": false
         }
       },

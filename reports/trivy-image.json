@@ -3,18 +3,18 @@
   "Trivy": {
     "Version": "0.76.2"
   },
-  "ReportID": "01a1bfd3-cff8-764d-9085-ed5402718667",
-  "CreatedAt": "2026-11-09T10:21:32.024417859Z",
-  "ArtifactID": "sha256:0ae18e7ca879e8e15c76b134888ef5913bba3c34a0f5a9f28f853de3e8d47271",
-  "ArtifactName": "harbor.project10.internal:30443/project10/petclinic:7d4d3ac71888020b277652fc257ade6d94954654",
+  "ReportID": "01a1c01d-e4cb-79d0-87af-b7a44906d59f",
+  "CreatedAt": "2026-11-09T11:42:27.019646616Z",
+  "ArtifactID": "sha256:505683f3d2e981f042af8a517b02b3e641105001d9c9ef01ef3fa48d0091c06e",
+  "ArtifactName": "harbor.project10.internal:30443/project10/petclinic:a5970ce3fd48a4a0f504ab25392e4c9cfb56aea7",
   "ArtifactType": "container_image",
   "Metadata": {
-    "Size": 276126208,
+    "Size": 280069632,
     "OS": {
       "Family": "alpine",
       "Name": "3.24.4"
     },
-    "ImageID": "sha256:60842dc05542b0b887de5e12d288c2d77ce34996bf3d144a4ed526ff9eee3b77",
+    "ImageID": "sha256:10464b376400d9630082885a04e0830001cdb93650b7d78e5253148295d61df2",
     "DiffIDs": [
       "sha256:75f1d9657d880da5f75298e8f40e9928bb6e260c50d26f97af196845307e3064",
       "sha256:84acb449159b20ac628a10d0ad6dea5a5b4d640ad6a692ab7c8f78f86a0d5046",
@@ -23,15 +23,15 @@
       "sha256:219987be08917e94711722bcd85ffebf2d6f506eb147e45f8b24865a4414a9e2",
       "sha256:8486b11a27bd22bf39f253008694b6320e882747f3918edf4a6af20aeed4db15",
       "sha256:9700a9813914d9f8ceb0fb3e1ffa6971a117e1cde5ff27c52da26114369ea467",
-      "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+      "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
     ],
     "RepoTags": [
-      "harbor.project10.internal:30443/project10/petclinic:7d4d3ac71888020b277652fc257ade6d94954654"
+      "harbor.project10.internal:30443/project10/petclinic:a5970ce3fd48a4a0f504ab25392e4c9cfb56aea7"
     ],
-    "Reference": "harbor.project10.internal:30443/project10/petclinic:7d4d3ac71888020b277652fc257ade6d94954654",
+    "Reference": "harbor.project10.internal:30443/project10/petclinic:a5970ce3fd48a4a0f504ab25392e4c9cfb56aea7",
     "ImageConfig": {
       "architecture": "amd64",
-      "created": "2026-11-09T10:20:41.01695058Z",
+      "created": "2026-11-09T11:38:52.467336653Z",
       "history": [
         {
           "created": "2026-11-05T18:00:28Z",
@@ -105,30 +105,30 @@
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2026-11-09T10:20:41Z",
+          "created": "2026-11-09T11:38:52Z",
           "created_by": "COPY --chown=10001:10001 /build/target/*.jar /app/petclinic.jar # buildkit",
           "comment": "buildkit.dockerfile.v0"
         },
         {
-          "created": "2026-11-09T10:20:41Z",
+          "created": "2026-11-09T11:38:52Z",
           "created_by": "USER 10001:10001",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2026-11-09T10:20:41Z",
-          "created_by": "EXPOSE \u0026{[{{15 0} {15 0}}] 0xc0019b6dc0}",
+          "created": "2026-11-09T11:38:52Z",
+          "created_by": "EXPOSE \u0026{[{{15 0} {15 0}}] 0xc000eda8c0}",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2026-11-09T10:20:41Z",
+          "created": "2026-11-09T11:38:52Z",
           "created_by": "HEALTHCHECK \u0026{[\"CMD\" \"wget\" \"-q\" \"-O\" \"/dev/null\" \"http://127.0.0.1:8080/actuator/health\"] \"30s\" \"5s\" \"1m30s\" \"0s\" '\\x03'}",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
         },
         {
-          "created": "2026-11-09T10:20:41Z",
+          "created": "2026-11-09T11:38:52Z",
           "created_by": "ENTRYPOINT [\"java\" \"-XX:MaxRAMPercentage=70\" \"-Djava.io.tmpdir=/tmp\" \"-jar\" \"/app/petclinic.jar\"]",
           "comment": "buildkit.dockerfile.v0",
           "empty_layer": true
@@ -145,7 +145,7 @@
           "sha256:219987be08917e94711722bcd85ffebf2d6f506eb147e45f8b24865a4414a9e2",
           "sha256:8486b11a27bd22bf39f253008694b6320e882747f3918edf4a6af20aeed4db15",
           "sha256:9700a9813914d9f8ceb0fb3e1ffa6971a117e1cde5ff27c52da26114369ea467",
-          "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+          "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
         ]
       },
       "config": {
@@ -215,14 +215,14 @@
         "DiffID": "sha256:9700a9813914d9f8ceb0fb3e1ffa6971a117e1cde5ff27c52da26114369ea467"
       },
       {
-        "Size": 66379264,
-        "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+        "Size": 70322688,
+        "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
       }
     ]
   },
   "Results": [
     {
-      "Target": "harbor.project10.internal:30443/project10/petclinic:7d4d3ac71888020b277652fc257ade6d94954654 (alpine 3.24.4)",
+      "Target": "harbor.project10.internal:30443/project10/petclinic:a5970ce3fd48a4a0f504ab25392e4c9cfb56aea7 (alpine 3.24.4)",
       "Class": "os-pkgs",
       "Type": "alpine",
       "Packages": [
@@ -3579,7 +3579,7 @@
             "LGPL-2.1-only"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/logback-classic-1.5.38.jar",
           "AnalyzedBy": "jar"
@@ -3596,7 +3596,7 @@
             "LGPL-2.1-only"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/logback-core-1.5.38.jar",
           "AnalyzedBy": "jar"
@@ -3612,7 +3612,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jackson-annotations-2.21.jar",
           "AnalyzedBy": "jar"
@@ -3628,7 +3628,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/classmate-1.7.3.jar",
           "AnalyzedBy": "jar"
@@ -3644,7 +3644,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/caffeine-3.2.4.jar",
           "AnalyzedBy": "jar"
@@ -3660,7 +3660,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/error_prone_annotations-2.49.0.jar",
           "AnalyzedBy": "jar"
@@ -3673,7 +3673,7 @@
           },
           "Version": "2.4.240",
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/h2-2.4.240.jar",
           "AnalyzedBy": "jar"
@@ -3694,7 +3694,7 @@
             "Unicode-DFS-2015"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/mysql-connector-j-9.7.0.jar",
           "AnalyzedBy": "jar"
@@ -3710,7 +3710,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/istack-commons-runtime-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -3726,7 +3726,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/HikariCP-7.0.2.jar",
           "AnalyzedBy": "jar"
@@ -3742,7 +3742,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/commons-logging-1.3.6.jar",
           "AnalyzedBy": "jar"
@@ -3758,7 +3758,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/micrometer-commons-1.17.2.jar",
           "AnalyzedBy": "jar"
@@ -3774,7 +3774,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/micrometer-core-1.17.2.jar",
           "AnalyzedBy": "jar"
@@ -3790,7 +3790,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/micrometer-jakarta9-1.17.2.jar",
           "AnalyzedBy": "jar"
@@ -3806,7 +3806,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/micrometer-observation-1.17.2.jar",
           "AnalyzedBy": "jar"
@@ -3822,7 +3822,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.activation-api-2.1.4.jar",
           "AnalyzedBy": "jar"
@@ -3839,7 +3839,7 @@
             "GPL-2.0-with-classpath-exception"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar",
           "AnalyzedBy": "jar"
@@ -3855,7 +3855,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.inject-api-2.0.1.jar",
           "AnalyzedBy": "jar"
@@ -3872,7 +3872,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.persistence-api-3.2.0.jar",
           "AnalyzedBy": "jar"
@@ -3889,7 +3889,7 @@
             "GPL-2.0-with-classpath-exception"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.transaction-api-2.0.1.jar",
           "AnalyzedBy": "jar"
@@ -3905,7 +3905,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.validation-api-3.1.1.jar",
           "AnalyzedBy": "jar"
@@ -3921,7 +3921,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar",
           "AnalyzedBy": "jar"
@@ -3937,7 +3937,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/cache-api-1.1.1.jar",
           "AnalyzedBy": "jar"
@@ -3953,7 +3953,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/byte-buddy-1.18.15.jar",
           "AnalyzedBy": "jar"
@@ -3966,7 +3966,7 @@
           },
           "Version": "4.13.2",
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/antlr4-runtime-4.13.2.jar",
           "AnalyzedBy": "jar"
@@ -3982,7 +3982,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/log4j-api-2.25.5.jar",
           "AnalyzedBy": "jar"
@@ -3998,7 +3998,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar",
           "AnalyzedBy": "jar"
@@ -4014,7 +4014,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/tomcat-embed-core-11.0.27.jar",
           "AnalyzedBy": "jar"
@@ -4030,7 +4030,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/tomcat-embed-el-11.0.27.jar",
           "AnalyzedBy": "jar"
@@ -4046,7 +4046,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/tomcat-embed-websocket-11.0.27.jar",
           "AnalyzedBy": "jar"
@@ -4059,7 +4059,7 @@
           },
           "Version": "1.9.25.1",
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/aspectjweaver-1.9.25.1.jar",
           "AnalyzedBy": "jar"
@@ -4075,7 +4075,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/attoparser-2.0.7.RELEASE.jar",
           "AnalyzedBy": "jar"
@@ -4091,7 +4091,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/checker-qual-3.55.1.jar",
           "AnalyzedBy": "jar"
@@ -4107,7 +4107,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/angus-activation-2.0.3.jar",
           "AnalyzedBy": "jar"
@@ -4123,7 +4123,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jaxb-core-4.0.9.jar",
           "AnalyzedBy": "jar"
@@ -4139,7 +4139,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jaxb-runtime-4.0.9.jar",
           "AnalyzedBy": "jar"
@@ -4155,7 +4155,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/txw2-4.0.9.jar",
           "AnalyzedBy": "jar"
@@ -4172,7 +4172,7 @@
             "BSD-2-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/HdrHistogram-2.2.2.jar",
           "AnalyzedBy": "jar"
@@ -4188,7 +4188,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/hibernate-models-1.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4204,7 +4204,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/hibernate-validator-9.1.5.Final.jar",
           "AnalyzedBy": "jar"
@@ -4220,7 +4220,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/hibernate-core-7.4.13.Final.jar",
           "AnalyzedBy": "jar"
@@ -4236,7 +4236,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jboss-logging-3.6.3.Final.jar",
           "AnalyzedBy": "jar"
@@ -4252,7 +4252,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jspecify-1.0.1.jar",
           "AnalyzedBy": "jar"
@@ -4268,7 +4268,7 @@
             "BSD-2-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/postgresql-42.7.14.jar",
           "AnalyzedBy": "jar"
@@ -4284,7 +4284,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jul-to-slf4j-2.0.20.jar",
           "AnalyzedBy": "jar"
@@ -4300,7 +4300,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/slf4j-api-2.0.20.jar",
           "AnalyzedBy": "jar"
@@ -4316,7 +4316,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4332,7 +4332,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-actuator-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4348,7 +4348,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-actuator-autoconfigure-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4364,7 +4364,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-autoconfigure-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4380,7 +4380,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-cache-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4396,7 +4396,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-data-commons-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4412,7 +4412,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-data-jpa-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4428,7 +4428,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-health-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4444,7 +4444,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-hibernate-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4460,7 +4460,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-http-converter-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4476,7 +4476,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-jackson-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4492,7 +4492,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-jarmode-tools-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4508,7 +4508,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-jdbc-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4524,7 +4524,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-jpa-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4540,7 +4540,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-micrometer-metrics-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4556,7 +4556,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-micrometer-observation-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4572,9 +4572,25 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-persistence-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-security",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-security@4.1.2",
+            "UID": "5e3c32b7db52cac1"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
+          },
+          "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-security-4.1.2.jar",
           "AnalyzedBy": "jar"
         },
         {
@@ -4588,7 +4604,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-servlet-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4604,7 +4620,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-sql-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4620,7 +4636,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-thymeleaf-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4636,7 +4652,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-tomcat-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4652,7 +4668,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-transaction-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4668,7 +4684,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-validation-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4684,7 +4700,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-web-server-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4700,7 +4716,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-boot-webmvc-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4716,7 +4732,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-data-commons-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4732,7 +4748,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-data-jpa-4.1.2.jar",
           "AnalyzedBy": "jar"
@@ -4748,9 +4764,73 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-config",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-config@7.1.2",
+            "UID": "b36f347e61013c6a"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
+          },
+          "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-security-config-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-core@7.1.2",
+            "UID": "c52f4d6178072fab"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
+          },
+          "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-security-core-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-crypto",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-crypto@7.1.2",
+            "UID": "b6ce55e0e8b81c9c"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
+          },
+          "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-security-crypto-7.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.security:spring-security-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.security/spring-security-web@7.1.2",
+            "UID": "acb1c8261a32a87c"
+          },
+          "Version": "7.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Layer": {
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
+          },
+          "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-security-web-7.1.2.jar",
           "AnalyzedBy": "jar"
         },
         {
@@ -4765,7 +4845,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-aop-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4782,7 +4862,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-aspects-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4799,7 +4879,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-beans-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4816,7 +4896,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-context-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4833,7 +4913,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-context-support-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4850,7 +4930,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-core-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4867,7 +4947,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-expression-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4884,7 +4964,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-jdbc-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4901,7 +4981,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-orm-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4918,7 +4998,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-tx-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4935,7 +5015,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-web-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4952,7 +5032,7 @@
             "BSD-3-Clause"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/spring-webmvc-7.0.10.jar",
           "AnalyzedBy": "jar"
@@ -4965,7 +5045,7 @@
           },
           "Version": "3.1.5.RELEASE",
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/thymeleaf-3.1.5.RELEASE.jar",
           "AnalyzedBy": "jar"
@@ -4981,7 +5061,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/thymeleaf-spring6-3.1.5.RELEASE.jar",
           "AnalyzedBy": "jar"
@@ -4997,7 +5077,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/unbescape-1.1.6.RELEASE.jar",
           "AnalyzedBy": "jar"
@@ -5013,7 +5093,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/bootstrap-5.3.8.jar",
           "AnalyzedBy": "jar"
@@ -5029,7 +5109,7 @@
             "Openfont-1.1"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/font-awesome-4.7.0.jar",
           "AnalyzedBy": "jar"
@@ -5045,7 +5125,7 @@
             "MIT"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/webjars-locator-lite-1.1.3.jar",
           "AnalyzedBy": "jar"
@@ -5061,7 +5141,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/snakeyaml-2.6.jar",
           "AnalyzedBy": "jar"
@@ -5077,7 +5157,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jackson-core-3.1.7.jar",
           "AnalyzedBy": "jar"
@@ -5093,7 +5173,7 @@
             "Apache-2.0"
           ],
           "Layer": {
-            "DiffID": "sha256:b646485edd6aa361bc0ae2c9aca36ee41acbf1ba5ad73da7427592ec70305fb8"
+            "DiffID": "sha256:530a003fabaf213a55b369f2bf76f23ecf065d9ad4c50f36c8c97b4873cabbd1"
           },
           "FilePath": "app/petclinic.jar/BOOT-INF/lib/jackson-databind-3.1.7.jar",
           "AnalyzedBy": "jar"

@@ -21,7 +21,7 @@ spec:
         seccompProfile: {type: RuntimeDefault}
       containers:
         - name: petclinic
-          image: harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538
+          image: harbor.project10.internal:30443/project10/petclinic@sha256:ee5a2a4cbe36142deb5ba139d0b99d80c01333fcec00651746174de1e95940f5
           securityContext:
             runAsNonRoot: true
             readOnlyRootFilesystem: true
@@ -30,6 +30,7 @@ spec:
           ports: [{containerPort: 8080, name: http}]
           env:
             - {name: SPRING_PROFILES_ACTIVE, value: postgres}
+            - {name: SERVER_SERVLET_SESSION_COOKIE_SAME_SITE, value: lax}
             - {name: POSTGRES_URL, value: 'jdbc:postgresql://postgres:5432/petclinic'}
             - {name: POSTGRES_USER, value: petclinic}
             - name: POSTGRES_PASS
