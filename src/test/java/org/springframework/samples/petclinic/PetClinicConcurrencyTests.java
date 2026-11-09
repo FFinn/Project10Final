@@ -26,7 +26,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-public class PetClinicConcurrencyTests {
+class PetClinicConcurrencyTests {
 
 	@LocalServerPort
 	private int port;
@@ -38,7 +38,7 @@ public class PetClinicConcurrencyTests {
 	private RestTemplateBuilder restTemplateBuilder;
 
 	@Test
-	public void testDuplicatePetNameRaceConditionIsBlocked() throws Exception {
+	void testDuplicatePetNameRaceConditionIsBlocked() throws Exception {
 		int ownerId = 1;
 		Optional<Owner> initialOwnerOpt = ownerRepository.findById(ownerId);
 		assertThat(initialOwnerOpt).isPresent();

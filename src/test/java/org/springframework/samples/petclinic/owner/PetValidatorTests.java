@@ -48,11 +48,11 @@ class PetValidatorTests {
 
 	private Errors errors;
 
-	private static final String petName = "Buddy";
+	private static final String PET_NAME = "Buddy";
 
-	private static final String petTypeName = "Dog";
+	private static final String PET_TYPE_NAME = "Dog";
 
-	private static final LocalDate petBirthDate = LocalDate.of(1990, 1, 1);
+	private static final LocalDate PET_BIRTH_DATE = LocalDate.of(1990, 1, 1);
 
 	@BeforeEach
 	void setUp() {
@@ -74,10 +74,10 @@ class PetValidatorTests {
 
 	@Test
 	void validate() {
-		petType.setName(petTypeName);
-		pet.setName(petName);
+		petType.setName(PET_TYPE_NAME);
+		pet.setName(PET_NAME);
 		pet.setType(petType);
-		pet.setBirthDate(petBirthDate);
+		pet.setBirthDate(PET_BIRTH_DATE);
 
 		petValidator.validate(pet, errors);
 
@@ -89,10 +89,10 @@ class PetValidatorTests {
 
 		@Test
 		void validateWithInvalidPetName() {
-			petType.setName(petTypeName);
+			petType.setName(PET_TYPE_NAME);
 			pet.setName("");
 			pet.setType(petType);
-			pet.setBirthDate(petBirthDate);
+			pet.setBirthDate(PET_BIRTH_DATE);
 
 			petValidator.validate(pet, errors);
 
@@ -101,9 +101,9 @@ class PetValidatorTests {
 
 		@Test
 		void validateWithInvalidPetType() {
-			pet.setName(petName);
+			pet.setName(PET_NAME);
 			pet.setType(null);
-			pet.setBirthDate(petBirthDate);
+			pet.setBirthDate(PET_BIRTH_DATE);
 
 			petValidator.validate(pet, errors);
 
@@ -112,8 +112,8 @@ class PetValidatorTests {
 
 		@Test
 		void validateWithInvalidBirthDate() {
-			petType.setName(petTypeName);
-			pet.setName(petName);
+			petType.setName(PET_TYPE_NAME);
+			pet.setName(PET_NAME);
 			pet.setType(petType);
 			pet.setBirthDate(null);
 
@@ -124,10 +124,10 @@ class PetValidatorTests {
 
 		@Test
 		void validateWithLongPetName() {
-			petType.setName(petTypeName);
+			petType.setName(PET_TYPE_NAME);
 			pet.setName("A".repeat(31));
 			pet.setType(petType);
-			pet.setBirthDate(petBirthDate);
+			pet.setBirthDate(PET_BIRTH_DATE);
 
 			petValidator.validate(pet, errors);
 

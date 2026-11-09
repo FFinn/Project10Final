@@ -39,8 +39,9 @@ dependencies:
 sonarqube:
   stage: tests
   script:
-    - docker run --rm -e SONAR_TOKEN -e SONAR_HOST_URL -v "$CI_PROJECT_DIR:/work" -v project10-ci-sonar-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.qualitygate.wait=true -Dspring.docker.compose.enabled=false > reports/sonar-analysis.log 2>&1
+    - docker run --rm -e SONAR_TOKEN -e SONAR_HOST_URL -v "$CI_PROJECT_DIR:/work" -v project10-ci-sonar-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.projectName=Project10Final -Dsonar.qualitygate.wait=true -Dspring.docker.compose.enabled=false > reports/sonar-analysis.log 2>&1
     - cp target/site/jacoco/jacoco.xml reports/jacoco.xml
+    - python3 scripts/check-sonar.py
 
 build_publish:
   stage: build

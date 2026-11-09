@@ -48,6 +48,10 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @Controller
 class OwnerController {
 
+	private static final String LAST_NAME_FIELD = "lastName";
+
+	private static final String ERROR_ATTRIBUTE = "error";
+
 	private static final String VIEWS_OWNER_CREATE_OR_UPDATE_FORM = "owners/createOrUpdateOwnerForm";
 
 	private final OwnerRepository owners;
@@ -58,7 +62,7 @@ class OwnerController {
 
 	@InitBinder
 	public void setAllowedFields(WebDataBinder dataBinder) {
-		dataBinder.setAllowedFields("firstName", "lastName", "address", "city", "telephone");
+		dataBinder.setAllowedFields("firstName", LAST_NAME_FIELD, "address", "city", "telephone");
 	}
 
 	@ModelAttribute("owner")
@@ -78,7 +82,7 @@ class OwnerController {
 	public String processCreationForm(@Valid @ModelAttribute("owner") OwnerForm owner, BindingResult result,
 			RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
-			redirectAttributes.addFlashAttribute("error", "There was an error in creating the owner.");
+			redirectAttributes.addFlashAttribute(ERROR_ATTRIBUTE, "There was an error in creating the owner.");
 			return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
 		}
 
@@ -109,14 +113,14 @@ class OwnerController {
 		if (page < 1 || page > Math.max(ownersResults.getTotalPages(), 1)) {
 			redirectAttributes.addAttribute("page", 1);
 			if (!lastName.isEmpty()) {
-				redirectAttributes.addAttribute("lastName", lastName);
+				redirectAttributes.addAttribute(LAST_NAME_FIELD, lastName);
 			}
 			return "redirect:/owners";
 		}
 
 		if (ownersResults.isEmpty()) {
 			// no owners found
-			result.rejectValue("lastName", "notFound", "not found");
+			result.rejectValue(LAST_NAME_FIELD, "notFound", "not found");
 			return "owners/findOwners";
 		}
 
@@ -154,13 +158,13 @@ class OwnerController {
 	public String processUpdateOwnerForm(@Valid @ModelAttribute("owner") OwnerForm owner, BindingResult result,
 			@PathVariable("ownerId") int ownerId, RedirectAttributes redirectAttributes) {
 		if (result.hasErrors()) {
-			redirectAttributes.addFlashAttribute("error", "There was an error in updating the owner.");
+			redirectAttributes.addFlashAttribute(ERROR_ATTRIBUTE, "There was an error in updating the owner.");
 			return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
 		}
 
 		if (!Objects.equals(owner.getId(), ownerId)) {
 			result.rejectValue("id", "mismatch", "The owner ID in the form does not match the URL.");
-			redirectAttributes.addFlashAttribute("error", "Owner ID mismatch. Please try again.");
+			redirectAttributes.addFlashAttribute(ERROR_ATTRIBUTE, "Owner ID mismatch. Please try again.");
 			return "redirect:/owners/{ownerId}/edit";
 		}
 

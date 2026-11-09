@@ -48,6 +48,14 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 @RequestMapping("/owners/{ownerId}")
 class PetController {
 
+	private static final String BIRTH_DATE_FIELD = "birthDate";
+
+	private static final String OWNER_ATTRIBUTE = "owner";
+
+	private static final String DUPLICATE_ERROR = "duplicate";
+
+	private static final String DUPLICATE_MESSAGE = "already exists";
+
 	private static final String VIEWS_PETS_CREATE_OR_UPDATE_FORM = "pets/createOrUpdatePetForm";
 
 	private final OwnerRepository owners;
@@ -64,12 +72,11 @@ class PetController {
 		return this.types.findPetTypes();
 	}
 
-	@ModelAttribute("owner")
+	@ModelAttribute(OWNER_ATTRIBUTE)
 	public Owner findOwner(@PathVariable("ownerId") int ownerId) {
 		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
-		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
+		return optionalOwner.orElseThrow(() -> new IllegalArgumentException(
 				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
-		return owner;
 	}
 
 	@ModelAttribute("pet")
@@ -86,7 +93,7 @@ class PetController {
 		return new PetForm(Objects.requireNonNull(owner.getPet(petId), "Pet not found for owner"));
 	}
 
-	@InitBinder("owner")
+	@InitBinder(OWNER_ATTRIBUTE)
 	public void initOwnerBinder(WebDataBinder dataBinder) {
 		dataBinder.setAllowedFields("__no_request_fields__");
 	}
@@ -94,12 +101,12 @@ class PetController {
 	@InitBinder("pet")
 	public void initPetBinder(WebDataBinder dataBinder) {
 		dataBinder.setValidator(new PetValidator());
-		dataBinder.setAllowedFields("name", "birthDate", "type");
+		dataBinder.setAllowedFields("name", BIRTH_DATE_FIELD, "type");
 	}
 
 	@GetMapping("/pets/new")
 	public String initCreationForm(ModelMap model) {
-		Owner owner = (Owner) model.get("owner");
+		Owner owner = (Owner) model.get(OWNER_ATTRIBUTE);
 		Pet pet = new Pet();
 		owner.addPet(pet);
 		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
@@ -108,16 +115,16 @@ class PetController {
 	@PostMapping("/pets/new")
 	public String processCreationForm(@Valid @ModelAttribute("pet") PetForm form, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
-		Owner owner = (Owner) model.get("owner");
+		Owner owner = (Owner) model.get(OWNER_ATTRIBUTE);
 		Pet pet = form.toPet();
 
 		if (StringUtils.hasText(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null) {
-			result.rejectValue("name", "duplicate", "already exists");
+			result.rejectValue("name", DUPLICATE_ERROR, DUPLICATE_MESSAGE);
 		}
 
 		LocalDate currentDate = LocalDate.now();
 		if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(currentDate)) {
-			result.rejectValue("birthDate", "typeMismatch.birthDate");
+			result.rejectValue(BIRTH_DATE_FIELD, "typeMismatch.birthDate");
 		}
 
 		if (result.hasErrors()) {
@@ -132,7 +139,7 @@ class PetController {
 			if (!isDuplicatePetNameViolation(ex)) {
 				throw ex;
 			}
-			result.rejectValue("name", "duplicate", "already exists");
+			result.rejectValue("name", DUPLICATE_ERROR, DUPLICATE_MESSAGE);
 			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 		}
 		redirectAttributes.addFlashAttribute("message", "New Pet has been Added");
@@ -147,7 +154,7 @@ class PetController {
 	@PostMapping("/pets/{petId}/edit")
 	public String processUpdateForm(@Valid @ModelAttribute("pet") PetForm form, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
-		Owner owner = (Owner) model.get("owner");
+		Owner owner = (Owner) model.get(OWNER_ATTRIBUTE);
 		Pet pet = form.toPet();
 
 		String petName = pet.getName();
@@ -156,13 +163,13 @@ class PetController {
 		if (StringUtils.hasText(petName)) {
 			Pet existingPet = owner.getPet(petName, false);
 			if (existingPet != null && !Objects.equals(existingPet.getId(), pet.getId())) {
-				result.rejectValue("name", "duplicate", "already exists");
+				result.rejectValue("name", DUPLICATE_ERROR, DUPLICATE_MESSAGE);
 			}
 		}
 
 		LocalDate currentDate = LocalDate.now();
 		if (pet.getBirthDate() != null && pet.getBirthDate().isAfter(currentDate)) {
-			result.rejectValue("birthDate", "typeMismatch.birthDate");
+			result.rejectValue(BIRTH_DATE_FIELD, "typeMismatch.birthDate");
 		}
 
 		if (result.hasErrors()) {
@@ -176,7 +183,7 @@ class PetController {
 			if (!isDuplicatePetNameViolation(ex)) {
 				throw ex;
 			}
-			result.rejectValue("name", "duplicate", "already exists");
+			result.rejectValue("name", DUPLICATE_ERROR, DUPLICATE_MESSAGE);
 			return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 		}
 		redirectAttributes.addFlashAttribute("message", "Pet details has been edited");
