@@ -1,0 +1,47 @@
+apiVersion: batch/v1
+kind: Job
+metadata: {name: zap-baseline, namespace: default}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 900
+  template:
+    metadata:
+      labels: {security-scan: "true", app: zap}
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 1000
+        runAsGroup: 1000
+        fsGroup: 1000
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: zap
+          image: ghcr.io/zaproxy/zaproxy:stable
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities: {drop: [ALL]}
+          env:
+            - {name: HOME, value: /tmp}
+          command: [/bin/sh, -c]
+          args:
+            - |
+              zap-baseline.py -t http://petclinic:8080 -m 1 -J zap.json -r zap.html -z "-dir /tmp/zap" > /zap/wrk/run.log 2>&1
+              result=$?
+              echo "ZAP_RESULT_BEGIN"
+              cat /zap/wrk/zap.json
+              echo "ZAP_RESULT_END"
+              cat /zap/wrk/run.log
+              test "$result" -le 2
+          resources:
+            requests: {cpu: 200m, memory: 512Mi}
+            limits: {cpu: '1', memory: 1Gi}
+          volumeMounts:
+            - {name: tmp, mountPath: /tmp}
+            - {name: work, mountPath: /zap/wrk}
+      volumes:
+        - {name: tmp, emptyDir: {sizeLimit: 512Mi}}
+        - {name: work, emptyDir: {sizeLimit: 128Mi}}

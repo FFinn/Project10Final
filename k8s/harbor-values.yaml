@@ -1,0 +1,21 @@
+expose:
+  type: nodePort
+  tls:
+    enabled: true
+    certSource: secret
+    secret:
+      secretName: harbor-tls
+  nodePort:
+    ports:
+      https:
+        port: 443
+        nodePort: 30443
+externalURL: https://10.91.0.20:30443
+trivy:
+  enabled: true
+persistence:
+  persistentVolumeClaim:
+    registry:
+      size: 8Gi
+    trivy:
+      size: 5Gi

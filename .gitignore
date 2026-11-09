@@ -46,3 +46,10 @@ out/
 _site/
 *.css
 !petclinic.css
+
+# Локальные параметры доступа
+.env
+.env.*
+!.env.example
+.secrets/
+*.kubeconfig

@@ -1,0 +1,19 @@
+driver:
+  kind: modern_ebpf
+falco:
+  json_output: true
+  buffered_outputs: false
+customRules:
+  petclinic.yaml: |-
+    - rule: PetClinic write outside tmp
+      desc: Попытка открыть файл для записи вне временного каталога PetClinic
+      condition: >
+        container.id != host and container.name = "petclinic" and
+        evt.type in (open, openat, openat2) and evt.dir = < and
+        evt.is_open_write = true and
+        not (fs.path.name = "/tmp" or fs.path.name startswith "/tmp/")
+      output: >
+        PetClinic write outside tmp (file=%fs.path.name result=%evt.res
+        command=%proc.cmdline container=%container.id name=%container.name)
+      priority: WARNING
+      tags: [filesystem, petclinic]

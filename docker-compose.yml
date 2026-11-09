@@ -1,21 +1,48 @@
 services:
-  mysql:
-    image: mysql:9.7
+  app:
+    build: .
+    image: petclinic:local
+    user: "10001:10001"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges=true]
+    tmpfs: ["/tmp:rw,noexec,nosuid,size=128m,uid=10001,gid=10001"]
     ports:
-      - "3306:3306"
+      - "127.0.0.1:${APP_PORT:-8080}:8080"
     environment:
-      - MYSQL_ROOT_PASSWORD=
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
-      - MYSQL_USER=petclinic
-      - MYSQL_PASSWORD=petclinic
-      - MYSQL_DATABASE=petclinic
-    volumes:
-      - "./conf.d:/etc/mysql/conf.d:ro"
+      SPRING_PROFILES_ACTIVE: postgres
+      POSTGRES_URL: jdbc:postgresql://postgres:5432/petclinic
+      POSTGRES_USER: petclinic
+      POSTGRES_PASS: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health,info
+      MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS: never
+    depends_on:
+      postgres:
+        condition: service_healthy
+    mem_limit: 768m
+    pids_limit: 200
   postgres:
-    image: postgres:18.4
-    ports:
-      - "5432:5432"
+    image: postgres:17-alpine@sha256:3540c0362c809df084ffac0ae69fe794515f9de92692f02178bcdce0ef0302ac
+    user: "70:70"
+    read_only: true
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges=true]
     environment:
-      - POSTGRES_PASSWORD=petclinic
-      - POSTGRES_USER=petclinic
-      - POSTGRES_DB=petclinic
+      POSTGRES_DB: petclinic
+      POSTGRES_USER: petclinic
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}
+      PGDATA: /var/lib/postgresql/data/pgdata
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    tmpfs:
+      - /tmp:rw,noexec,nosuid,size=64m,uid=70,gid=70
+      - /var/run/postgresql:rw,noexec,nosuid,size=16m,uid=70,gid=70
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U petclinic -d petclinic"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    mem_limit: 512m
+    pids_limit: 100
+volumes:
+  postgres-data:

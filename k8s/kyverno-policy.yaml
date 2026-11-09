@@ -1,0 +1,41 @@
+apiVersion: kyverno.io/v1
+kind: ClusterPolicy
+metadata:
+  name: require-safe-containers-default
+spec:
+  validationFailureAction: Enforce
+  background: true
+  rules:
+    - name: require-container-security
+      match:
+        any:
+          - resources:
+              kinds: [Pod]
+              namespaces: [default]
+      validate:
+        message: "Каждый контейнер должен работать без root, повышения привилегий и записи в корневую файловую систему."
+        foreach:
+          - list: request.object.spec.containers
+            pattern:
+              securityContext:
+                runAsNonRoot: true
+                readOnlyRootFilesystem: true
+                allowPrivilegeEscalation: false
+                capabilities:
+                  drop: [ALL]
+          - list: request.object.spec.initContainers || `[]`
+            pattern:
+              securityContext:
+                runAsNonRoot: true
+                readOnlyRootFilesystem: true
+                allowPrivilegeEscalation: false
+                capabilities:
+                  drop: [ALL]
+          - list: request.object.spec.ephemeralContainers || `[]`
+            pattern:
+              securityContext:
+                runAsNonRoot: true
+                readOnlyRootFilesystem: true
+                allowPrivilegeEscalation: false
+                capabilities:
+                  drop: [ALL]

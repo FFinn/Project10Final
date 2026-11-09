@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: petclinic
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels: {app: petclinic}
+  template:
+    metadata:
+      labels: {app: petclinic}
+    spec:
+      automountServiceAccountToken: false
+      imagePullSecrets: [{name: harbor-pull}]
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: 10001
+        runAsGroup: 10001
+        fsGroup: 10001
+        seccompProfile: {type: RuntimeDefault}
+      containers:
+        - name: petclinic
+          image: HARBOR_IMAGE_DIGEST
+          securityContext:
+            runAsNonRoot: true
+            readOnlyRootFilesystem: true
+            allowPrivilegeEscalation: false
+            capabilities: {drop: [ALL]}
+          ports: [{containerPort: 8080, name: http}]
+          env:
+            - {name: SPRING_PROFILES_ACTIVE, value: postgres}
+            - {name: POSTGRES_URL, value: 'jdbc:postgresql://postgres:5432/petclinic'}
+            - {name: POSTGRES_USER, value: petclinic}
+            - name: POSTGRES_PASS
+              valueFrom:
+                secretKeyRef: {name: petclinic-db, key: password}
+            - {name: MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE, value: 'health,info'}
+            - {name: MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS, value: never}
+          resources:
+            requests: {cpu: 100m, memory: 384Mi}
+            limits: {cpu: '1', memory: 768Mi}
+          startupProbe:
+            httpGet: {path: /actuator/health, port: http}
+            periodSeconds: 5
+            failureThreshold: 36
+          readinessProbe:
+            httpGet: {path: /actuator/health, port: http}
+            periodSeconds: 10
+          livenessProbe:
+            httpGet: {path: /actuator/health, port: http}
+            periodSeconds: 20
+          volumeMounts: [{name: tmp, mountPath: /tmp}]
+      volumes:
+        - name: tmp
+          emptyDir: {medium: Memory, sizeLimit: 128Mi}
