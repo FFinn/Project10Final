@@ -1,0 +1,138 @@
+{
+  "started_at": "2026-11-09T10:23:13.549364+00:00",
+  "write_checks": [
+    {
+      "path": "/tmp/project10-allowed",
+      "exit_code": 0,
+      "stderr": ""
+    },
+    {
+      "path": "/app/project10-denied",
+      "exit_code": 1,
+      "stderr": "sh: can't create /app/project10-denied: Read-only file system\ncommand terminated with exit code 1"
+    }
+  ],
+  "events": [
+    {
+      "hostname": "fhm0sgjci93t2f9032bh",
+      "output": "10:23:14.671763432: Warning PetClinic write outside tmp (file=/app/project10-denied result=EROFS command=sh -c printf check > /app/project10-denied container=e6745ba30a5d name=petclinic) container_id=e6745ba30a5d container_name=petclinic container_image_repository=harbor.project10.internal:30443/project10/petclinic container_image_tag=60842dc05542b0b887de5e12d288c2d77ce34996bf3d144a4ed526ff9eee3b77 k8s_pod_name=petclinic-55d965cb9b-t96xf k8s_ns_name=default",
+      "output_fields": {
+        "container.id": "e6745ba30a5d",
+        "container.image.repository": "harbor.project10.internal:30443/project10/petclinic",
+        "container.image.tag": "60842dc05542b0b887de5e12d288c2d77ce34996bf3d144a4ed526ff9eee3b77",
+        "container.name": "petclinic",
+        "evt.res": "EROFS",
+        "evt.time": 1794219794671763432,
+        "fs.path.name": "/app/project10-denied",
+        "k8s.ns.name": "default",
+        "k8s.pod.name": "petclinic-55d965cb9b-t96xf",
+        "proc.cmdline": "sh -c printf check > /app/project10-denied"
+      },
+      "priority": "Warning",
+      "rule": "PetClinic write outside tmp",
+      "source": "syscall",
+      "tags": [
+        "filesystem",
+        "petclinic"
+      ],
+      "time": "2026-11-09T10:23:14.671763432Z"
+    },
+    {
+      "hostname": "fhm0sgjci93t2f9032bh",
+      "output": "10:23:17.445834658: Warning PetClinic write outside tmp (file=/proc/self/oom_score_adj result=SUCCESS command=6 init container=ee7461b04d77 name=petclinic) container_id=ee7461b04d77 container_name=petclinic container_image_repository=mirror.gcr.io/aquasec/trivy container_image_tag=0.76.1 k8s_pod_name=scan-vulnerabilityreport-5c557c458b-w9w5z k8s_ns_name=trivy-system",
+      "output_fields": {
+        "container.id": "ee7461b04d77",
+        "container.image.repository": "mirror.gcr.io/aquasec/trivy",
+        "container.image.tag": "0.76.1",
+        "container.name": "petclinic",
+        "evt.res": "SUCCESS",
+        "evt.time": 1794219797445834658,
+        "fs.path.name": "/proc/self/oom_score_adj",
+        "k8s.ns.name": "trivy-system",
+        "k8s.pod.name": "scan-vulnerabilityreport-5c557c458b-w9w5z",
+        "proc.cmdline": "6 init"
+      },
+      "priority": "Warning",
+      "rule": "PetClinic write outside tmp",
+      "source": "syscall",
+      "tags": [
+        "filesystem",
+        "petclinic"
+      ],
+      "time": "2026-11-09T10:23:17.445834658Z"
+    },
+    {
+      "hostname": "fhm0sgjci93t2f9032bh",
+      "output": "10:23:17.460684487: Warning PetClinic write outside tmp (file=/dev/null result=SUCCESS command=runc:[1:CHILD] init container=ee7461b04d77 name=petclinic) container_id=ee7461b04d77 container_name=petclinic container_image_repository=mirror.gcr.io/aquasec/trivy container_image_tag=0.76.1 k8s_pod_name=scan-vulnerabilityreport-5c557c458b-w9w5z k8s_ns_name=trivy-system",
+      "output_fields": {
+        "container.id": "ee7461b04d77",
+        "container.image.repository": "mirror.gcr.io/aquasec/trivy",
+        "container.image.tag": "0.76.1",
+        "container.name": "petclinic",
+        "evt.res": "SUCCESS",
+        "evt.time": 1794219797460684487,
+        "fs.path.name": "/dev/null",
+        "k8s.ns.name": "trivy-system",
+        "k8s.pod.name": "scan-vulnerabilityreport-5c557c458b-w9w5z",
+        "proc.cmdline": "runc:[1:CHILD] init"
+      },
+      "priority": "Warning",
+      "rule": "PetClinic write outside tmp",
+      "source": "syscall",
+      "tags": [
+        "filesystem",
+        "petclinic"
+      ],
+      "time": "2026-11-09T10:23:17.460684487Z"
+    },
+    {
+      "hostname": "fhm0sgjci93t2f9032bh",
+      "output": "10:23:17.460740482: Warning PetClinic write outside tmp (file=/proc/self/attr/apparmor/exec result=SUCCESS command=runc:[1:CHILD] init container=ee7461b04d77 name=petclinic) container_id=ee7461b04d77 container_name=petclinic container_image_repository=mirror.gcr.io/aquasec/trivy container_image_tag=0.76.1 k8s_pod_name=scan-vulnerabilityreport-5c557c458b-w9w5z k8s_ns_name=trivy-system",
+      "output_fields": {
+        "container.id": "ee7461b04d77",
+        "container.image.repository": "mirror.gcr.io/aquasec/trivy",
+        "container.image.tag": "0.76.1",
+        "container.name": "petclinic",
+        "evt.res": "SUCCESS",
+        "evt.time": 1794219797460740482,
+        "fs.path.name": "/proc/self/attr/apparmor/exec",
+        "k8s.ns.name": "trivy-system",
+        "k8s.pod.name": "scan-vulnerabilityreport-5c557c458b-w9w5z",
+        "proc.cmdline": "runc:[1:CHILD] init"
+      },
+      "priority": "Warning",
+      "rule": "PetClinic write outside tmp",
+      "source": "syscall",
+      "tags": [
+        "filesystem",
+        "petclinic"
+      ],
+      "time": "2026-11-09T10:23:17.460740482Z"
+    },
+    {
+      "hostname": "fhm0sgjci93t2f9032bh",
+      "output": "10:23:17.478528039: Warning PetClinic write outside tmp (file=/proc/self/fd/5 result=SUCCESS command=runc:[1:CHILD] init container=ee7461b04d77 name=petclinic) container_id=ee7461b04d77 container_name=petclinic container_image_repository=mirror.gcr.io/aquasec/trivy container_image_tag=0.76.1 k8s_pod_name=scan-vulnerabilityreport-5c557c458b-w9w5z k8s_ns_name=trivy-system",
+      "output_fields": {
+        "container.id": "ee7461b04d77",
+        "container.image.repository": "mirror.gcr.io/aquasec/trivy",
+        "container.image.tag": "0.76.1",
+        "container.name": "petclinic",
+        "evt.res": "SUCCESS",
+        "evt.time": 1794219797478528039,
+        "fs.path.name": "/proc/self/fd/5",
+        "k8s.ns.name": "trivy-system",
+        "k8s.pod.name": "scan-vulnerabilityreport-5c557c458b-w9w5z",
+        "proc.cmdline": "runc:[1:CHILD] init"
+      },
+      "priority": "Warning",
+      "rule": "PetClinic write outside tmp",
+      "source": "syscall",
+      "tags": [
+        "filesystem",
+        "petclinic"
+      ],
+      "time": "2026-11-09T10:23:17.478528039Z"
+    }
+  ],
+  "passed": true
+}

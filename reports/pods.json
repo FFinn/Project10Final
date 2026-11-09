@@ -1,0 +1,2029 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "58ad4494c17f1c2eafe35ecc54297e1aa85aef89484817d246bae7450bc9c155",
+                    "cni.projectcalico.org/podIP": "10.200.131.212/32",
+                    "cni.projectcalico.org/podIPs": "10.200.131.212/32"
+                },
+                "creationTimestamp": "2026-11-09T10:22:26Z",
+                "generateName": "petclinic-55d965cb9b-",
+                "labels": {
+                    "app": "petclinic",
+                    "pod-template-hash": "55d965cb9b"
+                },
+                "name": "petclinic-55d965cb9b-t96xf",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "ReplicaSet",
+                        "name": "petclinic-55d965cb9b",
+                        "uid": "e8ab1515-e4f9-4c50-97f0-258de54c6491"
+                    }
+                ],
+                "resourceVersion": "24938",
+                "uid": "52a14944-4fed-43a4-9baa-ab58283e0182"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "env": [
+                            {
+                                "name": "SPRING_PROFILES_ACTIVE",
+                                "value": "postgres"
+                            },
+                            {
+                                "name": "POSTGRES_URL",
+                                "value": "jdbc:postgresql://postgres:5432/petclinic"
+                            },
+                            {
+                                "name": "POSTGRES_USER",
+                                "value": "petclinic"
+                            },
+                            {
+                                "name": "POSTGRES_PASS",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "password",
+                                        "name": "petclinic-db"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE",
+                                "value": "health,info"
+                            },
+                            {
+                                "name": "MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS",
+                                "value": "never"
+                            }
+                        ],
+                        "image": "harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/actuator/health",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 20,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "name": "petclinic",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "name": "http",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/actuator/health",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "768Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "384Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "startupProbe": {
+                            "failureThreshold": 36,
+                            "httpGet": {
+                                "path": "/actuator/health",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "imagePullSecrets": [
+                    {
+                        "name": "harbor-pull"
+                    }
+                ],
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 10001,
+                    "runAsGroup": 10001,
+                    "runAsNonRoot": true,
+                    "runAsUser": 10001,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "128Mi"
+                        },
+                        "name": "tmp"
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:22:29Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:22:27Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:22:52Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:22:52Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:22:27Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://e6745ba30a5dce42138c6af32f2357321ec042c8e6486b86d1a891a1283c7ae0",
+                        "image": "sha256:60842dc05542b0b887de5e12d288c2d77ce34996bf3d144a4ed526ff9eee3b77",
+                        "imageID": "harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538",
+                        "lastState": {},
+                        "name": "petclinic",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2026-11-09T10:22:29Z"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.200.131.212",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.212"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T10:22:27Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "05aae8b23f97bb980ab5a4cacd9f6df87ffb8c83f39516f18e415c5bdadd29bc",
+                    "cni.projectcalico.org/podIP": "10.200.131.218/32",
+                    "cni.projectcalico.org/podIPs": "10.200.131.218/32"
+                },
+                "creationTimestamp": "2026-11-09T09:26:12Z",
+                "generateName": "postgres-",
+                "labels": {
+                    "app": "postgres",
+                    "apps.kubernetes.io/pod-index": "0",
+                    "controller-revision-hash": "postgres-6fb8975f5c",
+                    "statefulset.kubernetes.io/pod-name": "postgres-0"
+                },
+                "name": "postgres-0",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "StatefulSet",
+                        "name": "postgres",
+                        "uid": "ce3275a6-a15a-4a50-b7ad-5843366a5fc5"
+                    }
+                ],
+                "resourceVersion": "10204",
+                "uid": "d8684b3d-4189-4a39-a8e3-9ca3b9924fe1"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "env": [
+                            {
+                                "name": "POSTGRES_DB",
+                                "value": "petclinic"
+                            },
+                            {
+                                "name": "POSTGRES_USER",
+                                "value": "petclinic"
+                            },
+                            {
+                                "name": "PGDATA",
+                                "value": "/var/lib/postgresql/data/pgdata"
+                            },
+                            {
+                                "name": "POSTGRES_PASSWORD",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "password",
+                                        "name": "petclinic-db"
+                                    }
+                                }
+                            }
+                        ],
+                        "image": "postgres:17-alpine@sha256:3540c0362c809df084ffac0ae69fe794515f9de92692f02178bcdce0ef0302ac",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "postgres",
+                        "ports": [
+                            {
+                                "containerPort": 5432,
+                                "name": "postgres",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "exec": {
+                                "command": [
+                                    "pg_isready",
+                                    "-U",
+                                    "petclinic",
+                                    "-d",
+                                    "petclinic"
+                                ]
+                            },
+                            "failureThreshold": 3,
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "512Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "128Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "data"
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            },
+                            {
+                                "mountPath": "/var/run/postgresql",
+                                "name": "run"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "hostname": "postgres-0",
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 70,
+                    "runAsGroup": 70,
+                    "runAsNonRoot": true,
+                    "runAsUser": 70,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "subdomain": "postgres",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "name": "data",
+                        "persistentVolumeClaim": {
+                            "claimName": "data-postgres-0"
+                        }
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "64Mi"
+                        },
+                        "name": "tmp"
+                    },
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "16Mi"
+                        },
+                        "name": "run"
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:26:59Z",
+                        "status": "True",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:26:30Z",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:27:10Z",
+                        "status": "True",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:27:10Z",
+                        "status": "True",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:26:30Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://badc1f8fced43e7b684169307c1e38ea963b277d1294c3bc39fada19536cbb66",
+                        "image": "sha256:aac5ed9e090c8b3e134bf1dcf3f9fe0787a29cecdf7867de8b53b5d8abc3eef2",
+                        "imageID": "docker.io/library/postgres@sha256:3540c0362c809df084ffac0ae69fe794515f9de92692f02178bcdce0ef0302ac",
+                        "lastState": {},
+                        "name": "postgres",
+                        "ready": true,
+                        "restartCount": 0,
+                        "started": true,
+                        "state": {
+                            "running": {
+                                "startedAt": "2026-11-09T09:26:58Z"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/var/lib/postgresql/data",
+                                "name": "data"
+                            },
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            },
+                            {
+                                "mountPath": "/var/run/postgresql",
+                                "name": "run"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Running",
+                "podIP": "10.200.131.218",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.218"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T09:26:30Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "70424754538777c6571f885f1372b54c0f99f0a8e5c54a74ce3c1df38764d597",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{\"security-scan\":\"true\"},\"name\":\"verify-authorized-scanner\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:43:48Z",
+                "labels": {
+                    "security-scan": "true"
+                },
+                "name": "verify-authorized-scanner",
+                "namespace": "default",
+                "resourceVersion": "15376",
+                "uid": "da9fbd3e-5614-4c63-addc-89f7b724e2dd"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:38Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:43:48Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:37Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:37Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:43:48Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://43a46e5c321ebf8396d8ebbe4a77b595c23d40d75cafec1714cc4df382fe1ab5",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://43a46e5c321ebf8396d8ebbe4a77b595c23d40d75cafec1714cc4df382fe1ab5",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T09:46:36Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T09:46:23Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.251",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.251"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T09:43:48Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "60e9768ac3fd04114286f9c873a30c9a59414c85a8d179d452eabce996031e81",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{\"security-scan\":\"true\"},\"name\":\"verify-authorized-scanner-1794217991\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:53:11Z",
+                "labels": {
+                    "security-scan": "true"
+                },
+                "name": "verify-authorized-scanner-1794217991",
+                "namespace": "default",
+                "resourceVersion": "17243",
+                "uid": "09a34e7d-7c73-485b-bc95-0528270e6b79"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:27Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:11Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:26Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:26Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:11Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://e1c705975661892176df06e2b6b2b6df97f29e87adac5484a9e758a126f81247",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://e1c705975661892176df06e2b6b2b6df97f29e87adac5484a9e758a126f81247",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T09:53:26Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T09:53:12Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.205",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.205"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T09:53:11Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "111ca31961b2c85611fd03399e63009d75cb287ba049b0c3cf82a7ac396d5b50",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{\"security-scan\":\"true\"},\"name\":\"verify-authorized-scanner-1794218603\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T10:03:23Z",
+                "labels": {
+                    "security-scan": "true"
+                },
+                "name": "verify-authorized-scanner-1794218603",
+                "namespace": "default",
+                "resourceVersion": "20050",
+                "uid": "2dd98274-0712-44d2-85e9-c32dd4a065b4"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:48Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:25Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:47Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:47Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:24Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://1d80aaa427ed4e097d7a1f918d9d72391a14c1bc128e8b95ba9f8d66e45aa4cd",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://1d80aaa427ed4e097d7a1f918d9d72391a14c1bc128e8b95ba9f8d66e45aa4cd",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T10:03:43Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T10:03:30Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.221",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.221"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T10:03:25Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "b5d9e6aa9ef1258cf51d365cd755fc11febf0f11f8f2ae03095bd754a77212ce",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{\"security-scan\":\"true\"},\"name\":\"verify-authorized-scanner-1794219794\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T10:23:14Z",
+                "labels": {
+                    "security-scan": "true"
+                },
+                "name": "verify-authorized-scanner-1794219794",
+                "namespace": "default",
+                "resourceVersion": "25204",
+                "uid": "f9acc83c-49c9-4d83-a507-678d369a63d9"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('scanner_to_app', 'petclinic', 8080, True), ('scanner_to_postgres_denied', '10.98.59.176', 5432, False), ('scanner_external_egress_denied', '1.1.1.1', 443, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:32Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:14Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:31Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:31Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:14Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://c3572c2b3b0807dc186eec2610e3c12f290c3adbad86b9c63cbb8b5487d3f65c",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://c3572c2b3b0807dc186eec2610e3c12f290c3adbad86b9c63cbb8b5487d3f65c",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T10:23:30Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T10:23:16Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.207",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.207"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T10:23:14Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "aa697b2606f3aa1e050853e9f2407db42a011fa83db4e1ae951cea83c6ba6fcf",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{},\"name\":\"verify-isolated-pod\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:46:41Z",
+                "name": "verify-isolated-pod",
+                "namespace": "default",
+                "resourceVersion": "15490",
+                "uid": "71c58c23-2fa9-480f-981e-1261b9af4198"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:47:03Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:41Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:58Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:58Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:46:41Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://561804ae644fff62546945ff77646d69a646274184a9297a193ce80ebb61806a",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://561804ae644fff62546945ff77646d69a646274184a9297a193ce80ebb61806a",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T09:46:53Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T09:46:44Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.255",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.255"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T09:46:41Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "5fdf99fc2760ca202575bfce5dac8961421bcf77042c83c6cf2c6dbe1a4d82b3",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{},\"name\":\"verify-isolated-pod-1794218008\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:53:28Z",
+                "name": "verify-isolated-pod-1794218008",
+                "namespace": "default",
+                "resourceVersion": "17337",
+                "uid": "9d311d7a-3106-4937-b504-86f56e640af3"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:40Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:28Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:39Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:39Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T09:53:28Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://abc40d63f3caaafc9829cb6ad5a4ae3d60d07ae9313980ccacf5caec2e2a3922",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://abc40d63f3caaafc9829cb6ad5a4ae3d60d07ae9313980ccacf5caec2e2a3922",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T09:53:38Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T09:53:29Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.211",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.211"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T09:53:28Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "6ae5a6915c28cbeb983e6176dfb21649a709829b6f3c0b99046818b602f3eac7",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{},\"name\":\"verify-isolated-pod-1794218630\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T10:03:50Z",
+                "name": "verify-isolated-pod-1794218630",
+                "namespace": "default",
+                "resourceVersion": "20189",
+                "uid": "94504485-1f68-42ec-b2d4-c7bf8c36c3f9"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:04:11Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:50Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:04:08Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:04:08Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:03:50Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://d7d93f26f18008271186f0f575da4015e7ea0a3ad669144c499f840c9ecf4e0e",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://d7d93f26f18008271186f0f575da4015e7ea0a3ad669144c499f840c9ecf4e0e",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T10:04:01Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T10:03:51Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.222",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.222"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T10:03:50Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "cd98196097ca2e43ea405e4b8d107c3b44437130b066fa47ccbaecc06c31ae3e",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": "",
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"v1\",\"kind\":\"Pod\",\"metadata\":{\"annotations\":{},\"labels\":{},\"name\":\"verify-isolated-pod-1794219814\",\"namespace\":\"default\"},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"command\":[\"python\",\"-c\",\"import socket,json,urllib.request\\nchecks=[]\\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\\n try:\\n  with socket.create_connection((host,port),timeout=4): pass\\n  connected=True\\n except OSError:\\n  connected=False\\n checks.append({\\\"check\\\":label,\\\"host\\\":host,\\\"port\\\":port,\\\"expected_access\\\":allowed,\\\"connected\\\":connected,\\\"passed\\\":connected==allowed})\\nprint(json.dumps(checks),flush=True)\\nraise SystemExit(0 if all(x[\\\"passed\\\"] for x in checks) else 1)\\n\"],\"image\":\"python:3.12-alpine\",\"name\":\"probe\",\"resources\":{\"limits\":{\"cpu\":\"100m\",\"memory\":\"64Mi\"},\"requests\":{\"cpu\":\"25m\",\"memory\":\"32Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true}}],\"restartPolicy\":\"Never\",\"securityContext\":{\"runAsNonRoot\":true,\"runAsUser\":1000,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}}}}\n"
+                },
+                "creationTimestamp": "2026-11-09T10:23:34Z",
+                "name": "verify-isolated-pod-1794219814",
+                "namespace": "default",
+                "resourceVersion": "25337",
+                "uid": "36929a4d-a50e-4851-ae5f-d0c9b55775a6"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "command": [
+                            "python",
+                            "-c",
+                            "import socket,json,urllib.request\nchecks=[]\nfor label,host,port,allowed in [('unlabeled_pod_to_app_denied', '10.107.238.249', 8080, False)]:\n try:\n  with socket.create_connection((host,port),timeout=4): pass\n  connected=True\n except OSError:\n  connected=False\n checks.append({\"check\":label,\"host\":host,\"port\":port,\"expected_access\":allowed,\"connected\":connected,\"passed\":connected==allowed})\nprint(json.dumps(checks),flush=True)\nraise SystemExit(0 if all(x[\"passed\"] for x in checks) else 1)\n"
+                        ],
+                        "image": "python:3.12-alpine",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "probe",
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "64Mi"
+                            },
+                            "requests": {
+                                "cpu": "25m",
+                                "memory": "32Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File"
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:57Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:34Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:50Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:50Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:34Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://0fdf7a7917e8283f1a6248a63c0ea8079c3b2da7f468fd3991f8e2c182f84d01",
+                        "image": "docker.io/library/python:3.12-alpine",
+                        "imageID": "docker.io/library/python@sha256:e064671ca452259bab50e8e2c7bd896e39e9a343bb06ca25234adf6fe18d0fc7",
+                        "lastState": {},
+                        "name": "probe",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://0fdf7a7917e8283f1a6248a63c0ea8079c3b2da7f468fd3991f8e2c182f84d01",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T10:23:45Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T10:23:35Z"
+                            }
+                        }
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.239",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.239"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T10:23:34Z"
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Pod",
+            "metadata": {
+                "annotations": {
+                    "cni.projectcalico.org/containerID": "4e195df420f3f516a0bdc472269ec055ff900d61f4dc3d5b3d0e8a36709546c9",
+                    "cni.projectcalico.org/podIP": "",
+                    "cni.projectcalico.org/podIPs": ""
+                },
+                "creationTimestamp": "2026-11-09T10:23:14Z",
+                "generateName": "zap-baseline-",
+                "labels": {
+                    "app": "zap",
+                    "batch.kubernetes.io/controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f",
+                    "batch.kubernetes.io/job-name": "zap-baseline",
+                    "controller-uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f",
+                    "job-name": "zap-baseline",
+                    "security-scan": "true"
+                },
+                "name": "zap-baseline-tcj5k",
+                "namespace": "default",
+                "ownerReferences": [
+                    {
+                        "apiVersion": "batch/v1",
+                        "blockOwnerDeletion": true,
+                        "controller": true,
+                        "kind": "Job",
+                        "name": "zap-baseline",
+                        "uid": "0a8740dd-6fbc-48d1-9705-6a9575c8079f"
+                    }
+                ],
+                "resourceVersion": "25365",
+                "uid": "0f69d462-6c7b-42b0-8b74-40eab4d72e40"
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "args": [
+                            "zap-baseline.py -t http://petclinic:8080 -m 1 -J zap.json -r zap.html -z \"-dir /tmp/zap -silent\" \u003e /zap/wrk/run.log 2\u003e\u00261\nresult=$?\necho \"ZAP_RESULT_BEGIN\"\ncat /zap/wrk/zap.json\necho \"ZAP_RESULT_END\"\ncat /zap/wrk/run.log\ntest \"$result\" -le 2\n"
+                        ],
+                        "command": [
+                            "/bin/sh",
+                            "-c"
+                        ],
+                        "env": [
+                            {
+                                "name": "HOME",
+                                "value": "/tmp"
+                            },
+                            {
+                                "name": "JAVA_OPTS",
+                                "value": "-Xmx512m"
+                            }
+                        ],
+                        "image": "ghcr.io/zaproxy/zaproxy:stable",
+                        "imagePullPolicy": "IfNotPresent",
+                        "name": "zap",
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "1Gi"
+                            },
+                            "requests": {
+                                "cpu": "200m",
+                                "memory": "512Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            },
+                            {
+                                "mountPath": "/zap/wrk",
+                                "name": "work"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "enableServiceLinks": true,
+                "nodeName": "fhm0sgjci93t2f9032bh",
+                "preemptionPolicy": "PreemptLowerPriority",
+                "priority": 0,
+                "restartPolicy": "Never",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 1000,
+                    "runAsGroup": 1000,
+                    "runAsNonRoot": true,
+                    "runAsUser": 1000,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "serviceAccount": "default",
+                "serviceAccountName": "default",
+                "terminationGracePeriodSeconds": 30,
+                "tolerations": [
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "effect": "NoExecute",
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "volumes": [
+                    {
+                        "emptyDir": {
+                            "sizeLimit": "512Mi"
+                        },
+                        "name": "tmp"
+                    },
+                    {
+                        "emptyDir": {
+                            "sizeLimit": "128Mi"
+                        },
+                        "name": "work"
+                    }
+                ]
+            },
+            "status": {
+                "conditions": [
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:24:02Z",
+                        "status": "False",
+                        "type": "PodReadyToStartContainers"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:14Z",
+                        "reason": "PodCompleted",
+                        "status": "True",
+                        "type": "Initialized"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:58Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "Ready"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:58Z",
+                        "reason": "PodCompleted",
+                        "status": "False",
+                        "type": "ContainersReady"
+                    },
+                    {
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2026-11-09T10:23:14Z",
+                        "status": "True",
+                        "type": "PodScheduled"
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "containerID": "containerd://6b7a2c86d9f579d8a8eeeb0524cd3882d8baea0a6d2f96672cf48f19f3a7896d",
+                        "image": "ghcr.io/zaproxy/zaproxy:stable",
+                        "imageID": "ghcr.io/zaproxy/zaproxy@sha256:9624669db72f54d86c4b46a7064518bd9bf79d8c61a4c31befa9923489f328af",
+                        "lastState": {},
+                        "name": "zap",
+                        "ready": false,
+                        "restartCount": 0,
+                        "started": false,
+                        "state": {
+                            "terminated": {
+                                "containerID": "containerd://6b7a2c86d9f579d8a8eeeb0524cd3882d8baea0a6d2f96672cf48f19f3a7896d",
+                                "exitCode": 0,
+                                "finishedAt": "2026-11-09T10:23:52Z",
+                                "reason": "Completed",
+                                "startedAt": "2026-11-09T10:23:15Z"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            },
+                            {
+                                "mountPath": "/zap/wrk",
+                                "name": "work"
+                            }
+                        ]
+                    }
+                ],
+                "hostIP": "10.91.0.20",
+                "hostIPs": [
+                    {
+                        "ip": "10.91.0.20"
+                    }
+                ],
+                "phase": "Succeeded",
+                "podIP": "10.200.131.200",
+                "podIPs": [
+                    {
+                        "ip": "10.200.131.200"
+                    }
+                ],
+                "qosClass": "Burstable",
+                "startTime": "2026-11-09T10:23:14Z"
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

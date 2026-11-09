@@ -1,0 +1,281 @@
+{
+    "apiVersion": "v1",
+    "items": [
+        {
+            "apiVersion": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"default-deny\",\"namespace\":\"default\"},\"spec\":{\"podSelector\":{},\"policyTypes\":[\"Ingress\",\"Egress\"]}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:26:12Z",
+                "generation": 1,
+                "name": "default-deny",
+                "namespace": "default",
+                "resourceVersion": "9909",
+                "uid": "6766e227-f6a0-4d04-8830-3ec869552db4"
+            },
+            "spec": {
+                "podSelector": {},
+                "policyTypes": [
+                    "Ingress",
+                    "Egress"
+                ]
+            }
+        },
+        {
+            "apiVersion": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"ingress-to-petclinic\",\"namespace\":\"default\"},\"spec\":{\"ingress\":[{\"from\":[{\"namespaceSelector\":{\"matchLabels\":{\"kubernetes.io/metadata.name\":\"ingress-nginx\"}},\"podSelector\":{\"matchLabels\":{\"app.kubernetes.io/component\":\"controller\"}}}],\"ports\":[{\"port\":8080,\"protocol\":\"TCP\"}]},{\"from\":[{\"podSelector\":{\"matchLabels\":{\"security-scan\":\"true\"}}}],\"ports\":[{\"port\":8080,\"protocol\":\"TCP\"}]}],\"podSelector\":{\"matchLabels\":{\"app\":\"petclinic\"}},\"policyTypes\":[\"Ingress\"]}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:26:12Z",
+                "generation": 1,
+                "name": "ingress-to-petclinic",
+                "namespace": "default",
+                "resourceVersion": "9911",
+                "uid": "c084ad83-2930-4126-987b-a847a558e029"
+            },
+            "spec": {
+                "ingress": [
+                    {
+                        "from": [
+                            {
+                                "namespaceSelector": {
+                                    "matchLabels": {
+                                        "kubernetes.io/metadata.name": "ingress-nginx"
+                                    }
+                                },
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "app.kubernetes.io/component": "controller"
+                                    }
+                                }
+                            }
+                        ],
+                        "ports": [
+                            {
+                                "port": 8080,
+                                "protocol": "TCP"
+                            }
+                        ]
+                    },
+                    {
+                        "from": [
+                            {
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "security-scan": "true"
+                                    }
+                                }
+                            }
+                        ],
+                        "ports": [
+                            {
+                                "port": 8080,
+                                "protocol": "TCP"
+                            }
+                        ]
+                    }
+                ],
+                "podSelector": {
+                    "matchLabels": {
+                        "app": "petclinic"
+                    }
+                },
+                "policyTypes": [
+                    "Ingress"
+                ]
+            }
+        },
+        {
+            "apiVersion": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"petclinic-egress\",\"namespace\":\"default\"},\"spec\":{\"egress\":[{\"ports\":[{\"port\":5432,\"protocol\":\"TCP\"}],\"to\":[{\"podSelector\":{\"matchLabels\":{\"app\":\"postgres\"}}}]},{\"ports\":[{\"port\":53,\"protocol\":\"UDP\"},{\"port\":53,\"protocol\":\"TCP\"}],\"to\":[{\"namespaceSelector\":{\"matchLabels\":{\"kubernetes.io/metadata.name\":\"kube-system\"}},\"podSelector\":{\"matchLabels\":{\"k8s-app\":\"kube-dns\"}}}]}],\"podSelector\":{\"matchLabels\":{\"app\":\"petclinic\"}},\"policyTypes\":[\"Egress\"]}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:26:12Z",
+                "generation": 1,
+                "name": "petclinic-egress",
+                "namespace": "default",
+                "resourceVersion": "9915",
+                "uid": "7fa0326f-d68f-45b4-ad97-3b5374dd1458"
+            },
+            "spec": {
+                "egress": [
+                    {
+                        "ports": [
+                            {
+                                "port": 5432,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "to": [
+                            {
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "app": "postgres"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "ports": [
+                            {
+                                "port": 53,
+                                "protocol": "UDP"
+                            },
+                            {
+                                "port": 53,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "to": [
+                            {
+                                "namespaceSelector": {
+                                    "matchLabels": {
+                                        "kubernetes.io/metadata.name": "kube-system"
+                                    }
+                                },
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "k8s-app": "kube-dns"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "podSelector": {
+                    "matchLabels": {
+                        "app": "petclinic"
+                    }
+                },
+                "policyTypes": [
+                    "Egress"
+                ]
+            }
+        },
+        {
+            "apiVersion": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"postgres-ingress\",\"namespace\":\"default\"},\"spec\":{\"ingress\":[{\"from\":[{\"podSelector\":{\"matchLabels\":{\"app\":\"petclinic\"}}}],\"ports\":[{\"port\":5432,\"protocol\":\"TCP\"}]}],\"podSelector\":{\"matchLabels\":{\"app\":\"postgres\"}},\"policyTypes\":[\"Ingress\"]}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:26:12Z",
+                "generation": 1,
+                "name": "postgres-ingress",
+                "namespace": "default",
+                "resourceVersion": "9916",
+                "uid": "2896e10c-78c1-4591-8428-b608f1fb08eb"
+            },
+            "spec": {
+                "ingress": [
+                    {
+                        "from": [
+                            {
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "app": "petclinic"
+                                    }
+                                }
+                            }
+                        ],
+                        "ports": [
+                            {
+                                "port": 5432,
+                                "protocol": "TCP"
+                            }
+                        ]
+                    }
+                ],
+                "podSelector": {
+                    "matchLabels": {
+                        "app": "postgres"
+                    }
+                },
+                "policyTypes": [
+                    "Ingress"
+                ]
+            }
+        },
+        {
+            "apiVersion": "networking.k8s.io/v1",
+            "kind": "NetworkPolicy",
+            "metadata": {
+                "annotations": {
+                    "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"networking.k8s.io/v1\",\"kind\":\"NetworkPolicy\",\"metadata\":{\"annotations\":{},\"name\":\"scanner-egress\",\"namespace\":\"default\"},\"spec\":{\"egress\":[{\"ports\":[{\"port\":8080,\"protocol\":\"TCP\"}],\"to\":[{\"podSelector\":{\"matchLabels\":{\"app\":\"petclinic\"}}}]},{\"ports\":[{\"port\":53,\"protocol\":\"UDP\"},{\"port\":53,\"protocol\":\"TCP\"}],\"to\":[{\"namespaceSelector\":{\"matchLabels\":{\"kubernetes.io/metadata.name\":\"kube-system\"}},\"podSelector\":{\"matchLabels\":{\"k8s-app\":\"kube-dns\"}}}]}],\"podSelector\":{\"matchLabels\":{\"security-scan\":\"true\"}},\"policyTypes\":[\"Egress\"]}}\n"
+                },
+                "creationTimestamp": "2026-11-09T09:26:12Z",
+                "generation": 1,
+                "name": "scanner-egress",
+                "namespace": "default",
+                "resourceVersion": "9917",
+                "uid": "8ebca8cd-08c6-4b5b-a609-73644be62887"
+            },
+            "spec": {
+                "egress": [
+                    {
+                        "ports": [
+                            {
+                                "port": 8080,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "to": [
+                            {
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "app": "petclinic"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "ports": [
+                            {
+                                "port": 53,
+                                "protocol": "UDP"
+                            },
+                            {
+                                "port": 53,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "to": [
+                            {
+                                "namespaceSelector": {
+                                    "matchLabels": {
+                                        "kubernetes.io/metadata.name": "kube-system"
+                                    }
+                                },
+                                "podSelector": {
+                                    "matchLabels": {
+                                        "k8s-app": "kube-dns"
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ],
+                "podSelector": {
+                    "matchLabels": {
+                        "security-scan": "true"
+                    }
+                },
+                "policyTypes": [
+                    "Egress"
+                ]
+            }
+        }
+    ],
+    "kind": "List",
+    "metadata": {
+        "resourceVersion": ""
+    }
+}

@@ -1,0 +1,3258 @@
+{
+  "SchemaVersion": 2,
+  "Trivy": {
+    "Version": "0.76.2"
+  },
+  "ReportID": "01a1bfcf-c344-7620-b618-7e96f4f9f124",
+  "CreatedAt": "2026-11-09T10:17:06.628406584Z",
+  "ArtifactName": "/work/target",
+  "ArtifactType": "filesystem",
+  "Results": [
+    {
+      "Target": "Java",
+      "Class": "lang-pkgs",
+      "Type": "jar",
+      "Packages": [
+        {
+          "Name": "ch.qos.logback:logback-classic",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-classic@1.5.38",
+            "UID": "c912c7d918c6696a"
+          },
+          "Version": "1.5.38",
+          "Licenses": [
+            "EPL-2.0",
+            "LGPL-2.1-only"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/logback-classic-1.5.38.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "ch.qos.logback:logback-classic:1.5.38",
+          "Name": "ch.qos.logback:logback-classic",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-classic@1.5.38?type=jar",
+            "UID": "eed3e9f693252d5a",
+            "BOMRef": "pkg:maven/ch.qos.logback/logback-classic@1.5.38?type=jar"
+          },
+          "Version": "1.5.38",
+          "Licenses": [
+            "EPL-2.0",
+            "LGPL-2.1-only"
+          ],
+          "DependsOn": [
+            "ch.qos.logback:logback-core:1.5.38",
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:558314a8784c6dd39cc18670303457cf",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "ch.qos.logback:logback-core",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-core@1.5.38",
+            "UID": "974a428e2250acf2"
+          },
+          "Version": "1.5.38",
+          "Licenses": [
+            "EPL-2.0",
+            "LGPL-2.1-only"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/logback-core-1.5.38.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "ch.qos.logback:logback-core:1.5.38",
+          "Name": "ch.qos.logback:logback-core",
+          "Identifier": {
+            "PURL": "pkg:maven/ch.qos.logback/logback-core@1.5.38?type=jar",
+            "UID": "1e1d759d8bdf6ab7",
+            "BOMRef": "pkg:maven/ch.qos.logback/logback-core@1.5.38?type=jar"
+          },
+          "Version": "1.5.38",
+          "Licenses": [
+            "EPL-2.0",
+            "LGPL-2.1-only"
+          ],
+          "Digest": "md5:a065b3893602a19f6f393a42c499c198",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21",
+            "UID": "be123b51e38bb139"
+          },
+          "Version": "2.21",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jackson-annotations-2.21.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.fasterxml.jackson.core:jackson-annotations:2.21",
+          "Name": "com.fasterxml.jackson.core:jackson-annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar",
+            "UID": "132a53140b5e69c3",
+            "BOMRef": "pkg:maven/com.fasterxml.jackson.core/jackson-annotations@2.21?type=jar"
+          },
+          "Version": "2.21",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:e0d0c3e7300954f73e43c67d933aaea4",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.fasterxml:classmate",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml/classmate@1.7.3",
+            "UID": "7f86bbb035bd4685"
+          },
+          "Version": "1.7.3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/classmate-1.7.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.fasterxml:classmate:1.7.3",
+          "Name": "com.fasterxml:classmate",
+          "Identifier": {
+            "PURL": "pkg:maven/com.fasterxml/classmate@1.7.3?type=jar",
+            "UID": "a99cfb5f843c849a",
+            "BOMRef": "pkg:maven/com.fasterxml/classmate@1.7.3?type=jar"
+          },
+          "Version": "1.7.3",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:d1a4a85ab782827adfa82772e3b5f483",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.github.ben-manes.caffeine:caffeine",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.ben-manes.caffeine/caffeine@3.2.4",
+            "UID": "3331a3ec0543e1a1"
+          },
+          "Version": "3.2.4",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/caffeine-3.2.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.github.ben-manes.caffeine:caffeine:3.2.4",
+          "Name": "com.github.ben-manes.caffeine:caffeine",
+          "Identifier": {
+            "PURL": "pkg:maven/com.github.ben-manes.caffeine/caffeine@3.2.4?type=jar",
+            "UID": "a218cd480aefc0f2",
+            "BOMRef": "pkg:maven/com.github.ben-manes.caffeine/caffeine@3.2.4?type=jar"
+          },
+          "Version": "3.2.4",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.jspecify:jspecify:1.0.1",
+            "com.google.errorprone:error_prone_annotations:2.49.0"
+          ],
+          "Digest": "md5:04d655feb58be297a86fa2814a1f1ef8",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.49.0",
+            "UID": "8fe9c488c9278a77"
+          },
+          "Version": "2.49.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/error_prone_annotations-2.49.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.google.errorprone:error_prone_annotations:2.49.0",
+          "Name": "com.google.errorprone:error_prone_annotations",
+          "Identifier": {
+            "PURL": "pkg:maven/com.google.errorprone/error_prone_annotations@2.49.0?type=jar",
+            "UID": "fd589474667d1ad",
+            "BOMRef": "pkg:maven/com.google.errorprone/error_prone_annotations@2.49.0?type=jar"
+          },
+          "Version": "2.49.0",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:f15f20dc5df752e2c0f8e37f7cdd9b1d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.h2database:h2",
+          "Identifier": {
+            "PURL": "pkg:maven/com.h2database/h2@2.4.240",
+            "UID": "77de47c5c0a1e08f"
+          },
+          "Version": "2.4.240",
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/h2-2.4.240.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.h2database:h2:2.4.240",
+          "Name": "com.h2database:h2",
+          "Identifier": {
+            "PURL": "pkg:maven/com.h2database/h2@2.4.240?type=jar",
+            "UID": "408e33917017c5f6",
+            "BOMRef": "pkg:maven/com.h2database/h2@2.4.240?type=jar"
+          },
+          "Version": "2.4.240",
+          "Licenses": [
+            "MPL-2.0",
+            "EPL-1.0"
+          ],
+          "Digest": "md5:fb14a47b07dfd4381a608d3adb89dc25",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.mysql:mysql-connector-j",
+          "Identifier": {
+            "PURL": "pkg:maven/com.mysql/mysql-connector-j@9.7.0",
+            "UID": "d47976bf3c4f4153"
+          },
+          "Version": "9.7.0",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause",
+            "EPL-1.0",
+            "GPL-2.0-only",
+            "LGPL-2.1-only",
+            "Unicode-DFS-2015"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/mysql-connector-j-9.7.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.mysql:mysql-connector-j:9.7.0",
+          "Name": "com.mysql:mysql-connector-j",
+          "Identifier": {
+            "PURL": "pkg:maven/com.mysql/mysql-connector-j@9.7.0?type=jar",
+            "UID": "cb1ca16113c0a3d4",
+            "BOMRef": "pkg:maven/com.mysql/mysql-connector-j@9.7.0?type=jar"
+          },
+          "Version": "9.7.0",
+          "Licenses": [
+            "The GNU General Public License, v2 with Universal FOSS Exception, v1.0"
+          ],
+          "Digest": "md5:07479bc6b6870cede56d0f192603c3f9",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.sun.istack:istack-commons-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2",
+            "UID": "ae42e1674edff4c5"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/istack-commons-runtime-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.sun.istack:istack-commons-runtime:4.1.2",
+          "Name": "com.sun.istack:istack-commons-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2?type=jar",
+            "UID": "83656984b9f56872",
+            "BOMRef": "pkg:maven/com.sun.istack/istack-commons-runtime@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Digest": "md5:535154ef647af2a52478c4debec93659",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "com.zaxxer:HikariCP",
+          "Identifier": {
+            "PURL": "pkg:maven/com.zaxxer/HikariCP@7.0.2",
+            "UID": "3eeda1ba6899677"
+          },
+          "Version": "7.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/HikariCP-7.0.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "com.zaxxer:HikariCP:7.0.2",
+          "Name": "com.zaxxer:HikariCP",
+          "Identifier": {
+            "PURL": "pkg:maven/com.zaxxer/HikariCP@7.0.2?type=jar",
+            "UID": "691cf092c778f437",
+            "BOMRef": "pkg:maven/com.zaxxer/HikariCP@7.0.2?type=jar"
+          },
+          "Version": "7.0.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:c36937c742c20cbdc7bcb47019e33151",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.3.6",
+            "UID": "895c73db441cbfd8"
+          },
+          "Version": "1.3.6",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/commons-logging-1.3.6.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "commons-logging:commons-logging:1.3.6",
+          "Name": "commons-logging:commons-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/commons-logging/commons-logging@1.3.6?type=jar",
+            "UID": "58df36a5d2962f78",
+            "BOMRef": "pkg:maven/commons-logging/commons-logging@1.3.6?type=jar"
+          },
+          "Version": "1.3.6",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:fe0ccbe8971fed954a0ad6528fe3ef24",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "io.micrometer:micrometer-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-commons@1.17.2",
+            "UID": "dafb02355d203914"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/micrometer-commons-1.17.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "io.micrometer:micrometer-commons:1.17.2",
+          "Name": "io.micrometer:micrometer-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-commons@1.17.2?type=jar",
+            "UID": "54da8ec0b1af53e3",
+            "BOMRef": "pkg:maven/io.micrometer/micrometer-commons@1.17.2?type=jar"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.jspecify:jspecify:1.0.1"
+          ],
+          "Digest": "md5:755b78d949ed4fbb396494d14658a7b9",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "io.micrometer:micrometer-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-core@1.17.2",
+            "UID": "c0403481c92f668c"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/micrometer-core-1.17.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "io.micrometer:micrometer-core:1.17.2",
+          "Name": "io.micrometer:micrometer-core",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-core@1.17.2?type=jar",
+            "UID": "7b02fd86981e01ab",
+            "BOMRef": "pkg:maven/io.micrometer/micrometer-core@1.17.2?type=jar"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.jspecify:jspecify:1.0.1",
+            "io.micrometer:micrometer-commons:1.17.2",
+            "io.micrometer:micrometer-observation:1.17.2",
+            "org.hdrhistogram:HdrHistogram:2.2.2"
+          ],
+          "Digest": "md5:7ac535cc2a2a99905dcd10d791977d00",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "io.micrometer:micrometer-jakarta9",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2",
+            "UID": "2a6faf27429aa830"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/micrometer-jakarta9-1.17.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "io.micrometer:micrometer-jakarta9:1.17.2",
+          "Name": "io.micrometer:micrometer-jakarta9",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2?type=jar",
+            "UID": "73ea46a0baad8bf5",
+            "BOMRef": "pkg:maven/io.micrometer/micrometer-jakarta9@1.17.2?type=jar"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.jspecify:jspecify:1.0.1",
+            "io.micrometer:micrometer-core:1.17.2",
+            "io.micrometer:micrometer-commons:1.17.2",
+            "io.micrometer:micrometer-observation:1.17.2"
+          ],
+          "Digest": "md5:518f6eda205839a34ee661d77ae1d7c9",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "io.micrometer:micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-observation@1.17.2",
+            "UID": "3d7f4c28847ae050"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/micrometer-observation-1.17.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "io.micrometer:micrometer-observation:1.17.2",
+          "Name": "io.micrometer:micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/io.micrometer/micrometer-observation@1.17.2?type=jar",
+            "UID": "6406c6df4658b297",
+            "BOMRef": "pkg:maven/io.micrometer/micrometer-observation@1.17.2?type=jar"
+          },
+          "Version": "1.17.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.jspecify:jspecify:1.0.1",
+            "io.micrometer:micrometer-commons:1.17.2"
+          ],
+          "Digest": "md5:3ab8f7e74224319d4c01ef87bab8a0db",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.activation:jakarta.activation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4",
+            "UID": "6233373d72208ee9"
+          },
+          "Version": "2.1.4",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.activation-api-2.1.4.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.activation:jakarta.activation-api:2.1.4",
+          "Name": "jakarta.activation:jakarta.activation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4?type=jar",
+            "UID": "6cb44602d1177383",
+            "BOMRef": "pkg:maven/jakarta.activation/jakarta.activation-api@2.1.4?type=jar"
+          },
+          "Version": "2.1.4",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Digest": "md5:bc1602eee7bc61a0b86f14bbbb0cc794",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0",
+            "UID": "abf1af349ab056e9"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.annotation-api-3.0.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.annotation:jakarta.annotation-api:3.0.0",
+          "Name": "jakarta.annotation:jakarta.annotation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0?type=jar",
+            "UID": "99ce05657c1b9e84",
+            "BOMRef": "pkg:maven/jakarta.annotation/jakarta.annotation-api@3.0.0?type=jar"
+          },
+          "Version": "3.0.0",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Digest": "md5:7faffaab962918da4cf5ddfd76609dd2",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.inject:jakarta.inject-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1",
+            "UID": "90e5741480c57405"
+          },
+          "Version": "2.0.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.inject-api-2.0.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.inject:jakarta.inject-api:2.0.1",
+          "Name": "jakarta.inject:jakarta.inject-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar",
+            "UID": "b07bcefa742095ab",
+            "BOMRef": "pkg:maven/jakarta.inject/jakarta.inject-api@2.0.1?type=jar"
+          },
+          "Version": "2.0.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:72003bf6efcc8455d414bbd7da86c11c",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.persistence:jakarta.persistence-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0",
+            "UID": "f1c8d7e2b0ae0c92"
+          },
+          "Version": "3.2.0",
+          "Licenses": [
+            "EPL-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.persistence-api-3.2.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.persistence:jakarta.persistence-api:3.2.0",
+          "Name": "jakarta.persistence:jakarta.persistence-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0?type=jar",
+            "UID": "eca46224ef29f982",
+            "BOMRef": "pkg:maven/jakarta.persistence/jakarta.persistence-api@3.2.0?type=jar"
+          },
+          "Version": "3.2.0",
+          "Licenses": [
+            "EPL-2.0",
+            "BSD-3-Clause"
+          ],
+          "Digest": "md5:79acec18d202797dcba1fff596a47684",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.transaction:jakarta.transaction-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1",
+            "UID": "723145e50cc8d26e"
+          },
+          "Version": "2.0.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.transaction-api-2.0.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.transaction:jakarta.transaction-api:2.0.1",
+          "Name": "jakarta.transaction:jakarta.transaction-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1?type=jar",
+            "UID": "d07d113c8e4972a2",
+            "BOMRef": "pkg:maven/jakarta.transaction/jakarta.transaction-api@2.0.1?type=jar"
+          },
+          "Version": "2.0.1",
+          "Licenses": [
+            "EPL-2.0",
+            "GPL-2.0-with-classpath-exception"
+          ],
+          "Digest": "md5:5315974a3935e342b40849478e1c9966",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.validation:jakarta.validation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1",
+            "UID": "2d5b072d796116ea"
+          },
+          "Version": "3.1.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.validation-api-3.1.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.validation:jakarta.validation-api:3.1.1",
+          "Name": "jakarta.validation:jakarta.validation-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1?type=jar",
+            "UID": "1470b7a69f3d2712",
+            "BOMRef": "pkg:maven/jakarta.validation/jakarta.validation-api@3.1.1?type=jar"
+          },
+          "Version": "3.1.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:93ce96e77734f4280157edeffcae44e8",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5",
+            "UID": "6f321d911e4ef3fa"
+          },
+          "Version": "4.0.5",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jakarta.xml.bind-api-4.0.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+          "Name": "jakarta.xml.bind:jakarta.xml.bind-api",
+          "Identifier": {
+            "PURL": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5?type=jar",
+            "UID": "aefc75d02ece586a",
+            "BOMRef": "pkg:maven/jakarta.xml.bind/jakarta.xml.bind-api@4.0.5?type=jar"
+          },
+          "Version": "4.0.5",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "DependsOn": [
+            "jakarta.activation:jakarta.activation-api:2.1.4"
+          ],
+          "Digest": "md5:935053b2c792f34c7ea3a238ea96f3ac",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "javax.cache:cache-api",
+          "Identifier": {
+            "PURL": "pkg:maven/javax.cache/cache-api@1.1.1",
+            "UID": "65ae052fd2db1771"
+          },
+          "Version": "1.1.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/cache-api-1.1.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "javax.cache:cache-api:1.1.1",
+          "Name": "javax.cache:cache-api",
+          "Identifier": {
+            "PURL": "pkg:maven/javax.cache/cache-api@1.1.1?type=jar",
+            "UID": "a3a650d7180fe198",
+            "BOMRef": "pkg:maven/javax.cache/cache-api@1.1.1?type=jar"
+          },
+          "Version": "1.1.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:dfdac9358e140e61c574abb1ada84dc9",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "net.bytebuddy:byte-buddy",
+          "Identifier": {
+            "PURL": "pkg:maven/net.bytebuddy/byte-buddy@1.18.15",
+            "UID": "f4d0bc219bff9ac1"
+          },
+          "Version": "1.18.15",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/byte-buddy-1.18.15.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "net.bytebuddy:byte-buddy:1.18.15",
+          "Name": "net.bytebuddy:byte-buddy",
+          "Identifier": {
+            "PURL": "pkg:maven/net.bytebuddy/byte-buddy@1.18.15?type=jar",
+            "UID": "6742dcc934c7c0ef",
+            "BOMRef": "pkg:maven/net.bytebuddy/byte-buddy@1.18.15?type=jar"
+          },
+          "Version": "1.18.15",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:36ebf60bade91fd4f25c187cf590937a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.antlr:antlr4-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.antlr/antlr4-runtime@4.13.2",
+            "UID": "53cd73028f2d29e"
+          },
+          "Version": "4.13.2",
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/antlr4-runtime-4.13.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.antlr:antlr4-runtime:4.13.2",
+          "Name": "org.antlr:antlr4-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.antlr/antlr4-runtime@4.13.2?type=jar",
+            "UID": "cdc0270b060c2aec",
+            "BOMRef": "pkg:maven/org.antlr/antlr4-runtime@4.13.2?type=jar"
+          },
+          "Version": "4.13.2",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Digest": "md5:eecf1908f0cfff10f8bb82878b5ca401",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5",
+            "UID": "f978d9e51b9a747e"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/log4j-api-2.25.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-api:2.25.5",
+          "Name": "org.apache.logging.log4j:log4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5?type=jar",
+            "UID": "620d5a639a10d7a8",
+            "BOMRef": "pkg:maven/org.apache.logging.log4j/log4j-api@2.25.5?type=jar"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:6da507c0ef11c49576534c1db69e1b99",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5",
+            "UID": "c01af52f9cee17d6"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/log4j-to-slf4j-2.25.5.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.apache.logging.log4j:log4j-to-slf4j:2.25.5",
+          "Name": "org.apache.logging.log4j:log4j-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5?type=jar",
+            "UID": "8f38933c2b5ac9ec",
+            "BOMRef": "pkg:maven/org.apache.logging.log4j/log4j-to-slf4j@2.25.5?type=jar"
+          },
+          "Version": "2.25.5",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.apache.logging.log4j:log4j-api:2.25.5",
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:9927bacbf08e748e4c816338658aeb7a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27",
+            "UID": "6e37aa454ad308cb"
+          },
+          "Version": "11.0.27",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/tomcat-embed-core-11.0.27.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-core:11.0.27",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27?type=jar",
+            "UID": "28a67f2c53811259",
+            "BOMRef": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-core@11.0.27?type=jar"
+          },
+          "Version": "11.0.27",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:b09b9d7fab37407966200c29e4c79468",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27",
+            "UID": "ddca57f295cf3508"
+          },
+          "Version": "11.0.27",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/tomcat-embed-el-11.0.27.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-el:11.0.27",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-el",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27?type=jar",
+            "UID": "a88c0fa980b036b0",
+            "BOMRef": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-el@11.0.27?type=jar"
+          },
+          "Version": "11.0.27",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:1a07f087e16d573763aeeb73789dd598",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27",
+            "UID": "436f8bf5921c517b"
+          },
+          "Version": "11.0.27",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/tomcat-embed-websocket-11.0.27.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.apache.tomcat.embed:tomcat-embed-websocket:11.0.27",
+          "Name": "org.apache.tomcat.embed:tomcat-embed-websocket",
+          "Identifier": {
+            "PURL": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27?type=jar",
+            "UID": "66cde5b61b81c7fd",
+            "BOMRef": "pkg:maven/org.apache.tomcat.embed/tomcat-embed-websocket@11.0.27?type=jar"
+          },
+          "Version": "11.0.27",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.apache.tomcat.embed:tomcat-embed-core:11.0.27"
+          ],
+          "Digest": "md5:c9044a8121b29fb8f57a95ce2111c006",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.aspectj:aspectjweaver",
+          "Identifier": {
+            "PURL": "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1",
+            "UID": "a829e32dd3224482"
+          },
+          "Version": "1.9.25.1",
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/aspectjweaver-1.9.25.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.aspectj:aspectjweaver:1.9.25.1",
+          "Name": "org.aspectj:aspectjweaver",
+          "Identifier": {
+            "PURL": "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1?type=jar",
+            "UID": "5d07805c9e3966e9",
+            "BOMRef": "pkg:maven/org.aspectj/aspectjweaver@1.9.25.1?type=jar"
+          },
+          "Version": "1.9.25.1",
+          "Licenses": [
+            "EPL-2.0"
+          ],
+          "Digest": "md5:7a88f606f52185a15a1527c968f55dfb",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.attoparser:attoparser",
+          "Identifier": {
+            "PURL": "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE",
+            "UID": "4e3b2e0675e7cd18"
+          },
+          "Version": "2.0.7.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/attoparser-2.0.7.RELEASE.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.attoparser:attoparser:2.0.7.RELEASE",
+          "Name": "org.attoparser:attoparser",
+          "Identifier": {
+            "PURL": "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE?type=jar",
+            "UID": "84a57239dfa07dcc",
+            "BOMRef": "pkg:maven/org.attoparser/attoparser@2.0.7.RELEASE?type=jar"
+          },
+          "Version": "2.0.7.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:fd09ceba7061e05460e74e0e1e64f233",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.55.1",
+            "UID": "54bf374ab3fa1ed9"
+          },
+          "Version": "3.55.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/checker-qual-3.55.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.checkerframework:checker-qual:3.55.1",
+          "Name": "org.checkerframework:checker-qual",
+          "Identifier": {
+            "PURL": "pkg:maven/org.checkerframework/checker-qual@3.55.1?type=jar",
+            "UID": "5e2323edd7192ae",
+            "BOMRef": "pkg:maven/org.checkerframework/checker-qual@3.55.1?type=jar"
+          },
+          "Version": "3.55.1",
+          "Licenses": [
+            "MIT"
+          ],
+          "Digest": "md5:05361199dc29af8334d1405f28b83109",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.eclipse.angus:angus-activation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3",
+            "UID": "4d9585be4c950ea2"
+          },
+          "Version": "2.0.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/angus-activation-2.0.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.eclipse.angus:angus-activation:2.0.3",
+          "Name": "org.eclipse.angus:angus-activation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3?type=jar",
+            "UID": "8aa4bd10938040be",
+            "BOMRef": "pkg:maven/org.eclipse.angus/angus-activation@2.0.3?type=jar"
+          },
+          "Version": "2.0.3",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "DependsOn": [
+            "jakarta.activation:jakarta.activation-api:2.1.4"
+          ],
+          "Digest": "md5:ad20392145690b36b4f950fe31a31a2a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.glassfish.jaxb:jaxb-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9",
+            "UID": "430f452f876abfc3"
+          },
+          "Version": "4.0.9",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jaxb-core-4.0.9.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.glassfish.jaxb:jaxb-core:4.0.9",
+          "Name": "org.glassfish.jaxb:jaxb-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9?type=jar",
+            "UID": "f212ad6e626d37f4",
+            "BOMRef": "pkg:maven/org.glassfish.jaxb/jaxb-core@4.0.9?type=jar"
+          },
+          "Version": "4.0.9",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "DependsOn": [
+            "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+            "jakarta.activation:jakarta.activation-api:2.1.4",
+            "org.eclipse.angus:angus-activation:2.0.3",
+            "org.glassfish.jaxb:txw2:4.0.9",
+            "com.sun.istack:istack-commons-runtime:4.1.2"
+          ],
+          "Digest": "md5:cfe79c0de53d009f9b171d1320f7879a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.glassfish.jaxb:jaxb-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9",
+            "UID": "3a6181bdc389cb1b"
+          },
+          "Version": "4.0.9",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jaxb-runtime-4.0.9.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.glassfish.jaxb:jaxb-runtime:4.0.9",
+          "Name": "org.glassfish.jaxb:jaxb-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9?type=jar",
+            "UID": "23e33bd8bbe59d1",
+            "BOMRef": "pkg:maven/org.glassfish.jaxb/jaxb-runtime@4.0.9?type=jar"
+          },
+          "Version": "4.0.9",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "DependsOn": [
+            "org.glassfish.jaxb:jaxb-core:4.0.9"
+          ],
+          "Digest": "md5:5a09f7188a527773fc71f0ac8ca30652",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.glassfish.jaxb:txw2",
+          "Identifier": {
+            "PURL": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9",
+            "UID": "e8b0d7a30072f7e3"
+          },
+          "Version": "4.0.9",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/txw2-4.0.9.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.glassfish.jaxb:txw2:4.0.9",
+          "Name": "org.glassfish.jaxb:txw2",
+          "Identifier": {
+            "PURL": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9?type=jar",
+            "UID": "fc4143c3114eb682",
+            "BOMRef": "pkg:maven/org.glassfish.jaxb/txw2@4.0.9?type=jar"
+          },
+          "Version": "4.0.9",
+          "Licenses": [
+            "BSD-3-Clause"
+          ],
+          "Digest": "md5:09ca7799e2d1a5b484e1290db7bb9344",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.hdrhistogram:HdrHistogram",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2",
+            "UID": "8b3196a500e54bf"
+          },
+          "Version": "2.2.2",
+          "Licenses": [
+            "CC0-1.0",
+            "BSD-2-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/HdrHistogram-2.2.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.hdrhistogram:HdrHistogram:2.2.2",
+          "Name": "org.hdrhistogram:HdrHistogram",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2?type=jar",
+            "UID": "b6401defd580bbc8",
+            "BOMRef": "pkg:maven/org.hdrhistogram/HdrHistogram@2.2.2?type=jar"
+          },
+          "Version": "2.2.2",
+          "Licenses": [
+            "CC0-1.0",
+            "BSD-2-Clause"
+          ],
+          "Digest": "md5:41f807bf0c681d6f692c408a6e217eaf",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.hibernate.models:hibernate-models",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.models/hibernate-models@1.1.2",
+            "UID": "8d44f17710ebe56d"
+          },
+          "Version": "1.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/hibernate-models-1.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.hibernate.models:hibernate-models:1.1.2",
+          "Name": "org.hibernate.models:hibernate-models",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.models/hibernate-models@1.1.2?type=jar",
+            "UID": "b8fe66fafa45c32e",
+            "BOMRef": "pkg:maven/org.hibernate.models/hibernate-models@1.1.2?type=jar"
+          },
+          "Version": "1.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.jboss.logging:jboss-logging:3.6.3.Final"
+          ],
+          "Digest": "md5:786565fb8a20b8d011bc46bcef7cef89",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.hibernate.orm:hibernate-core:7.4.13.Final",
+          "Name": "org.hibernate.orm:hibernate-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.orm/hibernate-core@7.4.13.Final?type=jar",
+            "UID": "d871f11d7abf4100",
+            "BOMRef": "pkg:maven/org.hibernate.orm/hibernate-core@7.4.13.Final?type=jar"
+          },
+          "Version": "7.4.13.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "jakarta.persistence:jakarta.persistence-api:3.2.0",
+            "jakarta.transaction:jakarta.transaction-api:2.0.1",
+            "org.jboss.logging:jboss-logging:3.6.3.Final",
+            "org.hibernate.models:hibernate-models:1.1.2",
+            "net.bytebuddy:byte-buddy:1.18.15",
+            "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+            "org.glassfish.jaxb:jaxb-runtime:4.0.9",
+            "jakarta.inject:jakarta.inject-api:2.0.1",
+            "org.antlr:antlr4-runtime:4.13.2"
+          ],
+          "Digest": "md5:ee9f1fee2788cedb79cb3f91cd557a59",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.hibernate.validator:hibernate-validator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.5.Final",
+            "UID": "fb630a8f1f40e688"
+          },
+          "Version": "9.1.5.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/hibernate-validator-9.1.5.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.hibernate.validator:hibernate-validator:9.1.5.Final",
+          "Name": "org.hibernate.validator:hibernate-validator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.5.Final?type=jar",
+            "UID": "aee1e62623410634",
+            "BOMRef": "pkg:maven/org.hibernate.validator/hibernate-validator@9.1.5.Final?type=jar"
+          },
+          "Version": "9.1.5.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "jakarta.validation:jakarta.validation-api:3.1.1",
+            "org.jboss.logging:jboss-logging:3.6.3.Final",
+            "com.fasterxml:classmate:1.7.3"
+          ],
+          "Digest": "md5:a05b1e56d8e20424d318ed88e19a925d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.hibernate:hibernate-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.hibernate/hibernate-core@7.4.13.Final",
+            "UID": "ece819f6a5753fa"
+          },
+          "Version": "7.4.13.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/hibernate-core-7.4.13.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.jboss.logging:jboss-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final",
+            "UID": "888c743a4f450457"
+          },
+          "Version": "3.6.3.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jboss-logging-3.6.3.Final.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.jboss.logging:jboss-logging:3.6.3.Final",
+          "Name": "org.jboss.logging:jboss-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final?type=jar",
+            "UID": "10e752a721dc9973",
+            "BOMRef": "pkg:maven/org.jboss.logging/jboss-logging@3.6.3.Final?type=jar"
+          },
+          "Version": "3.6.3.Final",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:b4cf5872f18b3e80e18769d51c7ae9b2",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.jspecify:jspecify",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jspecify/jspecify@1.0.1",
+            "UID": "61b64b5ef2f62d03"
+          },
+          "Version": "1.0.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jspecify-1.0.1.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.jspecify:jspecify:1.0.1",
+          "Name": "org.jspecify:jspecify",
+          "Identifier": {
+            "PURL": "pkg:maven/org.jspecify/jspecify@1.0.1?type=jar",
+            "UID": "e01102ff3d91cc6b",
+            "BOMRef": "pkg:maven/org.jspecify/jspecify@1.0.1?type=jar"
+          },
+          "Version": "1.0.1",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:d4fe1ea4d953b66fcb1d6043c22bffcf",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.postgresql:postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.postgresql/postgresql@42.7.14",
+            "UID": "9825e1297ecbb2fe"
+          },
+          "Version": "42.7.14",
+          "Licenses": [
+            "BSD-2-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/postgresql-42.7.14.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.postgresql:postgresql:42.7.14",
+          "Name": "org.postgresql:postgresql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.postgresql/postgresql@42.7.14?type=jar",
+            "UID": "c90de1defb30e5e6",
+            "BOMRef": "pkg:maven/org.postgresql/postgresql@42.7.14?type=jar"
+          },
+          "Version": "42.7.14",
+          "Licenses": [
+            "BSD-2-Clause"
+          ],
+          "DependsOn": [
+            "org.checkerframework:checker-qual:3.55.1"
+          ],
+          "Digest": "md5:16f26b00415e27db94b3da7ff77c045d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.slf4j:jul-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20",
+            "UID": "510260880feb5e00"
+          },
+          "Version": "2.0.20",
+          "Licenses": [
+            "MIT"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jul-to-slf4j-2.0.20.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.slf4j:jul-to-slf4j:2.0.20",
+          "Name": "org.slf4j:jul-to-slf4j",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20?type=jar",
+            "UID": "6361b8360b19f97c",
+            "BOMRef": "pkg:maven/org.slf4j/jul-to-slf4j@2.0.20?type=jar"
+          },
+          "Version": "2.0.20",
+          "Licenses": [
+            "MIT"
+          ],
+          "DependsOn": [
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:f853422b1400b2631e79edcee8067833",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@2.0.20",
+            "UID": "31169eec8b607c9d"
+          },
+          "Version": "2.0.20",
+          "Licenses": [
+            "MIT"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/slf4j-api-2.0.20.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.slf4j:slf4j-api:2.0.20",
+          "Name": "org.slf4j:slf4j-api",
+          "Identifier": {
+            "PURL": "pkg:maven/org.slf4j/slf4j-api@2.0.20?type=jar",
+            "UID": "43efe66db5319bf1",
+            "BOMRef": "pkg:maven/org.slf4j/slf4j-api@2.0.20?type=jar"
+          },
+          "Version": "2.0.20",
+          "Licenses": [
+            "MIT"
+          ],
+          "Digest": "md5:a7a6798aa78b29152479f89565f57446",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot@4.1.2",
+            "UID": "92c5f7f155be7a28"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot:4.1.2",
+          "Name": "org.springframework.boot:spring-boot",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot@4.1.2?type=jar",
+            "UID": "a0616e2c67fdeaa2",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-context:7.0.10"
+          ],
+          "Digest": "md5:a325f7da9a3c0e95cad4c215478b3856",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2",
+            "UID": "23299d241ea84a96"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-actuator-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-actuator:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2?type=jar",
+            "UID": "e3606283e92b8b7f",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-actuator@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2"
+          ],
+          "Digest": "md5:3fa576e1fa9060c747ba024da8e45a55",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2",
+            "UID": "1b7b239a4b161a2"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-actuator-autoconfigure-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-actuator-autoconfigure:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-actuator-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2?type=jar",
+            "UID": "66062f45d6bf9c12",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-actuator-autoconfigure@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-autoconfigure:4.1.2",
+            "org.springframework.boot:spring-boot-actuator:4.1.2"
+          ],
+          "Digest": "md5:c056759fc795c74fb0e75c52ef9fc549",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2",
+            "UID": "e873ac656ea025ea"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-autoconfigure-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-autoconfigure:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-autoconfigure",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2?type=jar",
+            "UID": "b7ffe6ab56f3164d",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-autoconfigure@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2"
+          ],
+          "Digest": "md5:07c70596b0eb5c9c69435f86fc3386ff",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-cache@4.1.2",
+            "UID": "82962cf8818a43f6"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-cache-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-cache:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-cache@4.1.2?type=jar",
+            "UID": "780cea0405ebb54b",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-cache@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework:spring-context-support:7.0.10"
+          ],
+          "Digest": "md5:38717ffa9ae404682c057af2d23807e1",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-data-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-data-commons@4.1.2",
+            "UID": "19e92d913033349d"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-data-commons-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-data-commons:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-data-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-data-commons@4.1.2?type=jar",
+            "UID": "1a13777c66cb7089",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-data-commons@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework.boot:spring-boot-persistence:4.1.2",
+            "org.springframework.data:spring-data-commons:4.1.2"
+          ],
+          "Digest": "md5:7e3e76dc5e23c1dd0cdfee52f01e6c12",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-data-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-data-jpa@4.1.2",
+            "UID": "2faf8cd1b5a836d7"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-data-jpa-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-data-jpa:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-data-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-data-jpa@4.1.2?type=jar",
+            "UID": "e8a0d620081f3b45",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-data-jpa@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-data-commons:4.1.2",
+            "org.springframework.boot:spring-boot-hibernate:4.1.2",
+            "org.springframework.data:spring-data-jpa:4.1.2",
+            "org.springframework:spring-aspects:7.0.10"
+          ],
+          "Digest": "md5:f1d999f9b57533921cab10c6a8f2276e",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-devtools:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-devtools",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-devtools@4.1.2?type=jar",
+            "UID": "7ac72b2918b7b69a",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-devtools@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework.boot:spring-boot-autoconfigure:4.1.2"
+          ],
+          "Digest": "md5:86ab96edc1ad08a0feebd745223ed14d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-health",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2",
+            "UID": "9a0aa4e09b156907"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-health-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-health:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-health",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2?type=jar",
+            "UID": "dd6f44b06a9cc477",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-health@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2"
+          ],
+          "Digest": "md5:f024f00fbcd39072e6fc4b3f571abba5",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-hibernate",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-hibernate@4.1.2",
+            "UID": "62ca90b7e606728"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-hibernate-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-hibernate:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-hibernate",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-hibernate@4.1.2?type=jar",
+            "UID": "2616cf6ca3906c2d",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-hibernate@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-jpa:4.1.2",
+            "org.hibernate.orm:hibernate-core:7.4.13.Final",
+            "org.springframework:spring-orm:7.0.10"
+          ],
+          "Digest": "md5:9fa6af850c9c9182ed1d638475619e86",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-http-converter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2",
+            "UID": "dffd610d7e5c54f1"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-http-converter-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-http-converter:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-http-converter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2?type=jar",
+            "UID": "bcad6cff33928b6b",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-http-converter@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework:spring-web:7.0.10"
+          ],
+          "Digest": "md5:2884f8f020662a2b9dc2993f764932b3",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2",
+            "UID": "7fba8a0cc7a4843"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-jackson-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jackson:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2?type=jar",
+            "UID": "92d2b93c1af110eb",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-jackson@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "tools.jackson.core:jackson-databind:3.1.7"
+          ],
+          "Digest": "md5:a12ac540f2027bfedffb59e67a0f6134",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-jarmode-tools",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jarmode-tools@4.1.2",
+            "UID": "f864686c0210c4bd"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-jarmode-tools-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.2",
+            "UID": "71e6e3aace8a3a15"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-jdbc-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jdbc:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.2?type=jar",
+            "UID": "c0f4263e51ee5de9",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-jdbc@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework.boot:spring-boot-sql:4.1.2",
+            "org.springframework.boot:spring-boot-transaction:4.1.2",
+            "org.springframework:spring-jdbc:7.0.10"
+          ],
+          "Digest": "md5:47ac482d5905c0a97cace788e672e957",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jpa@4.1.2",
+            "UID": "57f6bbb0a8ffe929"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-jpa-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-jpa:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-jpa@4.1.2?type=jar",
+            "UID": "91172f707d71bbcd",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-jpa@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-jdbc:4.1.2",
+            "org.springframework.boot:spring-boot-transaction:4.1.2",
+            "jakarta.persistence:jakarta.persistence-api:3.2.0",
+            "org.springframework:spring-orm:7.0.10"
+          ],
+          "Digest": "md5:52a7d102c0b5f1995137854344d0314d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2",
+            "UID": "5a4d8041b6bdf302"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-micrometer-metrics-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-micrometer-metrics:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2?type=jar",
+            "UID": "6fe26fbf0c6c6980",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-micrometer-metrics@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework.boot:spring-boot-micrometer-observation:4.1.2",
+            "io.micrometer:micrometer-core:1.17.2"
+          ],
+          "Digest": "md5:2c6de2444ada8630328578b300b23b97",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2",
+            "UID": "fe8fea0e250c9015"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-micrometer-observation-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-micrometer-observation:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-micrometer-observation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2?type=jar",
+            "UID": "c09cc8d714a5cd15",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-micrometer-observation@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "io.micrometer:micrometer-observation:1.17.2"
+          ],
+          "Digest": "md5:cedd115f934d389eccb9640105b362f4",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-persistence",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.2",
+            "UID": "3990e2f52f2591ed"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-persistence-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-persistence:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-persistence",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.2?type=jar",
+            "UID": "20726f5290c729c4",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-persistence@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework:spring-tx:7.0.10"
+          ],
+          "Digest": "md5:8ebbbec205c52e0739efd571967ab0ad",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-servlet",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2",
+            "UID": "e5c5655d37d41b26"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-servlet-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-servlet:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-servlet",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2?type=jar",
+            "UID": "96c7f63f8ad42b99",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-servlet@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework:spring-web:7.0.10"
+          ],
+          "Digest": "md5:8abfa8fb0fe860df4ed1561760decb76",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-sql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.2",
+            "UID": "2558c3dd10ecc470"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-sql-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-sql:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-sql",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.2?type=jar",
+            "UID": "82539fe79d09c703",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-sql@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2"
+          ],
+          "Digest": "md5:502829538bf86b81431edbf739cbe62d",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter@4.1.2?type=jar",
+            "UID": "73ae798154fbc086",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter-logging:4.1.2",
+            "org.springframework.boot:spring-boot-autoconfigure:4.1.2",
+            "jakarta.annotation:jakarta.annotation-api:3.0.0",
+            "org.yaml:snakeyaml:2.6"
+          ],
+          "Digest": "md5:2e11b803f2fd0de201eeac6bbee32e92",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-actuator:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-actuator",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.1.2?type=jar",
+            "UID": "d45498bb830d9fa1",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-actuator@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-starter-micrometer-metrics:4.1.2",
+            "org.springframework.boot:spring-boot-actuator-autoconfigure:4.1.2",
+            "org.springframework.boot:spring-boot-health:4.1.2",
+            "io.micrometer:micrometer-observation:1.17.2",
+            "io.micrometer:micrometer-jakarta9:1.17.2"
+          ],
+          "Digest": "md5:482cff0bb4c5625f2d8dac6b287f90e7",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-cache:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-cache",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.1.2?type=jar",
+            "UID": "a605546dcbb48bb2",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-cache@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-cache:4.1.2"
+          ],
+          "Digest": "md5:7073ca9b006e1f9bee848b5ef2b36fd0",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-data-jpa:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-data-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.1.2?type=jar",
+            "UID": "c4a4baca29b9b3b7",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-data-jpa@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-starter-jdbc:4.1.2",
+            "org.springframework.boot:spring-boot-data-jpa:4.1.2",
+            "org.springframework.boot:spring-boot-jdbc:4.1.2"
+          ],
+          "Digest": "md5:0aefa1cd9675a1243101347ed3f202a7",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jackson:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-jackson",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.1.2?type=jar",
+            "UID": "36c02cd990b3ab06",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-jackson@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-jackson:4.1.2"
+          ],
+          "Digest": "md5:9cfec8a9d7a9438768d192610df59dba",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-jdbc:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.1.2?type=jar",
+            "UID": "29a87d2faab67263",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-jdbc@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-jdbc:4.1.2",
+            "com.zaxxer:HikariCP:7.0.2"
+          ],
+          "Digest": "md5:9f317e578e7c76537b43dd9fa3b25b5a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-logging:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-logging",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.1.2?type=jar",
+            "UID": "14b3b768125d5077",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-logging@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "ch.qos.logback:logback-classic:1.5.38",
+            "org.apache.logging.log4j:log4j-to-slf4j:2.25.5",
+            "org.slf4j:jul-to-slf4j:2.0.20"
+          ],
+          "Digest": "md5:cdbe0077c77fc370ca4f804ab3bc72df",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-micrometer-metrics:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-micrometer-metrics",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.1.2?type=jar",
+            "UID": "40d651f2199a175d",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-micrometer-metrics@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-micrometer-metrics:4.1.2"
+          ],
+          "Digest": "md5:1f0797c8e4f4542e37537741a1934209",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-thymeleaf:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-thymeleaf",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-thymeleaf@4.1.2?type=jar",
+            "UID": "ce27e6ba6b02020f",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-thymeleaf@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-thymeleaf:4.1.2"
+          ],
+          "Digest": "md5:edd7af6d5d8ce7cc2d430f9722d5f0a2",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.1.2?type=jar",
+            "UID": "880debc831d69045",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-starter-tomcat-runtime:4.1.2",
+            "org.springframework.boot:spring-boot-tomcat:4.1.2"
+          ],
+          "Digest": "md5:4b18019a930ac339701001e0a6c92126",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-tomcat-runtime:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-tomcat-runtime",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.1.2?type=jar",
+            "UID": "f68a16d933bde46b",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-tomcat-runtime@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-tomcat:4.1.2",
+            "org.springframework.boot:spring-boot-web-server:4.1.2",
+            "jakarta.annotation:jakarta.annotation-api:3.0.0",
+            "org.apache.tomcat.embed:tomcat-embed-core:11.0.27",
+            "org.apache.tomcat.embed:tomcat-embed-el:11.0.27",
+            "org.apache.tomcat.embed:tomcat-embed-websocket:11.0.27"
+          ],
+          "Digest": "md5:281ada2d4259ba83ab99ea9b038a0ba7",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-validation:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-validation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.1.2?type=jar",
+            "UID": "64ca03f5b66a74cc",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-validation@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-validation:4.1.2"
+          ],
+          "Digest": "md5:f65349355b15cbc55173895460d80074",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-starter-webmvc:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-starter-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.1.2?type=jar",
+            "UID": "e9543a1fe66ea740",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-starter-webmvc@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter:4.1.2",
+            "org.springframework.boot:spring-boot-starter-jackson:4.1.2",
+            "org.springframework.boot:spring-boot-starter-tomcat:4.1.2",
+            "org.springframework.boot:spring-boot-http-converter:4.1.2",
+            "org.springframework.boot:spring-boot-webmvc:4.1.2"
+          ],
+          "Digest": "md5:20094b0f84f6c24e58d8b45f34bc2fb3",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-thymeleaf",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.1.2",
+            "UID": "2e3d3f0f80ce893f"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-thymeleaf-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-thymeleaf:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-thymeleaf",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.1.2?type=jar",
+            "UID": "329f2d53612f123c",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-thymeleaf@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.thymeleaf:thymeleaf-spring6:3.1.5.RELEASE",
+            "org.springframework:spring-web:7.0.10"
+          ],
+          "Digest": "md5:ff2980087226b57db3687031af285fa0",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2",
+            "UID": "eab99c4f85af9f51"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-tomcat-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-tomcat:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-tomcat",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2?type=jar",
+            "UID": "9a1ae10fc17f4dda",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-tomcat@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-web-server:4.1.2",
+            "org.apache.tomcat.embed:tomcat-embed-core:11.0.27",
+            "jakarta.annotation:jakarta.annotation-api:3.0.0"
+          ],
+          "Digest": "md5:4e40c8d21d39b850197bbfd613e73605",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-transaction",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.2",
+            "UID": "f73d5b02bead5d51"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-transaction-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-transaction:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-transaction",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.2?type=jar",
+            "UID": "f6bd7dce2363a227",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-transaction@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework.boot:spring-boot-persistence:4.1.2",
+            "org.springframework:spring-tx:7.0.10"
+          ],
+          "Digest": "md5:9a40a0fd5cf462679864469b980602ec",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-validation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-validation@4.1.2",
+            "UID": "59b87747bb804054"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-validation-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-validation:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-validation",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-validation@4.1.2?type=jar",
+            "UID": "449f5ca124233d39",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-validation@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.apache.tomcat.embed:tomcat-embed-el:11.0.27",
+            "org.hibernate.validator:hibernate-validator:9.1.5.Final"
+          ],
+          "Digest": "md5:1bb805ce3e6bbdcc49a81ff291d2a01e",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-web-server",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2",
+            "UID": "acde07cf179d4d72"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-web-server-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-web-server:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-web-server",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2?type=jar",
+            "UID": "c72c0a442109d02e",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-web-server@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot:4.1.2",
+            "org.springframework:spring-web:7.0.10"
+          ],
+          "Digest": "md5:fed87b861e05598de55c811cf1fc277a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.boot:spring-boot-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2",
+            "UID": "c8999f4cf888531c"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-boot-webmvc-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.boot:spring-boot-webmvc:4.1.2",
+          "Name": "org.springframework.boot:spring-boot-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2?type=jar",
+            "UID": "8db2d2016d70337d",
+            "BOMRef": "pkg:maven/org.springframework.boot/spring-boot-webmvc@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-servlet:4.1.2",
+            "org.springframework:spring-web:7.0.10",
+            "org.springframework:spring-webmvc:7.0.10",
+            "org.springframework.boot:spring-boot-http-converter:4.1.2"
+          ],
+          "Digest": "md5:a1ebda6c36f5cadf017503eaa9b603a0",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.data:spring-data-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-commons@4.1.2",
+            "UID": "374bd2c50483ee9e"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-data-commons-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.data:spring-data-commons:4.1.2",
+          "Name": "org.springframework.data:spring-data-commons",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-commons@4.1.2?type=jar",
+            "UID": "d1bf70947ebf17c5",
+            "BOMRef": "pkg:maven/org.springframework.data/spring-data-commons@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:941395f823a50945ba3b5cd176ebe669",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.data:spring-data-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.2",
+            "UID": "b4ae63d7b6eb8630"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-data-jpa-4.1.2.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.data:spring-data-jpa:4.1.2",
+          "Name": "org.springframework.data:spring-data-jpa",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.2?type=jar",
+            "UID": "65d676a9cc36eb4f",
+            "BOMRef": "pkg:maven/org.springframework.data/spring-data-jpa@4.1.2?type=jar"
+          },
+          "Version": "4.1.2",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.data:spring-data-commons:4.1.2",
+            "org.springframework:spring-orm:7.0.10",
+            "org.springframework:spring-context:7.0.10",
+            "org.springframework:spring-aop:7.0.10",
+            "org.springframework:spring-tx:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "org.antlr:antlr4-runtime:4.13.2",
+            "jakarta.annotation:jakarta.annotation-api:3.0.0",
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:04cc0a03b45fc44fb794d4b4ea450989",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework.samples:spring-petclinic",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.samples/spring-petclinic@4.0.0-SNAPSHOT",
+            "UID": "a5ac0fc96288c0c8"
+          },
+          "Version": "4.0.0-SNAPSHOT",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework.samples:spring-petclinic:4.0.0-SNAPSHOT",
+          "Name": "org.springframework.samples:spring-petclinic",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework.samples/spring-petclinic@4.0.0-SNAPSHOT?type=jar",
+            "UID": "ca5e34d341cf675d",
+            "BOMRef": "pkg:maven/org.springframework.samples/spring-petclinic@4.0.0-SNAPSHOT?type=jar"
+          },
+          "Version": "4.0.0-SNAPSHOT",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework.boot:spring-boot-starter-actuator:4.1.2",
+            "org.springframework.boot:spring-boot-starter-cache:4.1.2",
+            "org.springframework.boot:spring-boot-starter-data-jpa:4.1.2",
+            "org.springframework.boot:spring-boot-starter-thymeleaf:4.1.2",
+            "org.springframework.boot:spring-boot-starter-validation:4.1.2",
+            "org.springframework.boot:spring-boot-starter-webmvc:4.1.2",
+            "javax.cache:cache-api:1.1.1",
+            "jakarta.xml.bind:jakarta.xml.bind-api:4.0.5",
+            "com.h2database:h2:2.4.240",
+            "com.github.ben-manes.caffeine:caffeine:3.2.4",
+            "com.mysql:mysql-connector-j:9.7.0",
+            "org.postgresql:postgresql:42.7.14",
+            "org.webjars:webjars-locator-lite:1.1.3",
+            "org.webjars.npm:bootstrap:5.3.8",
+            "org.webjars.npm:font-awesome:4.7.0",
+            "org.springframework.boot:spring-boot-devtools:4.1.2"
+          ],
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-aop",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aop@7.0.10",
+            "UID": "d72c94f572cfb6ab"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-aop-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-aop:7.0.10",
+          "Name": "org.springframework:spring-aop",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aop@7.0.10?type=jar",
+            "UID": "c4c22e8a94367b93",
+            "BOMRef": "pkg:maven/org.springframework/spring-aop@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10"
+          ],
+          "Digest": "md5:3543c36c67fdc19a613df5ccb16e2b42",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-aspects",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aspects@7.0.10",
+            "UID": "cc18e531421f1bb0"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-aspects-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-aspects:7.0.10",
+          "Name": "org.springframework:spring-aspects",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-aspects@7.0.10?type=jar",
+            "UID": "c22e06bf1101624b",
+            "BOMRef": "pkg:maven/org.springframework/spring-aspects@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.aspectj:aspectjweaver:1.9.25.1"
+          ],
+          "Digest": "md5:9ff35e06175c6e18e2aba470abaaacef",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-beans",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-beans@7.0.10",
+            "UID": "7c82395ebd71bd9a"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-beans-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-beans:7.0.10",
+          "Name": "org.springframework:spring-beans",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-beans@7.0.10?type=jar",
+            "UID": "c877e619cd602767",
+            "BOMRef": "pkg:maven/org.springframework/spring-beans@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-core:7.0.10"
+          ],
+          "Digest": "md5:3ad5531cabea3d24ecd883aab0c9e122",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-context",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context@7.0.10",
+            "UID": "2a522c87335ec585"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-context-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-context:7.0.10",
+          "Name": "org.springframework:spring-context",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context@7.0.10?type=jar",
+            "UID": "7bb8e055109278d6",
+            "BOMRef": "pkg:maven/org.springframework/spring-context@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-aop:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-expression:7.0.10",
+            "io.micrometer:micrometer-observation:1.17.2"
+          ],
+          "Digest": "md5:2d5a1cd0ef2f6cb79f92487f0ba697fe",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-context-support",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context-support@7.0.10",
+            "UID": "1006b23fd1652d0d"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-context-support-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-context-support:7.0.10",
+          "Name": "org.springframework:spring-context-support",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-context-support@7.0.10?type=jar",
+            "UID": "a7627987d10fda37",
+            "BOMRef": "pkg:maven/org.springframework/spring-context-support@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-context:7.0.10",
+            "org.springframework:spring-core:7.0.10"
+          ],
+          "Digest": "md5:d0e8f9f0c1738ea258b14e8851f74019",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-core@7.0.10",
+            "UID": "899e51d3eb6b003a"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-core-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-core:7.0.10",
+          "Name": "org.springframework:spring-core",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-core@7.0.10?type=jar",
+            "UID": "6ddb8ab609302869",
+            "BOMRef": "pkg:maven/org.springframework/spring-core@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "commons-logging:commons-logging:1.3.6",
+            "org.jspecify:jspecify:1.0.1"
+          ],
+          "Digest": "md5:d0f471a1d80bd6dfffefe621b2e56755",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-expression",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-expression@7.0.10",
+            "UID": "a1da7e7d8fa0b9de"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-expression-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-expression:7.0.10",
+          "Name": "org.springframework:spring-expression",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-expression@7.0.10?type=jar",
+            "UID": "e05aac0a50b2f777",
+            "BOMRef": "pkg:maven/org.springframework/spring-expression@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-core:7.0.10"
+          ],
+          "Digest": "md5:0ea71236844f7d2548889556d1b162e6",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-jdbc@7.0.10",
+            "UID": "56b5a6315533934c"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-jdbc-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-jdbc:7.0.10",
+          "Name": "org.springframework:spring-jdbc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-jdbc@7.0.10?type=jar",
+            "UID": "4093383a80500f2f",
+            "BOMRef": "pkg:maven/org.springframework/spring-jdbc@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-tx:7.0.10"
+          ],
+          "Digest": "md5:1f74ec8c1e83a4e754706422194e1f95",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-orm",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-orm@7.0.10",
+            "UID": "16777eb788a21416"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-orm-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-orm:7.0.10",
+          "Name": "org.springframework:spring-orm",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-orm@7.0.10?type=jar",
+            "UID": "7335b724b9b14a65",
+            "BOMRef": "pkg:maven/org.springframework/spring-orm@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-jdbc:7.0.10",
+            "org.springframework:spring-tx:7.0.10"
+          ],
+          "Digest": "md5:25ef24f7dec413138a2d8ac73af29333",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-tx",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-tx@7.0.10",
+            "UID": "5c78280ee00ce94e"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-tx-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-tx:7.0.10",
+          "Name": "org.springframework:spring-tx",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-tx@7.0.10?type=jar",
+            "UID": "fc67cd11d975e649",
+            "BOMRef": "pkg:maven/org.springframework/spring-tx@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10"
+          ],
+          "Digest": "md5:d88b9552163a118a45b343fd5b7f6078",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-web@7.0.10",
+            "UID": "ea686e40a7458f3c"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-web-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-web:7.0.10",
+          "Name": "org.springframework:spring-web",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-web@7.0.10?type=jar",
+            "UID": "2ad4beecb0eaf132",
+            "BOMRef": "pkg:maven/org.springframework/spring-web@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "io.micrometer:micrometer-observation:1.17.2"
+          ],
+          "Digest": "md5:b378481a10aad2fed0b11802c87a962c",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.springframework:spring-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-webmvc@7.0.10",
+            "UID": "eab53cbcf376ed0"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0",
+            "BSD-3-Clause"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/spring-webmvc-7.0.10.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.springframework:spring-webmvc:7.0.10",
+          "Name": "org.springframework:spring-webmvc",
+          "Identifier": {
+            "PURL": "pkg:maven/org.springframework/spring-webmvc@7.0.10?type=jar",
+            "UID": "105a9739be8da4bd",
+            "BOMRef": "pkg:maven/org.springframework/spring-webmvc@7.0.10?type=jar"
+          },
+          "Version": "7.0.10",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.springframework:spring-aop:7.0.10",
+            "org.springframework:spring-beans:7.0.10",
+            "org.springframework:spring-context:7.0.10",
+            "org.springframework:spring-core:7.0.10",
+            "org.springframework:spring-expression:7.0.10",
+            "org.springframework:spring-web:7.0.10"
+          ],
+          "Digest": "md5:cd7affe0b899991d0b78f971e71d8eaa",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.thymeleaf:thymeleaf",
+          "Identifier": {
+            "PURL": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE",
+            "UID": "ba48d37834968242"
+          },
+          "Version": "3.1.5.RELEASE",
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/thymeleaf-3.1.5.RELEASE.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.thymeleaf:thymeleaf:3.1.5.RELEASE",
+          "Name": "org.thymeleaf:thymeleaf",
+          "Identifier": {
+            "PURL": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE?type=jar",
+            "UID": "62f3376a552003e8",
+            "BOMRef": "pkg:maven/org.thymeleaf/thymeleaf@3.1.5.RELEASE?type=jar"
+          },
+          "Version": "3.1.5.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.attoparser:attoparser:2.0.7.RELEASE",
+            "org.unbescape:unbescape:1.1.6.RELEASE",
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:a98ce31b33c80805b77e26f24e531aad",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.thymeleaf:thymeleaf-spring6",
+          "Identifier": {
+            "PURL": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.5.RELEASE",
+            "UID": "3de8476318ffd205"
+          },
+          "Version": "3.1.5.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/thymeleaf-spring6-3.1.5.RELEASE.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.thymeleaf:thymeleaf-spring6:3.1.5.RELEASE",
+          "Name": "org.thymeleaf:thymeleaf-spring6",
+          "Identifier": {
+            "PURL": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.5.RELEASE?type=jar",
+            "UID": "234a4945c226e88f",
+            "BOMRef": "pkg:maven/org.thymeleaf/thymeleaf-spring6@3.1.5.RELEASE?type=jar"
+          },
+          "Version": "3.1.5.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "org.thymeleaf:thymeleaf:3.1.5.RELEASE",
+            "org.slf4j:slf4j-api:2.0.20"
+          ],
+          "Digest": "md5:ba6d76a7c1c81ffbed318b165a72cc3a",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.unbescape:unbescape",
+          "Identifier": {
+            "PURL": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE",
+            "UID": "21916d49a0de25fc"
+          },
+          "Version": "1.1.6.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/unbescape-1.1.6.RELEASE.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.unbescape:unbescape:1.1.6.RELEASE",
+          "Name": "org.unbescape:unbescape",
+          "Identifier": {
+            "PURL": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE?type=jar",
+            "UID": "ab8e7272e7be376a",
+            "BOMRef": "pkg:maven/org.unbescape/unbescape@1.1.6.RELEASE?type=jar"
+          },
+          "Version": "1.1.6.RELEASE",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:d95ed94e1624e307a1958ee105ccbf39",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.webjars.npm:bootstrap",
+          "Identifier": {
+            "PURL": "pkg:maven/org.webjars.npm/bootstrap@5.3.8",
+            "UID": "93e1e481e4ed8dd6"
+          },
+          "Version": "5.3.8",
+          "Licenses": [
+            "MIT"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/bootstrap-5.3.8.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.webjars.npm:bootstrap:5.3.8",
+          "Name": "org.webjars.npm:bootstrap",
+          "Identifier": {
+            "PURL": "pkg:maven/org.webjars.npm/bootstrap@5.3.8?type=jar",
+            "UID": "e42684b28aa624da",
+            "BOMRef": "pkg:maven/org.webjars.npm/bootstrap@5.3.8?type=jar"
+          },
+          "Version": "5.3.8",
+          "Licenses": [
+            "MIT"
+          ],
+          "Digest": "md5:4a7ab934e7afc1c7f18baa816aabfb2f",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.webjars.npm:font-awesome",
+          "Identifier": {
+            "PURL": "pkg:maven/org.webjars.npm/font-awesome@4.7.0",
+            "UID": "3bb1655bb9f3b1c"
+          },
+          "Version": "4.7.0",
+          "Licenses": [
+            "Openfont-1.1"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/font-awesome-4.7.0.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.webjars.npm:font-awesome:4.7.0",
+          "Name": "org.webjars.npm:font-awesome",
+          "Identifier": {
+            "PURL": "pkg:maven/org.webjars.npm/font-awesome@4.7.0?type=jar",
+            "UID": "a43c3d3021d722ac",
+            "BOMRef": "pkg:maven/org.webjars.npm/font-awesome@4.7.0?type=jar"
+          },
+          "Version": "4.7.0",
+          "Licenses": [
+            "Openfont-1.1"
+          ],
+          "Digest": "md5:d01d4fbc4870714c76341ca06ea80525",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.webjars:webjars-locator-lite",
+          "Identifier": {
+            "PURL": "pkg:maven/org.webjars/webjars-locator-lite@1.1.3",
+            "UID": "e2515f516d70d76b"
+          },
+          "Version": "1.1.3",
+          "Licenses": [
+            "MIT"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/webjars-locator-lite-1.1.3.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.webjars:webjars-locator-lite:1.1.3",
+          "Name": "org.webjars:webjars-locator-lite",
+          "Identifier": {
+            "PURL": "pkg:maven/org.webjars/webjars-locator-lite@1.1.3?type=jar",
+            "UID": "1d382b1d00b96c12",
+            "BOMRef": "pkg:maven/org.webjars/webjars-locator-lite@1.1.3?type=jar"
+          },
+          "Version": "1.1.3",
+          "Licenses": [
+            "MIT"
+          ],
+          "DependsOn": [
+            "org.jspecify:jspecify:1.0.1"
+          ],
+          "Digest": "md5:649d9b39a79b284f9646d37b9b3f5b79",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "org.yaml:snakeyaml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.yaml/snakeyaml@2.6",
+            "UID": "2d4fe2fee787c527"
+          },
+          "Version": "2.6",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/snakeyaml-2.6.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "org.yaml:snakeyaml:2.6",
+          "Name": "org.yaml:snakeyaml",
+          "Identifier": {
+            "PURL": "pkg:maven/org.yaml/snakeyaml@2.6?type=jar",
+            "UID": "117088cc62d8c790",
+            "BOMRef": "pkg:maven/org.yaml/snakeyaml@2.6?type=jar"
+          },
+          "Version": "2.6",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:d8bd94536cee962cfff39730bffdb8da",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "tools.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-core@3.1.7",
+            "UID": "de3ad779e5f04eba"
+          },
+          "Version": "3.1.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jackson-core-3.1.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "tools.jackson.core:jackson-core:3.1.7",
+          "Name": "tools.jackson.core:jackson-core",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-core@3.1.7?type=jar",
+            "UID": "4a112672c9f5eb4",
+            "BOMRef": "pkg:maven/tools.jackson.core/jackson-core@3.1.7?type=jar"
+          },
+          "Version": "3.1.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "Digest": "md5:4dcb2a5b488b0e020f6546a2973c0a28",
+          "AnalyzedBy": "sbom"
+        },
+        {
+          "Name": "tools.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7",
+            "UID": "3661543ade9dd4a"
+          },
+          "Version": "3.1.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "FilePath": "spring-petclinic-4.0.0-SNAPSHOT.jar/BOOT-INF/lib/jackson-databind-3.1.7.jar",
+          "AnalyzedBy": "jar"
+        },
+        {
+          "ID": "tools.jackson.core:jackson-databind:3.1.7",
+          "Name": "tools.jackson.core:jackson-databind",
+          "Identifier": {
+            "PURL": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7?type=jar",
+            "UID": "c8c77910b0cf56ff",
+            "BOMRef": "pkg:maven/tools.jackson.core/jackson-databind@3.1.7?type=jar"
+          },
+          "Version": "3.1.7",
+          "Licenses": [
+            "Apache-2.0"
+          ],
+          "DependsOn": [
+            "com.fasterxml.jackson.core:jackson-annotations:2.21",
+            "tools.jackson.core:jackson-core:3.1.7"
+          ],
+          "Digest": "md5:bd36876c84ba73520f0633336ca2f93a",
+          "AnalyzedBy": "sbom"
+        }
+      ]
+    }
+  ]
+}

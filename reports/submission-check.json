@@ -1,0 +1,99 @@
+{
+  "checked_at": "2026-11-09T10:25:09.125932+00:00",
+  "checks": [
+    {
+      "check": "required_files",
+      "passed": true
+    },
+    {
+      "check": "json_valid",
+      "passed": true
+    },
+    {
+      "check": "gitlab_pipeline",
+      "passed": true
+    },
+    {
+      "check": "gitlab_jobs",
+      "passed": true
+    },
+    {
+      "check": "gitleaks",
+      "passed": true
+    },
+    {
+      "check": "hadolint",
+      "passed": true
+    },
+    {
+      "check": "trivy-image_packages",
+      "passed": true
+    },
+    {
+      "check": "trivy-image_no_vulnerabilities",
+      "passed": true
+    },
+    {
+      "check": "trivy-dependencies_packages",
+      "passed": true
+    },
+    {
+      "check": "trivy-dependencies_no_vulnerabilities",
+      "passed": true
+    },
+    {
+      "check": "sonar_release",
+      "passed": true
+    },
+    {
+      "check": "sonar_no_open_issues",
+      "passed": true
+    },
+    {
+      "check": "compose-verification",
+      "passed": true
+    },
+    {
+      "check": "kubernetes-verification",
+      "passed": true
+    },
+    {
+      "check": "falco-test",
+      "passed": true
+    },
+    {
+      "check": "network_tests",
+      "passed": true
+    },
+    {
+      "check": "manifest_image_matches",
+      "passed": true
+    },
+    {
+      "check": "running_image_matches",
+      "passed": true
+    },
+    {
+      "check": "harbor_digest_matches",
+      "passed": true
+    },
+    {
+      "check": "harbor_scan",
+      "passed": true
+    },
+    {
+      "check": "zap_completed",
+      "passed": true
+    },
+    {
+      "check": "kube_bench_completed",
+      "passed": true
+    },
+    {
+      "check": "markdown_links",
+      "passed": true
+    }
+  ],
+  "broken_links": [],
+  "passed": true
+}

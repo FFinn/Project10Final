@@ -1,0 +1,72 @@
+{
+  "checked_at": "2026-11-09T10:23:22.471255+00:00",
+  "containers": [
+    {
+      "name": "/project10final-app-1",
+      "image_id": "sha256:60842dc05542b0b887de5e12d288c2d77ce34996bf3d144a4ed526ff9eee3b77",
+      "user": "10001:10001",
+      "read_only_rootfs": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges=true"
+      ],
+      "state": "running",
+      "health": "healthy",
+      "ports": {
+        "8080/tcp": [
+          {
+            "HostIp": "127.0.0.1",
+            "HostPort": "18081"
+          }
+        ]
+      }
+    },
+    {
+      "name": "/project10final-postgres-1",
+      "image_id": "sha256:aac5ed9e090c8b3e134bf1dcf3f9fe0787a29cecdf7867de8b53b5d8abc3eef2",
+      "user": "70:70",
+      "read_only_rootfs": true,
+      "cap_drop": [
+        "ALL"
+      ],
+      "security_opt": [
+        "no-new-privileges=true"
+      ],
+      "state": "running",
+      "health": "healthy",
+      "ports": {
+        "5432/tcp": null
+      }
+    }
+  ],
+  "checks": {
+    "identity": {
+      "exit_code": 0,
+      "stdout": "uid=10001(app) gid=10001(app) groups=10001(app)",
+      "stderr": ""
+    },
+    "no_build_tools": {
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    "health": {
+      "exit_code": 0,
+      "stdout": "{\"groups\":[\"liveness\",\"readiness\"],\"status\":\"UP\"}",
+      "stderr": ""
+    },
+    "owners": {
+      "exit_code": 0,
+      "stdout": "200",
+      "stderr": ""
+    },
+    "postgres": {
+      "exit_code": 0,
+      "stdout": "petclinic|10",
+      "stderr": ""
+    }
+  },
+  "passed": true
+}

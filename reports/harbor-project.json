@@ -1,0 +1,26 @@
+{
+  "creation_time": "2026-11-09T09:15:21.139Z",
+  "current_user_role_id": 1,
+  "current_user_role_ids": [
+    1
+  ],
+  "cve_allowlist": {
+    "creation_time": "0001-01-01T00:00:00.000Z",
+    "id": 2,
+    "items": [],
+    "project_id": 2,
+    "update_time": "0001-01-01T00:00:00.000Z"
+  },
+  "metadata": {
+    "auto_scan": "true",
+    "prevent_vul": "true",
+    "public": "false",
+    "severity": "high"
+  },
+  "name": "project10",
+  "owner_id": 1,
+  "owner_name": "admin",
+  "project_id": 2,
+  "repo_count": 1,
+  "update_time": "2026-11-09T09:15:21.139Z"
+}

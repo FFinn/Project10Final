@@ -1,0 +1,20 @@
+{
+  "image": "harbor.project10.internal:30443/project10/petclinic:7d4d3ac71888020b277652fc257ade6d94954654",
+  "summary": {
+    "fatal": 0,
+    "warn": 0,
+    "info": 1,
+    "skip": 0,
+    "pass": 15
+  },
+  "details": [
+    {
+      "code": "CIS-DI-0005",
+      "title": "Enable Content trust for Docker",
+      "level": "INFO",
+      "alerts": [
+        "export DOCKER_CONTENT_TRUST=1 before docker pull/build"
+      ]
+    }
+  ]
+}

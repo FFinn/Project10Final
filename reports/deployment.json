@@ -1,0 +1,202 @@
+{
+    "apiVersion": "apps/v1",
+    "kind": "Deployment",
+    "metadata": {
+        "annotations": {
+            "deployment.kubernetes.io/revision": "5",
+            "kubectl.kubernetes.io/last-applied-configuration": "{\"apiVersion\":\"apps/v1\",\"kind\":\"Deployment\",\"metadata\":{\"annotations\":{},\"name\":\"petclinic\",\"namespace\":\"default\"},\"spec\":{\"replicas\":1,\"selector\":{\"matchLabels\":{\"app\":\"petclinic\"}},\"template\":{\"metadata\":{\"labels\":{\"app\":\"petclinic\"}},\"spec\":{\"automountServiceAccountToken\":false,\"containers\":[{\"env\":[{\"name\":\"SPRING_PROFILES_ACTIVE\",\"value\":\"postgres\"},{\"name\":\"POSTGRES_URL\",\"value\":\"jdbc:postgresql://postgres:5432/petclinic\"},{\"name\":\"POSTGRES_USER\",\"value\":\"petclinic\"},{\"name\":\"POSTGRES_PASS\",\"valueFrom\":{\"secretKeyRef\":{\"key\":\"password\",\"name\":\"petclinic-db\"}}},{\"name\":\"MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE\",\"value\":\"health,info\"},{\"name\":\"MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS\",\"value\":\"never\"}],\"image\":\"harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538\",\"livenessProbe\":{\"httpGet\":{\"path\":\"/actuator/health\",\"port\":\"http\"},\"periodSeconds\":20},\"name\":\"petclinic\",\"ports\":[{\"containerPort\":8080,\"name\":\"http\"}],\"readinessProbe\":{\"httpGet\":{\"path\":\"/actuator/health\",\"port\":\"http\"},\"periodSeconds\":10},\"resources\":{\"limits\":{\"cpu\":\"1\",\"memory\":\"768Mi\"},\"requests\":{\"cpu\":\"100m\",\"memory\":\"384Mi\"}},\"securityContext\":{\"allowPrivilegeEscalation\":false,\"capabilities\":{\"drop\":[\"ALL\"]},\"readOnlyRootFilesystem\":true,\"runAsNonRoot\":true},\"startupProbe\":{\"failureThreshold\":36,\"httpGet\":{\"path\":\"/actuator/health\",\"port\":\"http\"},\"periodSeconds\":5},\"volumeMounts\":[{\"mountPath\":\"/tmp\",\"name\":\"tmp\"}]}],\"imagePullSecrets\":[{\"name\":\"harbor-pull\"}],\"securityContext\":{\"fsGroup\":10001,\"runAsGroup\":10001,\"runAsNonRoot\":true,\"runAsUser\":10001,\"seccompProfile\":{\"type\":\"RuntimeDefault\"}},\"volumes\":[{\"emptyDir\":{\"medium\":\"Memory\",\"sizeLimit\":\"128Mi\"},\"name\":\"tmp\"}]}}}}\n"
+        },
+        "creationTimestamp": "2026-11-09T09:33:29Z",
+        "generation": 5,
+        "name": "petclinic",
+        "namespace": "default",
+        "resourceVersion": "24955",
+        "uid": "51d89878-62d3-4c59-90bb-679a3edba512"
+    },
+    "spec": {
+        "progressDeadlineSeconds": 600,
+        "replicas": 1,
+        "revisionHistoryLimit": 10,
+        "selector": {
+            "matchLabels": {
+                "app": "petclinic"
+            }
+        },
+        "strategy": {
+            "rollingUpdate": {
+                "maxSurge": "25%",
+                "maxUnavailable": "25%"
+            },
+            "type": "RollingUpdate"
+        },
+        "template": {
+            "metadata": {
+                "creationTimestamp": null,
+                "labels": {
+                    "app": "petclinic"
+                }
+            },
+            "spec": {
+                "automountServiceAccountToken": false,
+                "containers": [
+                    {
+                        "env": [
+                            {
+                                "name": "SPRING_PROFILES_ACTIVE",
+                                "value": "postgres"
+                            },
+                            {
+                                "name": "POSTGRES_URL",
+                                "value": "jdbc:postgresql://postgres:5432/petclinic"
+                            },
+                            {
+                                "name": "POSTGRES_USER",
+                                "value": "petclinic"
+                            },
+                            {
+                                "name": "POSTGRES_PASS",
+                                "valueFrom": {
+                                    "secretKeyRef": {
+                                        "key": "password",
+                                        "name": "petclinic-db"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE",
+                                "value": "health,info"
+                            },
+                            {
+                                "name": "MANAGEMENT_ENDPOINT_HEALTH_SHOW_DETAILS",
+                                "value": "never"
+                            }
+                        ],
+                        "image": "harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538",
+                        "imagePullPolicy": "IfNotPresent",
+                        "livenessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/actuator/health",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 20,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "name": "petclinic",
+                        "ports": [
+                            {
+                                "containerPort": 8080,
+                                "name": "http",
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "readinessProbe": {
+                            "failureThreshold": 3,
+                            "httpGet": {
+                                "path": "/actuator/health",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "768Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "384Mi"
+                            }
+                        },
+                        "securityContext": {
+                            "allowPrivilegeEscalation": false,
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "readOnlyRootFilesystem": true,
+                            "runAsNonRoot": true
+                        },
+                        "startupProbe": {
+                            "failureThreshold": 36,
+                            "httpGet": {
+                                "path": "/actuator/health",
+                                "port": "http",
+                                "scheme": "HTTP"
+                            },
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "timeoutSeconds": 1
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "volumeMounts": [
+                            {
+                                "mountPath": "/tmp",
+                                "name": "tmp"
+                            }
+                        ]
+                    }
+                ],
+                "dnsPolicy": "ClusterFirst",
+                "imagePullSecrets": [
+                    {
+                        "name": "harbor-pull"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "schedulerName": "default-scheduler",
+                "securityContext": {
+                    "fsGroup": 10001,
+                    "runAsGroup": 10001,
+                    "runAsNonRoot": true,
+                    "runAsUser": 10001,
+                    "seccompProfile": {
+                        "type": "RuntimeDefault"
+                    }
+                },
+                "terminationGracePeriodSeconds": 30,
+                "volumes": [
+                    {
+                        "emptyDir": {
+                            "medium": "Memory",
+                            "sizeLimit": "128Mi"
+                        },
+                        "name": "tmp"
+                    }
+                ]
+            }
+        }
+    },
+    "status": {
+        "availableReplicas": 1,
+        "conditions": [
+            {
+                "lastTransitionTime": "2026-11-09T09:43:48Z",
+                "lastUpdateTime": "2026-11-09T09:43:48Z",
+                "message": "Deployment has minimum availability.",
+                "reason": "MinimumReplicasAvailable",
+                "status": "True",
+                "type": "Available"
+            },
+            {
+                "lastTransitionTime": "2026-11-09T09:33:31Z",
+                "lastUpdateTime": "2026-11-09T10:22:54Z",
+                "message": "ReplicaSet \"petclinic-55d965cb9b\" has successfully progressed.",
+                "reason": "NewReplicaSetAvailable",
+                "status": "True",
+                "type": "Progressing"
+            }
+        ],
+        "observedGeneration": 5,
+        "readyReplicas": 1,
+        "replicas": 1,
+        "updatedReplicas": 1
+    }
+}

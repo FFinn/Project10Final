@@ -1,0 +1,25 @@
+[
+  {
+    "check": "clean_image",
+    "report": "reports/trivy-image.json",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "output": "Проверено пакетов: 168\nHIGH/CRITICAL: 0\n",
+    "passed": true
+  },
+  {
+    "check": "vulnerable_image",
+    "report": "reports/trivy-image-before.json",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "output": "Проверено пакетов: 167\nCRITICAL: CVE-2026-55276 — org.apache.tomcat.embed:tomcat-embed-core 11.0.22\nCRITICAL: CVE-2026-65182 — org.apache.tomcat.embed:tomcat-embed-core 11.0.22\nCRITICAL: CVE-2026-65637 — org.apache.tomcat.embed:tomcat-embed-core 11.0.22\nCRITICAL: CVE-2026-65905 — org.apache.tomcat.embed:tomcat-embed-core 11.0.22\nCRITICAL: CVE-2026-68525 — org.apache.tomcat.embed:tomcat-embed-core 11.0.22\nHIGH: CVE-2026-53404 — org.apache.tomcat.embed:tomcat-embed-core 11.0.22\nHIGH: CVE-2026-54291 — org.postgresql:postgresql 42.7.11\nCRITICAL: CVE-2026-47884 — org.springframework:spring-webmvc 7.0.8\nCRITICAL: CVE-2026-47890 — org.springframework:spring-webmvc 7.0.8\nHIGH: CVE-2026-89407 — tools.jackson.core:jackson-core 3.1.4\nHIGH: CVE-2026-89425 — tools.jackson.core:jackson-core 3.1.4\nHIGH: CVE-2026-68497 — tools.jackson.core:jackson-databind 3.1.4\nHIGH: CVE-2026-91776 — tools.jackson.core:jackson-databind 3.1.4\nHIGH: CVE-2026-91777 — tools.jackson.core:jackson-databind 3.1.4\nHIGH/CRITICAL: 14\n",
+    "passed": true
+  },
+  {
+    "check": "empty_report",
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "output": "Ошибка: отчёт не содержит проверенных пакетов\n",
+    "passed": true
+  }
+]

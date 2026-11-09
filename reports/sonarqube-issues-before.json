@@ -1,0 +1,1514 @@
+{
+  "total": 24,
+  "p": 1,
+  "ps": 500,
+  "paging": {
+    "pageIndex": 1,
+    "pageSize": 500,
+    "total": 24
+  },
+  "effortTotal": 144,
+  "issues": [
+    {
+      "key": "c645f5c7-6178-4fa9-8ed1-885b3b1e0a47",
+      "rule": "java:S1192",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+      "project": "s2417991-project10final",
+      "line": 61,
+      "hash": "1d22005311e4f6212ed0ac3ae60cd88b",
+      "textRange": {
+        "startLine": 61,
+        "endLine": 61,
+        "startOffset": 43,
+        "endOffset": 53
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+              "textRange": {
+                "startLine": 61,
+                "endLine": 61,
+                "startOffset": 43,
+                "endOffset": 53
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+              "textRange": {
+                "startLine": 112,
+                "endLine": 112,
+                "startOffset": 36,
+                "endOffset": 46
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+              "textRange": {
+                "startLine": 119,
+                "endLine": 119,
+                "startOffset": 22,
+                "endOffset": 32
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal \"lastName\" 3 times.",
+      "effort": "8min",
+      "debt": "8min",
+      "author": "s2417991@students.yandex.ru",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-11-09T09:34:56+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "4e131c6c-57b5-4ac3-bcbe-b054db0551da",
+      "rule": "java:S1192",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "project": "s2417991-project10final",
+      "line": 97,
+      "hash": "e146b914167a330956b616990b82d017",
+      "textRange": {
+        "startLine": 97,
+        "endLine": 97,
+        "startOffset": 38,
+        "endOffset": 49
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 97,
+                "endLine": 97,
+                "startOffset": 38,
+                "endOffset": 49
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 120,
+                "endLine": 120,
+                "startOffset": 22,
+                "endOffset": 33
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 165,
+                "endLine": 165,
+                "startOffset": 22,
+                "endOffset": 33
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal \"birthDate\" 3 times.",
+      "effort": "8min",
+      "debt": "8min",
+      "author": "s2417991@students.yandex.ru",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-11-09T09:34:56+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "b7cea0fe-579f-4119-927a-ae15489310ed",
+      "rule": "java:S1192",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "project": "s2417991-project10final",
+      "line": 102,
+      "hash": "550d0c4048aa871fda05517da263ec80",
+      "textRange": {
+        "startLine": 102,
+        "endLine": 102,
+        "startOffset": 34,
+        "endOffset": 41
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 102,
+                "endLine": 102,
+                "startOffset": 34,
+                "endOffset": 41
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 111,
+                "endLine": 111,
+                "startOffset": 34,
+                "endOffset": 41
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 150,
+                "endLine": 150,
+                "startOffset": 34,
+                "endOffset": 41
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal \"owner\" 3 times.",
+      "effort": "8min",
+      "debt": "8min",
+      "author": "s2417991@students.yandex.ru",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-11-09T09:34:56+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "1bec4b5a-6914-48d0-a89c-3ae4907ce348",
+      "rule": "java:S1192",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "project": "s2417991-project10final",
+      "line": 115,
+      "hash": "f1cbd1a642051bf036979c85eb677ca9",
+      "textRange": {
+        "startLine": 115,
+        "endLine": 115,
+        "startOffset": 30,
+        "endOffset": 41
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 115,
+                "endLine": 115,
+                "startOffset": 30,
+                "endOffset": 41
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 135,
+                "endLine": 135,
+                "startOffset": 30,
+                "endOffset": 41
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 159,
+                "endLine": 159,
+                "startOffset": 31,
+                "endOffset": 42
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 179,
+                "endLine": 179,
+                "startOffset": 30,
+                "endOffset": 41
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal \"duplicate\" 4 times.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "shivram_r@outlook.com",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-07-16T16:27:28+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "e1fca45a-bf47-4d8c-95fa-2dacf3397a53",
+      "rule": "java:S1192",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "project": "s2417991-project10final",
+      "line": 115,
+      "hash": "f1cbd1a642051bf036979c85eb677ca9",
+      "textRange": {
+        "startLine": 115,
+        "endLine": 115,
+        "startOffset": 43,
+        "endOffset": 59
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 115,
+                "endLine": 115,
+                "startOffset": 43,
+                "endOffset": 59
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 135,
+                "endLine": 135,
+                "startOffset": 43,
+                "endOffset": 59
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 159,
+                "endLine": 159,
+                "startOffset": 44,
+                "endOffset": 60
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+              "textRange": {
+                "startLine": 179,
+                "endLine": 179,
+                "startOffset": 43,
+                "endOffset": 59
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal \"already exists\" 4 times.",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "shivram_r@outlook.com",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2026-07-16T16:27:28+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "36a11620-ffa2-47d8-a95e-5fcd4ee00727",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java",
+      "project": "s2417991-project10final",
+      "line": 29,
+      "hash": "b30b2db45415ca25ab92d0a38670bb7c",
+      "textRange": {
+        "startLine": 29,
+        "endLine": 29,
+        "startOffset": 0,
+        "endOffset": 6
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this 'public' modifier.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "shivram_r@outlook.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-07-16T16:27:28+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "aa33d69e-146e-428c-b822-a94ace297854",
+      "rule": "java:S5786",
+      "severity": "INFO",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java",
+      "project": "s2417991-project10final",
+      "line": 41,
+      "hash": "40a5e97f18757baece35ac07f1648e09",
+      "textRange": {
+        "startLine": 41,
+        "endLine": 41,
+        "startOffset": 1,
+        "endOffset": 7
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Remove this 'public' modifier.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "shivram_r@outlook.com",
+      "tags": [
+        "junit",
+        "tests"
+      ],
+      "creationDate": "2026-07-16T16:27:28+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "INFO"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "2ba6b984-4d5d-4a37-995a-3d83a2cb79b8",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "project": "s2417991-project10final",
+      "line": 262,
+      "hash": "6343938331bde868ac9eaf0a0dcca61b",
+      "textRange": {
+        "startLine": 262,
+        "endLine": 262,
+        "startOffset": 22,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"types\" which hides the field declared at line 81.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "shivram_r@outlook.com",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2026-07-16T16:27:28+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "498b2f81-5528-419f-8658-d2130b37a5a1",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "project": "s2417991-project10final",
+      "line": 282,
+      "hash": "6343938331bde868ac9eaf0a0dcca61b",
+      "textRange": {
+        "startLine": 282,
+        "endLine": 282,
+        "startOffset": 22,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"types\" which hides the field declared at line 81.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "shivram_r@outlook.com",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2026-07-16T16:27:28+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "9aa9348d-b216-4849-82b3-5e985670fae2",
+      "rule": "java:S125",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+      "project": "s2417991-project10final",
+      "line": 30,
+      "hash": "e75e3fd0537147f89475a9a84bb0421a",
+      "textRange": {
+        "startLine": 30,
+        "endLine": 30,
+        "startOffset": 50,
+        "endOffset": 79
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "This block of commented-out lines of code should be removed.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "xp.vit.blr@gmail.com",
+      "tags": [
+        "unused"
+      ],
+      "creationDate": "2026-06-07T07:17:22+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d3ce3d85-7c52-4944-aee8-0c294f94d878",
+      "rule": "java:S1700",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+      "project": "s2417991-project10final",
+      "line": 33,
+      "hash": "4b42e49839bc418477a78d7f3a970ae6",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 19,
+        "endOffset": 23
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename field \"vets\"",
+      "effort": "10min",
+      "debt": "10min",
+      "author": "david.syer@broadcom.com",
+      "tags": [
+        "brain-overload"
+      ],
+      "creationDate": "2025-11-26T14:22:44+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "IDENTIFIABLE",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "08a751b2-d255-4a10-aebb-9d1533c101de",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+      "project": "s2417991-project10final",
+      "line": 47,
+      "hash": "a062e905f862625f416651af6f2b5e4a",
+      "textRange": {
+        "startLine": 47,
+        "endLine": 47,
+        "startOffset": 9,
+        "endOffset": 13
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"name\" which hides the field declared at line 33.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "moritz.halbritter@broadcom.com",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2025-10-14T10:13:13+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "913fc0e7-4e58-49b6-85f0-757a1134327b",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "project": "s2417991-project10final",
+      "line": 168,
+      "hash": "6343938331bde868ac9eaf0a0dcca61b",
+      "textRange": {
+        "startLine": 168,
+        "endLine": 168,
+        "startOffset": 22,
+        "endOffset": 27
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"types\" which hides the field declared at line 81.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "contact@patbaumgartner.com",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2025-06-05T11:18:10+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "51308d03-35c6-4864-b5a8-fe6947d7cab5",
+      "rule": "java:S6204",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+      "project": "s2417991-project10final",
+      "line": 63,
+      "hash": "7fb4ca3bdafe94c1165e7816973e258a",
+      "textRange": {
+        "startLine": 63,
+        "endLine": 63,
+        "startOffset": 12,
+        "endOffset": 31
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()' and ensure that the list is unmodified.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "antoine.rey@free.fr",
+      "tags": [
+        "java16"
+      ],
+      "creationDate": "2025-02-04T08:09:03+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "3618ee31-2ec2-4a54-8568-6dc38d206740",
+      "rule": "java:S115",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java",
+      "project": "s2417991-project10final",
+      "line": 51,
+      "hash": "171fee0566248a54193b8e7ccf4b2688",
+      "textRange": {
+        "startLine": 51,
+        "endLine": 51,
+        "startOffset": 29,
+        "endOffset": 36
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "1328032567@qq.com",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2024-11-28T09:52:29+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "IDENTIFIABLE",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d0cb09ab-a2b6-4672-87b5-c4275a427d10",
+      "rule": "java:S115",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java",
+      "project": "s2417991-project10final",
+      "line": 53,
+      "hash": "72d437e7a6751159d311998237613bec",
+      "textRange": {
+        "startLine": 53,
+        "endLine": 53,
+        "startOffset": 29,
+        "endOffset": 40
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "1328032567@qq.com",
+      "tags": [
+        "convention"
+      ],
+      "creationDate": "2024-11-28T09:52:29+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "IDENTIFIABLE",
+      "cleanCodeAttributeCategory": "CONSISTENT",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "3a7dfb64-e526-4bd3-a516-fd4ee2c78056",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "project": "s2417991-project10final",
+      "line": 91,
+      "hash": "9adecdee1e9ca61ddd81fc9b804ed12d",
+      "textRange": {
+        "startLine": 91,
+        "endLine": 91,
+        "startOffset": 14,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"owners\" which hides the field declared at line 78.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "1328032567@qq.com",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2024-11-11T17:55:34+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "f4f46185-84a3-4bdb-bdfc-08a3e45e4870",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "project": "s2417991-project10final",
+      "line": 112,
+      "hash": "ca84c7ca767d1afd4f7286f8bda6f894",
+      "textRange": {
+        "startLine": 112,
+        "endLine": 112,
+        "startOffset": 14,
+        "endOffset": 20
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"owners\" which hides the field declared at line 78.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "1328032567@qq.com",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2024-11-11T17:55:34+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "1244face-61df-4f94-ad8c-d0d11d06221a",
+      "rule": "java:S1488",
+      "severity": "MINOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "project": "s2417991-project10final",
+      "line": 70,
+      "hash": "be23c5f42789a6a5abb97476e710ec5b",
+      "textRange": {
+        "startLine": 70,
+        "endLine": 71,
+        "startOffset": 16,
+        "endOffset": 82
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Immediately return this expression instead of assigning it to the temporary variable \"owner\".",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "1328032567@qq.com",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2024-11-10T09:14:42+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "d6fc0d76-bea4-45f1-b6ef-c5b5085e6bde",
+      "rule": "java:S1192",
+      "severity": "CRITICAL",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+      "project": "s2417991-project10final",
+      "line": 81,
+      "hash": "f1bd01f9334aaf9206f29f0048802daf",
+      "textRange": {
+        "startLine": 81,
+        "endLine": 81,
+        "startOffset": 40,
+        "endOffset": 47
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+              "textRange": {
+                "startLine": 81,
+                "endLine": 81,
+                "startOffset": 40,
+                "endOffset": 47
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+              "textRange": {
+                "startLine": 157,
+                "endLine": 157,
+                "startOffset": 40,
+                "endOffset": 47
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        },
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+              "textRange": {
+                "startLine": 163,
+                "endLine": 163,
+                "startOffset": 40,
+                "endOffset": 47
+              },
+              "msg": "Duplication",
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Define a constant instead of duplicating this literal \"error\" 3 times.",
+      "effort": "8min",
+      "debt": "8min",
+      "author": "1328032567@qq.com",
+      "tags": [
+        "design"
+      ],
+      "creationDate": "2024-11-06T18:46:58+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "DISTINCT",
+      "cleanCodeAttributeCategory": "ADAPTABLE",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "HIGH"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "508d3154-9297-4802-b764-28cf8e2cb98a",
+      "rule": "java:S1612",
+      "severity": "MINOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java",
+      "project": "s2417991-project10final",
+      "line": 37,
+      "hash": "c8b5056d7465055fd2b687e838e36769",
+      "textRange": {
+        "startLine": 37,
+        "endLine": 37,
+        "startOffset": 66,
+        "endOffset": 68
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace this lambda with method reference 'testee::triggerException'.",
+      "effort": "2min",
+      "debt": "2min",
+      "author": "dsyer@vmware.com",
+      "tags": [
+        "java8"
+      ],
+      "creationDate": "2024-05-16T14:23:56+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "LOW"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "8005581d-1f00-46ce-8d2b-1b26498fd396",
+      "rule": "java:S1066",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+      "project": "s2417991-project10final",
+      "line": 151,
+      "hash": "3aad4302e90c6625c65cde9965ed2f66",
+      "textRange": {
+        "startLine": 151,
+        "endLine": 151,
+        "startOffset": 4,
+        "endOffset": 6
+      },
+      "flows": [
+        {
+          "locations": [
+            {
+              "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+              "textRange": {
+                "startLine": 150,
+                "endLine": 150,
+                "startOffset": 3,
+                "endOffset": 5
+              },
+              "msgFormattings": []
+            }
+          ]
+        }
+      ],
+      "status": "OPEN",
+      "message": "Merge this if statement with the enclosing one.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "bijomutta@gmail.com",
+      "tags": [
+        "clumsy"
+      ],
+      "creationDate": "2023-07-13T12:05:34+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": true,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "0577d6e4-ee3a-4622-9f85-1a9b8cd2a6e9",
+      "rule": "java:S112",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+      "project": "s2417991-project10final",
+      "line": 33,
+      "hash": "0285e6eea6d36962c14bbd7979f5d86a",
+      "textRange": {
+        "startLine": 33,
+        "endLine": 33,
+        "startOffset": 12,
+        "endOffset": 28
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Replace generic exceptions with specific library exceptions or a custom exception.",
+      "effort": "20min",
+      "debt": "20min",
+      "author": "david_syer@hotmail.com",
+      "tags": [
+        "cwe",
+        "error-handling",
+        "cert"
+      ],
+      "creationDate": "2020-01-03T11:22:05+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "MAIN",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "COMPLETE",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    },
+    {
+      "key": "424d5e6b-66dc-4207-b5f1-4b3bb41531b6",
+      "rule": "java:S1117",
+      "severity": "MAJOR",
+      "component": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "project": "s2417991-project10final",
+      "line": 208,
+      "hash": "c88d48f69d5994ef6f342ba6f8d2ec30",
+      "textRange": {
+        "startLine": 208,
+        "endLine": 208,
+        "startOffset": 18,
+        "endOffset": 22
+      },
+      "flows": [],
+      "status": "OPEN",
+      "message": "Rename \"vets\" which hides the field declared at line 84.",
+      "effort": "5min",
+      "debt": "5min",
+      "author": "dsyer@pivotal.io",
+      "tags": [
+        "cert",
+        "suspicious",
+        "pitfall"
+      ],
+      "creationDate": "2016-11-14T15:36:21+0000",
+      "updateDate": "2026-11-09T10:13:11+0000",
+      "type": "CODE_SMELL",
+      "scope": "TEST",
+      "quickFixAvailable": false,
+      "messageFormattings": [],
+      "codeVariants": [],
+      "cleanCodeAttribute": "CLEAR",
+      "cleanCodeAttributeCategory": "INTENTIONAL",
+      "impacts": [
+        {
+          "softwareQuality": "MAINTAINABILITY",
+          "severity": "MEDIUM"
+        }
+      ],
+      "issueStatus": "OPEN",
+      "prioritizedRule": false,
+      "fromSonarQubeUpdate": false,
+      "internalTags": [],
+      "linkedTicketStatus": "NOT_LINKED"
+    }
+  ],
+  "components": [
+    {
+      "key": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "PetValidatorTests.java",
+      "longName": "src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java",
+      "path": "src/test/java/org/springframework/samples/petclinic/owner/PetValidatorTests.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Vet.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/vet/Vet.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/vet/Vet.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "PetClinicRuntimeHints.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/PetClinicRuntimeHints.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "PetController.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/owner/PetController.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/owner/PetController.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Owner.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/owner/Owner.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/owner/Owner.java"
+    },
+    {
+      "key": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "ClinicServiceTests.java",
+      "longName": "src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java",
+      "path": "src/test/java/org/springframework/samples/petclinic/service/ClinicServiceTests.java"
+    },
+    {
+      "key": "s2417991-project10final",
+      "enabled": true,
+      "qualifier": "TRK",
+      "name": "petclinic",
+      "longName": "petclinic"
+    },
+    {
+      "key": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "CrashControllerTests.java",
+      "longName": "src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java",
+      "path": "src/test/java/org/springframework/samples/petclinic/system/CrashControllerTests.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "Vets.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/vet/Vets.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/vet/Vets.java"
+    },
+    {
+      "key": "s2417991-project10final:src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java",
+      "enabled": true,
+      "qualifier": "UTS",
+      "name": "PetClinicConcurrencyTests.java",
+      "longName": "src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java",
+      "path": "src/test/java/org/springframework/samples/petclinic/PetClinicConcurrencyTests.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "CrashController.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/system/CrashController.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/system/CrashController.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "OwnerController.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/owner/OwnerController.java"
+    },
+    {
+      "key": "s2417991-project10final:src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+      "enabled": true,
+      "qualifier": "FIL",
+      "name": "NamedEntity.java",
+      "longName": "src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java",
+      "path": "src/main/java/org/springframework/samples/petclinic/model/NamedEntity.java"
+    }
+  ],
+  "facets": []
+}

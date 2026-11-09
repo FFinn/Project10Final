@@ -1,0 +1,72 @@
+{
+  "component": {
+    "key": "s2417991-project10final",
+    "name": "Project10Final",
+    "description": "Parent pom providing dependency and plugin management for applications built with Maven",
+    "qualifier": "TRK",
+    "measures": [
+      {
+        "metric": "coverage",
+        "value": "91.6",
+        "bestValue": false
+      },
+      {
+        "metric": "blocker_violations",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "test_failures",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "bugs",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "duplicated_lines_density",
+        "value": "0.0",
+        "bestValue": true
+      },
+      {
+        "metric": "code_smells",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "tests",
+        "value": "80"
+      },
+      {
+        "metric": "new_coverage",
+        "period": {
+          "index": 1,
+          "value": "89.5",
+          "bestValue": false
+        }
+      },
+      {
+        "metric": "vulnerabilities",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "security_hotspots",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "test_errors",
+        "value": "0",
+        "bestValue": true
+      },
+      {
+        "metric": "critical_violations",
+        "value": "0",
+        "bestValue": true
+      }
+    ]
+  }
+}

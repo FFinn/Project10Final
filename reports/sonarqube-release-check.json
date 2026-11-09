@@ -1,0 +1,11 @@
+{
+  "server": "https://sonarqube.devsecops.education-services.ru",
+  "project": "s2417991-project10final",
+  "metrics": {
+    "vulnerabilities": "0",
+    "blocker_violations": "0",
+    "critical_violations": "0"
+  },
+  "quality_gate": "OK",
+  "passed": true
+}

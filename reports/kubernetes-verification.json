@@ -1,0 +1,54 @@
+{
+  "checked_at": "2026-11-09T10:23:20.487091+00:00",
+  "checks": {
+    "/": {
+      "exit_code": 0,
+      "stdout": "200",
+      "stderr": ""
+    },
+    "/owners?lastName=": {
+      "exit_code": 0,
+      "stdout": "200",
+      "stderr": ""
+    },
+    "/vets": {
+      "exit_code": 0,
+      "stdout": "200",
+      "stderr": ""
+    },
+    "/actuator/health": {
+      "exit_code": 0,
+      "stdout": "200",
+      "stderr": ""
+    },
+    "postgres": {
+      "exit_code": 0,
+      "stdout": "petclinic|10",
+      "stderr": ""
+    }
+  },
+  "app_containers": [
+    {
+      "containerID": "containerd://e6745ba30a5dce42138c6af32f2357321ec042c8e6486b86d1a891a1283c7ae0",
+      "image": "sha256:60842dc05542b0b887de5e12d288c2d77ce34996bf3d144a4ed526ff9eee3b77",
+      "imageID": "harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538",
+      "lastState": {},
+      "name": "petclinic",
+      "ready": true,
+      "restartCount": 0,
+      "started": true,
+      "state": {
+        "running": {
+          "startedAt": "2026-11-09T10:22:29Z"
+        }
+      },
+      "volumeMounts": [
+        {
+          "mountPath": "/tmp",
+          "name": "tmp"
+        }
+      ]
+    }
+  ],
+  "passed": true
+}

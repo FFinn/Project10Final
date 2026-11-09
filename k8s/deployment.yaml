@@ -21,7 +21,7 @@ spec:
         seccompProfile: {type: RuntimeDefault}
       containers:
         - name: petclinic
-          image: harbor.project10.internal:30443/project10/petclinic@sha256:8b63825ab149f985ed0d5878f77e18c3a89a4e76be49b41e5275eef4b4abb1d7
+          image: harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538
           securityContext:
             runAsNonRoot: true
             readOnlyRootFilesystem: true

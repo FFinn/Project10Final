@@ -1,0 +1,212 @@
+{
+  "created_at": "2026-11-09T10:25:09.080735+00:00",
+  "application_repository": "https://github.com/spring-projects/spring-petclinic",
+  "baseline_source_commit": "500158f732419217507c7656904b8e6aa1bcc0d6",
+  "analyzed_commit": "7d4d3ac71888020b277652fc257ade6d94954654",
+  "gitlab_pipeline": "https://devsecops.gitlab.yandexcloud.net/s2417991/project10final/-/pipelines/16154",
+  "deployed_image": "harbor.project10.internal:30443/project10/petclinic@sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538",
+  "sonarqube": {
+    "server": "https://sonarqube.devsecops.education-services.ru",
+    "version": "26.1.0.118079",
+    "project": "s2417991-project10final"
+  },
+  "sources": {
+    "gitlab": [
+      "gitleaks.json",
+      "hadolint.json",
+      "trivy-dependencies.json",
+      "trivy-image.json",
+      "dockle.json",
+      "sonar-analysis.log",
+      "sonarqube-quality.json",
+      "sonarqube-measures.json",
+      "sonarqube-issues.json",
+      "sonarqube-release-check.json",
+      "jacoco.xml",
+      "image-digest.json",
+      "image-push.log"
+    ],
+    "harbor_api": [
+      "harbor-artifact.json",
+      "harbor-project.json",
+      "harbor-scan.json"
+    ],
+    "kubernetes_jobs": [
+      "zap.json",
+      "zap-job.json",
+      "kube-bench.json",
+      "kube-bench-fail.json",
+      "kube-bench-job.json"
+    ],
+    "live_checks": [
+      "compose-verification.json",
+      "kubernetes-verification.json",
+      "network-tests.json",
+      "falco-test.json",
+      "kyverno-rejection.txt"
+    ],
+    "prior_scans": {
+      "binding-tests.log": "Проверка классов форм до итогового повторного анализа; все эти тесты также выполнены в окончательном задании SonarQube",
+      "trivy-image-before.json": "Первичная сборка приложения до обновления зависимостей",
+      "sonarqube-issues-before.json": "Учебный SonarQube: версия 3822cc72ed2776d529b172b0c50256dec14d2044 до исправления 24 замечаний"
+    }
+  },
+  "files": {
+    "binding-tests.log": {
+      "bytes": 22166,
+      "sha256": "0e877d0c34d9663cc2f9050fa6de21815c975aca7cc259ceb16a6236e8f2d875"
+    },
+    "compose-verification.json": {
+      "bytes": 1599,
+      "sha256": "769d302a5cf6d522e2530f13ed3758f1b1ae077abd743633617a5ce763e6add1"
+    },
+    "deployment.json": {
+      "bytes": 9799,
+      "sha256": "3ae400ffcaa0f967a60afd92709bdeff13004db6a199ff5edc20f28d3a16cc1c"
+    },
+    "dockle.json": {
+      "bytes": 430,
+      "sha256": "de34fdaaeeba9e42f870c4ccac1aa08ef66af08671e6f9439daf9a152cf9620b"
+    },
+    "falco-test.json": {
+      "bytes": 6351,
+      "sha256": "d404d05fe47bcec42f3777cfb0086aca8d912e9679a8912fb99c0dca0d0e0e37"
+    },
+    "gitlab-access.json": {
+      "bytes": 238,
+      "sha256": "84042471c1dabe7d427dab2ad808001f4cf3d9ddd098671870fecc229072f164"
+    },
+    "gitlab-jobs.json": {
+      "bytes": 997,
+      "sha256": "2f724250796ac36a79e5830498cc1d7da9b505b63998f9e345c292d674adfe49"
+    },
+    "gitlab-pipeline.json": {
+      "bytes": 298,
+      "sha256": "21752f8be6b0af43bfaa8f9b3a73c0a96cdfb382880d36e2a9ccd3f54bc85611"
+    },
+    "gitleaks.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "hadolint.json": {
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "harbor-artifact.json": {
+      "bytes": 2865,
+      "sha256": "03f660a1621381ab555c46c403126317ac776d3d82fda6e57d1c9d8664a37ab4"
+    },
+    "harbor-project.json": {
+      "bytes": 558,
+      "sha256": "d8fb9212a304f3ece995cd0f0a87b1dae1cfbd1d412193ed9bb37b39f329d935"
+    },
+    "harbor-scan.json": {
+      "bytes": 281,
+      "sha256": "0be910db0a5a7ed45127a09f2a90bf33ea352feaa6ca2579a2f4999b9a21ab9a"
+    },
+    "helm-releases.json": {
+      "bytes": 909,
+      "sha256": "02ea2fe40a185e8b50b6d4b21179680698ce9e2973f57f01b0f4375091c5a3fb"
+    },
+    "image-digest.json": {
+      "bytes": 128,
+      "sha256": "7bb562293f16f6893a20d7bf3a35bae17e2dbf191f21c31b554bf7d2d5480734"
+    },
+    "image-push.log": {
+      "bytes": 741,
+      "sha256": "6d339015c751a20cb4c172cb8c6e78f2cc5e16e06e9df4c434f170b4f3dee5de"
+    },
+    "jacoco.xml": {
+      "bytes": 80038,
+      "sha256": "c04e8d70579c88f3f52aead68c7fcb1f5f1d3a43005d48f34564360bb2a7298b"
+    },
+    "kube-bench-fail.json": {
+      "bytes": 22830,
+      "sha256": "fe7f582cca5c22f30f51c4968fd05ec82a455769c457083bd045326b3527b404"
+    },
+    "kube-bench-job.json": {
+      "bytes": 15151,
+      "sha256": "390bd0939ae0f62af5b27967f9e4cf8210395080a54fe96b5a274a9c740501a8"
+    },
+    "kube-bench.json": {
+      "bytes": 261346,
+      "sha256": "c854f3cc93c8fe4f9212fd3e3a7f130b0707d7ffd44606a0b95c77df8c7e25bd"
+    },
+    "kubernetes-verification.json": {
+      "bytes": 1256,
+      "sha256": "29a4497eb795ded6cd7625871850ec49dcc888ebef202007d520a690b0aae9c2"
+    },
+    "kyverno-rejection.txt": {
+      "bytes": 512,
+      "sha256": "9209b53962db1ca0df98cec07bf0cefabbf5d80809e115492758481874c3d907"
+    },
+    "network-policies.json": {
+      "bytes": 12355,
+      "sha256": "1258213f45bd5c37a579de1bf9035dee9cf6082b77c05cfdf2bdcff09df212bf"
+    },
+    "network-tests.json": {
+      "bytes": 671,
+      "sha256": "53a92eae31835e7565ba05b0d2df0ebeb57097ed16a77d71bd1d884f64c15a13"
+    },
+    "pods.json": {
+      "bytes": 100024,
+      "sha256": "929be2cbecdf049a5c0ffaa5a0d65340bbe64a10f050c8bd82d4a0c18e54f506"
+    },
+    "postgres-statefulset.json": {
+      "bytes": 9087,
+      "sha256": "3bddc6c60c9d66c9d9ec648617d96b5a516c28cd7ceeeed18ebe3a3714a6997e"
+    },
+    "release-gate-test.json": {
+      "bytes": 1680,
+      "sha256": "a14ba9b5709c2e2167daba646081d6190ade83e4cd82e3ec5f1b5bcd4de70cb3"
+    },
+    "security-gate-before.txt": {
+      "bytes": 1024,
+      "sha256": "ac7fef84640068a33e6e7636d5102a33cb86fad1734fc655d4b2d2e97d89cf23"
+    },
+    "sonar-analysis.log": {
+      "bytes": 94953,
+      "sha256": "d0a7e76d0dad4c5ab85b60e66aed28fc371bf4b3919c05e17900495a436490db"
+    },
+    "sonarqube-issues-before.json": {
+      "bytes": 48239,
+      "sha256": "31d190e747e7a1dd0d50184feb9366fd7739cea8a915cbfae56ca2ad0f222ebd"
+    },
+    "sonarqube-issues.json": {
+      "bytes": 187,
+      "sha256": "91e6e8cb7f3a1d98331b796f30f543f759ffe3cf622f6a102fb259ea9f47ad89"
+    },
+    "sonarqube-measures.json": {
+      "bytes": 1491,
+      "sha256": "60e5ca24310abc36d7109db4fd059c22decd7992719f8936a69f8951af19e3c1"
+    },
+    "sonarqube-quality.json": {
+      "bytes": 751,
+      "sha256": "bbbe29bbd38d9b729c9c42ae1dedf4238aebd1b863382ecf1317df9ad9e69b9c"
+    },
+    "sonarqube-release-check.json": {
+      "bytes": 260,
+      "sha256": "c826eef0c296d234b70d2f1de04c640c80124ff0e7b16328cce55d509ee929be"
+    },
+    "trivy-dependencies.json": {
+      "bytes": 122935,
+      "sha256": "78bc3b88a621309818f317e50bfe6eda763c92f58dc64449f6466c858b9f3f4b"
+    },
+    "trivy-image-before.json": {
+      "bytes": 296855,
+      "sha256": "4e8a8f32f1385acaf0d7b0431da35069ef8d4c3a6ed21a8ffa1201da59ef5b48"
+    },
+    "trivy-image.json": {
+      "bytes": 199704,
+      "sha256": "541544bc50a477aa942375d6a40b9eef81601487666e94d946d27f850910f1ea"
+    },
+    "zap-job.json": {
+      "bytes": 7791,
+      "sha256": "82e18008e1da48d68efe90bc58e4bc48d7f995b012222b155ecddfaa474e5ee5"
+    },
+    "zap.json": {
+      "bytes": 29062,
+      "sha256": "3f55e60e170ddfc6b72fa9ad838e128d04e8f44ccacbcb38a32d2c9bcdd63285"
+    }
+  }
+}

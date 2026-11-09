@@ -1,0 +1,92 @@
+{
+  "accessories": null,
+  "addition_links": {
+    "build_history": {
+      "absolute": false,
+      "href": "/api/v2.0/projects/project10/repositories/petclinic/artifacts/sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538/additions/build_history"
+    },
+    "sboms": {
+      "absolute": false,
+      "href": "/api/v2.0/projects/project10/repositories/petclinic/artifacts//additions/sbom"
+    },
+    "vulnerabilities": {
+      "absolute": false,
+      "href": "/api/v2.0/projects/project10/repositories/petclinic/artifacts/sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538/additions/vulnerabilities"
+    }
+  },
+  "artifact_type": "application/vnd.docker.container.image.v1+json",
+  "digest": "sha256:f7f3f4e2c442df6b8caac1a542203b309d8ac89e186df48d18cd880650a4c538",
+  "extra_attrs": {
+    "architecture": "amd64",
+    "author": "",
+    "config": {
+      "Entrypoint": [
+        "java",
+        "-XX:MaxRAMPercentage=70",
+        "-Djava.io.tmpdir=/tmp",
+        "-jar",
+        "/app/petclinic.jar"
+      ],
+      "Env": [
+        "PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+        "JAVA_HOME=/opt/java/openjdk",
+        "LANG=en_US.UTF-8",
+        "LANGUAGE=en_US:en",
+        "LC_ALL=en_US.UTF-8",
+        "JAVA_VERSION=jdk-21.0.13+9"
+      ],
+      "ExposedPorts": {
+        "8080/tcp": {}
+      },
+      "User": "10001:10001",
+      "WorkingDir": "/app"
+    },
+    "created": "2026-11-09T10:20:41.01695058Z",
+    "os": "linux"
+  },
+  "icon": "sha256:0048162a053eef4d4ce3fe7518615bef084403614f8bca43b40ae2e762e11e06",
+  "id": 6,
+  "labels": null,
+  "manifest_media_type": "application/vnd.docker.distribution.manifest.v2+json",
+  "media_type": "application/vnd.docker.container.image.v1+json",
+  "project_id": 2,
+  "pull_time": "2026-11-09T10:21:48.587Z",
+  "push_time": "2026-11-09T10:21:47.478Z",
+  "references": null,
+  "repository_id": 1,
+  "repository_name": "project10/petclinic",
+  "scan_overview": {
+    "application/vnd.security.vulnerability.report; version=1.1": {
+      "complete_percent": 100,
+      "duration": 8,
+      "end_time": "2026-11-09T10:21:55.000Z",
+      "report_id": "dffbea51-5a9a-4b84-bcf9-27fcee75894d",
+      "scan_status": "Success",
+      "scanner": {
+        "name": "Trivy",
+        "vendor": "Aqua Security",
+        "version": "v0.75.0"
+      },
+      "severity": "None",
+      "start_time": "2026-11-09T10:21:47.000Z",
+      "summary": {
+        "fixable": 0,
+        "summary": {},
+        "total": 0
+      }
+    }
+  },
+  "size": 134243851,
+  "tags": [
+    {
+      "artifact_id": 6,
+      "id": 5,
+      "immutable": false,
+      "name": "7d4d3ac71888020b277652fc257ade6d94954654",
+      "pull_time": "0001-01-01T00:00:00.000Z",
+      "push_time": "2026-11-09T10:21:47.626Z",
+      "repository_id": 1
+    }
+  ],
+  "type": "IMAGE"
+}
