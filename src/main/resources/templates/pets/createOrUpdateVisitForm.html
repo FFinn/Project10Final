@@ -28,6 +28,7 @@
   </table>
 
   <form th:object="${visit}" class="form-horizontal" method="post">
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
     <div class="form-group has-feedback">
       <input th:replace="~{fragments/inputField :: input ('Date', 'date', 'date')}" />
       <input th:replace="~{fragments/inputField :: input ('Description', 'description', 'text')}" />

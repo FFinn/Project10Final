@@ -3,6 +3,9 @@ package org.springframework.samples.petclinic;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Optional;
+import java.util.Objects;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -52,6 +55,16 @@ class PetClinicConcurrencyTests {
 
 		RestTemplate template = restTemplateBuilder.baseUri("http://localhost:" + port).build();
 
+		ResponseEntity<String> form = template.getForEntity("/owners/" + ownerId + "/pets/new", String.class);
+		var tokenMatcher = Pattern.compile("name=\"_csrf\" value=\"([^\"]+)\"")
+			.matcher(Objects.requireNonNull(form.getBody()));
+		assertThat(tokenMatcher.find()).isTrue();
+		String csrfToken = tokenMatcher.group(1);
+		String sessionCookie = Objects.requireNonNull(form.getHeaders().get(HttpHeaders.SET_COOKIE))
+			.stream()
+			.map(cookie -> cookie.split(";", 2)[0])
+			.collect(Collectors.joining("; "));
+
 		int threadCount = 2;
 		ExecutorService executorService = Executors.newFixedThreadPool(threadCount);
 		CountDownLatch readyLatch = new CountDownLatch(threadCount);
@@ -69,8 +82,10 @@ class PetClinicConcurrencyTests {
 
 					HttpHeaders headers = new HttpHeaders();
 					headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+					headers.set(HttpHeaders.COOKIE, sessionCookie);
 
 					MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+					map.add("_csrf", csrfToken);
 					map.add("name", duplicatePetName);
 					map.add("birthDate", "2020-01-01");
 					map.add("type", "cat");

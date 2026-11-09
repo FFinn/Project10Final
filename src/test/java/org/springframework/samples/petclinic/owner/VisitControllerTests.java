@@ -25,6 +25,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.csrf;
+import org.springframework.context.annotation.Import;
+import org.springframework.samples.petclinic.system.SecurityConfiguration;
 import org.junit.jupiter.api.condition.DisabledInNativeImage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
@@ -41,6 +44,7 @@ import java.util.Optional;
  * @author Colin But
  * @author Wick Dynex
  */
+@Import(SecurityConfiguration.class)
 @WebMvcTest(VisitController.class)
 @DisabledInNativeImage
 @DisabledInAotMode
@@ -75,7 +79,7 @@ class VisitControllerTests {
 	@Test
 	void processNewVisitFormSuccess() throws Exception {
 		mockMvc
-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).with(csrf())
 				.param("name", "George")
 				.param("date", LocalDate.now().plusDays(1).toString())
 				.param("description", "Visit Description"))
@@ -86,8 +90,8 @@ class VisitControllerTests {
 	@Test
 	void processNewVisitFormHasErrors() throws Exception {
 		mockMvc
-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).param("name",
-					"George"))
+			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).with(csrf())
+				.param("name", "George"))
 			.andExpect(model().attributeHasErrors("visit"))
 			.andExpect(status().isOk())
 			.andExpect(view().name("pets/createOrUpdateVisitForm"));
@@ -96,7 +100,7 @@ class VisitControllerTests {
 	@Test
 	void processNewVisitFormHasErrorsWhenVisitDateIsNotInFuture() throws Exception {
 		mockMvc
-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).with(csrf())
 				.param("name", "George")
 				.param("date", LocalDate.now().toString())
 				.param("description", "Visit Description"))
@@ -109,7 +113,7 @@ class VisitControllerTests {
 	@Test
 	void processNewVisitFormHasErrorsWhenDescriptionIsTooLong() throws Exception {
 		mockMvc
-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).with(csrf())
 				.param("name", "George")
 				.param("date", LocalDate.now().plusDays(1).toString())
 				.param("description", "a".repeat(256)))
@@ -123,7 +127,7 @@ class VisitControllerTests {
 		Owner original = owners.findById(TEST_OWNER_ID).orElseThrow();
 		original.setFirstName("Original");
 		mockMvc
-			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID).with(csrf())
 				.param("date", LocalDate.now().plusDays(1).toString())
 				.param("description", "Check")
 				.param("firstName", "Injected")
