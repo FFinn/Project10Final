@@ -11,7 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfiguration {
 
 	@Bean
-	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+	SecurityFilterChain securityFilterChain(HttpSecurity http) {
 		http.authorizeHttpRequests(requests -> requests.anyRequest().permitAll())
 			.headers(headers -> headers
 				.contentSecurityPolicy(csp -> csp.policyDirectives("default-src 'self'; script-src 'self'; "
