@@ -22,5 +22,26 @@ jobs:
           java-version: '21'
           distribution: temurin
           cache: maven
+      - name: Подготовить временную базу PostgreSQL
+        shell: bash
+        run: |
+          export POSTGRES_PASSWORD="$(openssl rand -hex 24)"
+          echo "::add-mask::$POSTGRES_PASSWORD"
+          echo "POSTGRES_PASS=$POSTGRES_PASSWORD" >> "$GITHUB_ENV"
+          echo "POSTGRES_URL=jdbc:postgresql://127.0.0.1:5432/petclinic" >> "$GITHUB_ENV"
+          docker run -d --name petclinic-test-postgres \
+            -p 127.0.0.1:5432:5432 \
+            -e POSTGRES_PASSWORD -e POSTGRES_USER=petclinic -e POSTGRES_DB=petclinic \
+            postgres:17-alpine@sha256:3540c0362c809df084ffac0ae69fe794515f9de92692f02178bcdce0ef0302ac
+          for attempt in {1..30}; do
+            if docker exec petclinic-test-postgres pg_isready -U petclinic -d petclinic; then
+              exit 0
+            fi
+            sleep 2
+          done
+          exit 1
       - name: Выполнить сборку и тесты
         run: ./mvnw -B -ntp verify -Dspring.docker.compose.enabled=false
+      - name: Удалить временную базу
+        if: always()
+        run: docker rm -f petclinic-test-postgres
