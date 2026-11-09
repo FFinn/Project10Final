@@ -1,0 +1,6 @@
+Error from server: admission webhook "validate.kyverno.svc-fail" denied the request: 
+
+resource Pod/default/bad-pod was blocked due to the following policies 
+
+require-safe-containers-default:
+  require-container-security: 'validation failure: validation error: Каждый контейнер должен работать без root, повышения привилегий и записи в корневую файловую систему. rule require-container-security failed at path /securityContext/'

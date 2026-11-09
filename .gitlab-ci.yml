@@ -27,7 +27,7 @@ dependencies:
   stage: tests
   script:
     - docker run --rm -v "$CI_PROJECT_DIR:/work" -v project10-ci-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp -DskipTests package > reports/dependency-build.log 2>&1
-    - docker run --rm -v "$CI_PROJECT_DIR:/work" -v project10-ci-trivy:/root/.cache/ aquasec/trivy:latest fs --quiet --scanners vuln --format json --output /work/reports/trivy-dependencies.json /work/target
+    - docker run --rm -v "$CI_PROJECT_DIR:/work" -v trivy-cache:/root/.cache/ aquasec/trivy:latest fs --timeout 15m --quiet --scanners vuln --format json --output /work/reports/trivy-dependencies.json /work/target
     - python3 scripts/check-severity.py reports/trivy-dependencies.json
 
 sonarqube:
@@ -43,7 +43,7 @@ build_publish:
     - IMAGE="$HARBOR_REGISTRY/$HARBOR_PROJECT/petclinic:$CI_COMMIT_SHA"
     - docker build --pull -t "$IMAGE" . > reports/docker-build.log 2>&1
     - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" goodwithtech/dockle:latest --exit-code 1 --exit-level WARN --format json --output /reports/dockle.json "$IMAGE"
-    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" -v project10-ci-trivy:/root/.cache/ aquasec/trivy:latest image --quiet --scanners vuln --format json --output /reports/trivy-image.json "$IMAGE"
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" -v trivy-cache:/root/.cache/ aquasec/trivy:latest image --timeout 15m --quiet --scanners vuln --format json --output /reports/trivy-image.json "$IMAGE"
     - python3 scripts/check-severity.py reports/trivy-image.json
     - export DOCKER_CONFIG="$(mktemp -d)"
     - trap 'rm -rf "$DOCKER_CONFIG"' EXIT

@@ -10,7 +10,7 @@ expose:
       https:
         port: 443
         nodePort: 30443
-externalURL: https://10.91.0.20:30443
+externalURL: https://harbor.project10.internal:30443
 trivy:
   enabled: true
 persistence:

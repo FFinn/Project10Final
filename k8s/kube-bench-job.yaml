@@ -19,7 +19,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: kube-bench
+  name: kube-bench-cis131
   namespace: security-audit
 spec:
   template:
@@ -31,6 +31,8 @@ spec:
       - command:
         - kube-bench
         - --json
+        - --version
+        - '1.31'
         image: docker.io/aquasec/kube-bench:v0.16.0
         name: kube-bench
         volumeMounts:
