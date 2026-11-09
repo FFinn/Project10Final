@@ -1,6 +1,7 @@
 name: Проверка сборки Maven
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
   pull_request:
