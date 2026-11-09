@@ -6,7 +6,9 @@ COPY src src
 RUN mvn -B -ntp -DskipTests package
 
 FROM eclipse-temurin:21-jre-alpine@sha256:ac05c3c42b7c2f1a52c9bd52f01041fa1958231b15ebeae7420429cbc5baf474 AS runtime
-RUN addgroup -g 10001 app && adduser -D -H -u 10001 -G app app
+RUN apk add --no-cache zlib=1.4-r0 \
+    && addgroup -g 10001 app \
+    && adduser -D -H -u 10001 -G app app
 WORKDIR /app
 COPY --from=build --chown=10001:10001 /build/target/*.jar /app/petclinic.jar
 USER 10001:10001

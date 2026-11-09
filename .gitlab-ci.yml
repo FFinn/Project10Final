@@ -22,24 +22,24 @@ default:
 secrets:
   stage: tests
   script:
-    - docker run --rm -v "$CI_PROJECT_DIR:/src" zricethezav/gitleaks:latest git /src --log-opts="--all" --redact --report-format json --report-path /src/reports/gitleaks.json
+    - docker run --rm -v "$CI_PROJECT_DIR:/src" zricethezav/gitleaks@sha256:c00b6bd0aeb3071cbcb79009cb16a60dd9e0a7c60e2be9ab65d25e6bc8abbb7f git /src --log-opts="--all" --redact --report-format json --report-path /src/reports/gitleaks.json
 
 hadolint:
   stage: tests
   script:
-    - docker run --rm -i hadolint/hadolint:latest hadolint --format json - < Dockerfile > reports/hadolint.json
+    - docker run --rm -i hadolint/hadolint@sha256:32dac94127fd60b7b7e3fbfc65e1383b9b5e25c9bfd7b8536de7a539fe68a12d hadolint --format json - < Dockerfile > reports/hadolint.json
 
 dependencies:
   stage: tests
   script:
     - docker run --rm -v "$CI_PROJECT_DIR:/work" -v project10-ci-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp -DskipTests package > reports/dependency-build.log 2>&1
-    - docker run --rm -v "$CI_PROJECT_DIR:/work" -v trivy-cache:/root/.cache/ aquasec/trivy:latest fs --timeout 15m --quiet --scanners vuln --format json --output /work/reports/trivy-dependencies.json /work/target
+    - docker run --rm -v "$CI_PROJECT_DIR:/work" -v trivy-cache:/root/.cache/ aquasec/trivy@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb fs --timeout 15m --quiet --scanners vuln --format json --output /work/reports/trivy-dependencies.json /work/target
     - python3 scripts/check-severity.py reports/trivy-dependencies.json
 
 sonarqube:
   stage: tests
   script:
-    - docker run --rm -e SONAR_TOKEN -e SONAR_HOST_URL -v "$CI_PROJECT_DIR:/work" -v project10-ci-sonar-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.qualitygate.wait=true -Dspring.docker.compose.enabled=false > reports/sonar-analysis.log 2>&1
+    - docker run --rm -e SONAR_TOKEN -e SONAR_HOST_URL -v "$CI_PROJECT_DIR:/work" -v project10-ci-sonar-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp verify org.sonarsource.scanner.maven:sonar-maven-plugin:5.8.0.7211:sonar -Dsonar.projectKey="$SONAR_PROJECT_KEY" -Dsonar.qualitygate.wait=true -Dspring.docker.compose.enabled=false > reports/sonar-analysis.log 2>&1
     - cp target/site/jacoco/jacoco.xml reports/jacoco.xml
 
 build_publish:
@@ -48,8 +48,8 @@ build_publish:
   script:
     - IMAGE="$HARBOR_REGISTRY/$HARBOR_PROJECT/petclinic:$CI_COMMIT_SHA"
     - docker build --pull -t "$IMAGE" . > reports/docker-build.log 2>&1
-    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" goodwithtech/dockle:latest --exit-code 1 --exit-level WARN --format json --output /reports/dockle.json "$IMAGE"
-    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" -v trivy-cache:/root/.cache/ aquasec/trivy:latest image --timeout 15m --quiet --scanners vuln --format json --output /reports/trivy-image.json "$IMAGE"
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" goodwithtech/dockle@sha256:eade932f793742de0aa8755406c7677cd7696f8675b6180926f7eeffa7abe6b9 --exit-code 1 --exit-level WARN --format json --output /reports/dockle.json "$IMAGE"
+    - docker run --rm -v /var/run/docker.sock:/var/run/docker.sock -v "$CI_PROJECT_DIR/reports:/reports" -v trivy-cache:/root/.cache/ aquasec/trivy@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb image --timeout 15m --quiet --scanners vuln --format json --output /reports/trivy-image.json "$IMAGE"
     - python3 scripts/check-severity.py reports/trivy-image.json
     - export DOCKER_CONFIG="$(mktemp -d)"
     - trap 'rm -rf "$DOCKER_CONFIG"' EXIT
