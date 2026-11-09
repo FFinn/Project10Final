@@ -26,10 +26,11 @@ spec:
             capabilities: {drop: [ALL]}
           env:
             - {name: HOME, value: /tmp}
+            - {name: JAVA_OPTS, value: "-Xmx512m"}
           command: [/bin/sh, -c]
           args:
             - |
-              zap-baseline.py -t http://petclinic:8080 -m 1 -J zap.json -r zap.html -z "-dir /tmp/zap" > /zap/wrk/run.log 2>&1
+              zap-baseline.py -t http://petclinic:8080 -m 1 -J zap.json -r zap.html -z "-dir /tmp/zap -silent" > /zap/wrk/run.log 2>&1
               result=$?
               echo "ZAP_RESULT_BEGIN"
               cat /zap/wrk/zap.json

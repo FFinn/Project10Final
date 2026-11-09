@@ -33,7 +33,7 @@ dependencies:
   stage: tests
   script:
     - docker run --rm -v "$CI_PROJECT_DIR:/work" -v project10-ci-maven:/root/.m2 -w /work "$MAVEN_IMAGE" mvn -B -ntp -DskipTests package > reports/dependency-build.log 2>&1
-    - docker run --rm -v "$CI_PROJECT_DIR:/work" -v trivy-cache:/root/.cache/ aquasec/trivy@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb fs --timeout 15m --quiet --scanners vuln --format json --output /work/reports/trivy-dependencies.json /work/target
+    - docker run --rm -v "$CI_PROJECT_DIR:/work" -v trivy-cache:/root/.cache/ aquasec/trivy@sha256:8f6bb947dbc528902e11f2f5be52f7b519f6a39d5d148f41166f2040499768fb rootfs --timeout 15m --quiet --scanners vuln --format json --output /work/reports/trivy-dependencies.json /work/target
     - python3 scripts/check-severity.py reports/trivy-dependencies.json
 
 sonarqube:
