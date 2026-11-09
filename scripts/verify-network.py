@@ -46,7 +46,7 @@ for name, labels, targets in [
             break
         time.sleep(2)
     else:
-        raise RuntimeError(f"Probe did not complete: {name}")
+        raise RuntimeError(f"Проверка соединения не завершилась: {name}")
     all_results.extend(json.loads(kubectl("logs", name)))
 print(json.dumps(all_results, ensure_ascii=False, indent=2))
 raise SystemExit(0 if all(x["passed"] for x in all_results) else 1)

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-: "${APP_IMAGE:?Set a Harbor image reference with sha256 digest}"
+: "${APP_IMAGE:?Укажите образ из Harbor с SHA-256}"
 [[ "$APP_IMAGE" =~ @sha256:[a-f0-9]{64}$ ]] || { echo 'Требуется образ по SHA-256'; exit 1; }
 kubectl get secret petclinic-db harbor-pull petclinic-tls >/dev/null
 kubectl apply -f k8s/kyverno-policy.yaml

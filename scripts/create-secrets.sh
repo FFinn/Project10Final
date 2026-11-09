@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 umask 077
-: "${HARBOR_REGISTRY:?Set HARBOR_REGISTRY}"
-: "${HARBOR_PULL_USER:?Set HARBOR_PULL_USER}"
-: "${HARBOR_PULL_PASSWORD:?Set HARBOR_PULL_PASSWORD}"
-: "${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD}"
-: "${TLS_CERT:?Set TLS_CERT file path}"
-: "${TLS_KEY:?Set TLS_KEY file path}"
+: "${HARBOR_REGISTRY:?Укажите HARBOR_REGISTRY}"
+: "${HARBOR_PULL_USER:?Укажите HARBOR_PULL_USER}"
+: "${HARBOR_PULL_PASSWORD:?Укажите HARBOR_PULL_PASSWORD}"
+: "${POSTGRES_PASSWORD:?Укажите POSTGRES_PASSWORD}"
+: "${TLS_CERT:?Укажите путь TLS_CERT к сертификату}"
+: "${TLS_KEY:?Укажите путь TLS_KEY к ключу}"
 work=$(mktemp -d)
 trap 'rm -rf "$work"' EXIT
 printf '%s' "$POSTGRES_PASSWORD" > "$work/password"
