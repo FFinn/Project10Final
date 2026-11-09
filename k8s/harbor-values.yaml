@@ -13,6 +13,7 @@ expose:
 externalURL: https://harbor.project10.internal:30443
 trivy:
   enabled: true
+  timeout: 15m0s
 persistence:
   persistentVolumeClaim:
     registry:

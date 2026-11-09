@@ -118,4 +118,22 @@ class VisitControllerTests {
 			.andExpect(view().name("pets/createOrUpdateVisitForm"));
 	}
 
+	@Test
+	void visitFormCannotChangeOwnerOrVisitIdentity() throws Exception {
+		Owner original = owners.findById(TEST_OWNER_ID).orElseThrow();
+		original.setFirstName("Original");
+		mockMvc
+			.perform(post("/owners/{ownerId}/pets/{petId}/visits/new", TEST_OWNER_ID, TEST_PET_ID)
+				.param("date", LocalDate.now().plusDays(1).toString())
+				.param("description", "Check")
+				.param("firstName", "Injected")
+				.param("id", "999")
+				.param("pets[0].name", "Injected"))
+			.andExpect(status().is3xxRedirection());
+		org.assertj.core.api.Assertions.assertThat(original.getFirstName()).isEqualTo("Original");
+		org.assertj.core.api.Assertions.assertThat(original.getPet(TEST_PET_ID).getName()).isNull();
+		org.assertj.core.api.Assertions.assertThat(original.getPet(TEST_PET_ID).getVisits())
+			.allSatisfy(visit -> org.assertj.core.api.Assertions.assertThat(visit.getId()).isNull());
+	}
+
 }

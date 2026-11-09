@@ -309,10 +309,29 @@ class OwnerControllerTests {
 
 		when(owners.findById(pathOwnerId)).thenReturn(Optional.of(owner));
 
-		mockMvc.perform(MockMvcRequestBuilders.post("/owners/{ownerId}/edit", pathOwnerId).flashAttr("owner", owner))
+		mockMvc
+			.perform(MockMvcRequestBuilders.post("/owners/{ownerId}/edit", pathOwnerId)
+				.flashAttr("owner", new OwnerForm(owner)))
 			.andExpect(status().is3xxRedirection())
 			.andExpect(redirectedUrl("/owners/" + pathOwnerId + "/edit"))
 			.andExpect(flash().attributeExists("error"));
+	}
+
+	@Test
+	void ownerFormCannotChangeIdentityOrPets() throws Exception {
+		Owner original = owners.findById(TEST_OWNER_ID).orElseThrow();
+		mockMvc
+			.perform(post("/owners/{ownerId}/edit", TEST_OWNER_ID).param("firstName", "George")
+				.param("lastName", "Franklin")
+				.param("address", "110 W. Liberty St.")
+				.param("city", "Madison")
+				.param("telephone", "6085551023")
+				.param("id", "999")
+				.param("pets[0].name", "Injected")
+				.param("pets[0].id", "999"))
+			.andExpect(status().is3xxRedirection());
+		org.assertj.core.api.Assertions.assertThat(original.getId()).isEqualTo(TEST_OWNER_ID);
+		org.assertj.core.api.Assertions.assertThat(original.getPet(1).getName()).isEqualTo("Max");
 	}
 
 }

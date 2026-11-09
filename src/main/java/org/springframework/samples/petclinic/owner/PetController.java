@@ -73,40 +73,43 @@ class PetController {
 	}
 
 	@ModelAttribute("pet")
-	public Pet findPet(@PathVariable("ownerId") int ownerId,
+	public PetForm findPet(@PathVariable("ownerId") int ownerId,
 			@PathVariable(name = "petId", required = false) Integer petId) {
 
 		if (petId == null) {
-			return new Pet();
+			return new PetForm(new Pet());
 		}
 
 		Optional<Owner> optionalOwner = this.owners.findById(ownerId);
 		Owner owner = optionalOwner.orElseThrow(() -> new IllegalArgumentException(
 				"Owner not found with id: " + ownerId + ". Please ensure the ID is correct "));
-		return owner.getPet(petId);
+		return new PetForm(Objects.requireNonNull(owner.getPet(petId), "Pet not found for owner"));
 	}
 
 	@InitBinder("owner")
 	public void initOwnerBinder(WebDataBinder dataBinder) {
-		dataBinder.setDisallowedFields("id", "*.id");
+		dataBinder.setAllowedFields("__no_request_fields__");
 	}
 
 	@InitBinder("pet")
 	public void initPetBinder(WebDataBinder dataBinder) {
 		dataBinder.setValidator(new PetValidator());
-		dataBinder.setDisallowedFields("id", "*.id");
+		dataBinder.setAllowedFields("name", "birthDate", "type");
 	}
 
 	@GetMapping("/pets/new")
-	public String initCreationForm(Owner owner, ModelMap model) {
+	public String initCreationForm(ModelMap model) {
+		Owner owner = (Owner) model.get("owner");
 		Pet pet = new Pet();
 		owner.addPet(pet);
 		return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
 	}
 
 	@PostMapping("/pets/new")
-	public String processCreationForm(Owner owner, @Valid Pet pet, BindingResult result,
+	public String processCreationForm(@Valid @ModelAttribute("pet") PetForm form, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
+		Owner owner = (Owner) model.get("owner");
+		Pet pet = form.toPet();
 
 		if (StringUtils.hasText(pet.getName()) && pet.isNew() && owner.getPet(pet.getName(), true) != null) {
 			result.rejectValue("name", "duplicate", "already exists");
@@ -142,8 +145,10 @@ class PetController {
 	}
 
 	@PostMapping("/pets/{petId}/edit")
-	public String processUpdateForm(Owner owner, @Valid Pet pet, BindingResult result,
+	public String processUpdateForm(@Valid @ModelAttribute("pet") PetForm form, BindingResult result, ModelMap model,
 			RedirectAttributes redirectAttributes) {
+		Owner owner = (Owner) model.get("owner");
+		Pet pet = form.toPet();
 
 		String petName = pet.getName();
 

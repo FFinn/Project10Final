@@ -271,4 +271,21 @@ class PetControllerTests {
 
 	}
 
+	@Test
+	void petFormCannotChangeOwnerOrNestedTypeId() throws Exception {
+		Owner original = owners.findById(TEST_OWNER_ID).orElseThrow();
+		original.setFirstName("Original");
+		mockMvc
+			.perform(post("/owners/{ownerId}/pets/new", TEST_OWNER_ID).param("name", "SafePet")
+				.param("type", "hamster")
+				.param("birthDate", "2020-01-01")
+				.param("firstName", "Injected")
+				.param("type.id", "999")
+				.param("id", "999"))
+			.andExpect(status().is3xxRedirection());
+		org.assertj.core.api.Assertions.assertThat(original.getFirstName()).isEqualTo("Original");
+		org.assertj.core.api.Assertions.assertThat(original.getPet("SafePet").getId()).isNull();
+		org.assertj.core.api.Assertions.assertThat(original.getPet("SafePet").getType().getId()).isEqualTo(3);
+	}
+
 }

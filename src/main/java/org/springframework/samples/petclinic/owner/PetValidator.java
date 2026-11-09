@@ -37,7 +37,7 @@ public class PetValidator implements Validator {
 
 	@Override
 	public void validate(Object obj, Errors errors) {
-		Pet pet = (Pet) obj;
+		Pet pet = obj instanceof PetForm form ? form.toPet() : (Pet) obj;
 		String name = pet.getName();
 		// name validation
 		if (!StringUtils.hasText(name)) {
@@ -63,7 +63,7 @@ public class PetValidator implements Validator {
 	 */
 	@Override
 	public boolean supports(Class<?> clazz) {
-		return Pet.class.isAssignableFrom(clazz);
+		return Pet.class.isAssignableFrom(clazz) || PetForm.class.isAssignableFrom(clazz);
 	}
 
 }
