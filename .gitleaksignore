@@ -1,0 +1,26 @@
+# UUID замечаний SonarQube из первичной выгрузки; это идентификаторы, не учётные данные.
+# Исключения закреплены за конкретным коммитом, файлом, правилом и строкой.
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:13
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:103
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:193
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:283
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:388
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:493
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:538
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:583
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:629
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:675
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:719
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:763
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:809
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:855
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:899
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:943
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:987
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1033
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1079
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1123
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1213
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1257
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1316
+4ba312158c3919dba5ed79db5b0cb3480034d7bb:reports/sonarqube-issues-before.json:generic-api-key:1362

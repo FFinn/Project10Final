@@ -1,0 +1,9 @@
+{
+  "count": 24,
+  "tool": "Gitleaks",
+  "rule": "generic-api-key",
+  "classification": "false_positive",
+  "file": "reports/sonarqube-issues-before.json",
+  "reason": "Сопоставлены поля key с идентификаторами замечаний SonarQube. Все значения являются UUID записей и не предоставляют доступ к сервису.",
+  "scope": "Точные отпечатки срабатываний в .gitleaksignore; новые коммиты и остальные строки проверяются без исключений."
+}
